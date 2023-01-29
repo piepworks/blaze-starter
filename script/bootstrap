@@ -19,3 +19,16 @@ django-admin startproject $project_folder .
 # Create a "core" app.
 cd $project_folder
 ../manage.py startapp core
+
+next_steps="
+# Next steps:
+\n
+- Add \`\"${project_folder}.core\",\` to the top of your \`INSTALLED_APPS\`.
+"
+
+if command -v gum &> /dev/null
+then
+  echo $next_steps | gum format
+else
+  echo $next_steps
+fi
