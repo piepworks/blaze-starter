@@ -30,9 +30,12 @@ rm $project_folder/core/apps.py
 cp self-destruct/models.py $project_folder/core/
 cp self-destruct/admin.py $project_folder/core/
 
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
 if command -v gum &> /dev/null
 then
-  pwd
   cat self-destruct/next-steps.md | gum format
 else
   cat self-destruct/next-steps.md
