@@ -13,23 +13,30 @@ python -m pip install pip-tools
 pip-compile
 python -m pip install -r requirements.txt
 
+touch .env
+
 # Name the Django project with the same name as our base folder.
 django-admin startproject $project_folder .
 
 # Create a "core" app.
 cd $project_folder
 ../manage.py startapp core
+cd ..
 
-next_steps="
-# Next steps:
-\n
-- Add \`\"${project_folder}.core\",\` to the top of your \`INSTALLED_APPS\`.\n
-- Add \`AUTH_USER_MODEL = \"core.User\"\` right before \`AUTH_PASSWORD_VALIDATORS = [\`.\n
-"
+# Delete an extraneous file.
+rm $project_folder/core/apps.py
+
+# Add some new files.
+cp self-destruct/models.py $project_folder/core/
+cp self-destruct/admin.py $project_folder/core/
 
 if command -v gum &> /dev/null
 then
-  echo $next_steps | gum format
+  pwd
+  cat self-destruct/next-steps.md | gum format
 else
-  echo $next_steps
+  cat self-destruct/next-steps.md
 fi
+
+# Delete our starter stuff?
+# rm -rf self-destruct/
