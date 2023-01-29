@@ -23,7 +23,8 @@ cd $project_folder
 next_steps="
 # Next steps:
 \n
-- Add \`\"${project_folder}.core\",\` to the top of your \`INSTALLED_APPS\`.
+- Add \`\"${project_folder}.core\",\` to the top of your \`INSTALLED_APPS\`.\n
+- Add \`AUTH_USER_MODEL = \"core.User\"\` right before \`AUTH_PASSWORD_VALIDATORS = [\`.\n
 "
 
 if command -v gum &> /dev/null
