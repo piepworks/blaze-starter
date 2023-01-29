@@ -1,7 +1,9 @@
 #!/bin/sh
 
 # Get the name of the current folder.
-folder=${PWD##*/}
+raw_folder=${PWD##*/}
+# Replace hypehens with underscores.
+project_folder=${raw_folder//-/_}
 
 # Create a virtual environment and get things installed.
 python3 -m venv --prompt . .venv
@@ -12,7 +14,8 @@ pip-compile
 python -m pip install -r requirements.txt
 
 # Name the Django project with the same name as our base folder.
-django-admin startproject $folder
+django-admin startproject $project_folder .
 
 # Create a "core" app.
-./manage.py startapp $folder/core
+cd $project_folder
+../manage.py startapp core
