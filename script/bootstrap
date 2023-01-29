@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Get the name of the current folder.
+folder=${PWD##*/}
+
+# Create a virtual environment and get things installed.
+python3 -m venv --prompt . .venv
+.venv/bin/pip install -U pip setuptools wheel
+source .venv/bin/activate
+python -m pip install pip-tools
+pip-compile
+python -m pip install -r requirements.txt
+
+# Name the Django project with the same name as our base folder.
+django-admin startproject $folder
+
+# Create a "core" app.
+./manage.py startapp $folder/core
