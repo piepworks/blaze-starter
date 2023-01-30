@@ -21,10 +21,11 @@ Add/adjust various things in `[project_folder]/settings.py`:
 (Don’t forget to replace `[project_folder]` with your actual project folder’s name.)
 
 ```python
-import os
 # Other stuff…
+import os
 from django.core.management.utils import get_random_secret_key
 from dotenv import load_dotenv
+import dj_database_url
 ```
 
 ```python
@@ -87,6 +88,14 @@ DEBUG_TOOLBAR_CONFIG = {
     # Un-comment to temporarily disable Django Debug Toolbar. Don't commit it.
     # "SHOW_TOOLBAR_CALLBACK": lambda r: False,
 }
+```
+
+### Warm up the database
+
+Only run this after you’ve made the changes/additions to `settings.py`.
+
+```shell
+script/database-setup
 ```
 
 ## To run the local server to work on things

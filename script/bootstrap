@@ -32,10 +32,6 @@ cp self-destruct/models.py $project_folder/core/
 cp self-destruct/views.py $project_folder/core/
 cp self-destruct/tests.py $project_folder/core/
 
-python manage.py makemigrations
-python manage.py migrate
-python manage.py createsuperuser
-
 # Set up pre-commit.
 pre-commit install
 
