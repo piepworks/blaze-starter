@@ -1,0 +1,38 @@
+default_language_version:
+  python: python3.10
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: https://github.com/psf/black
+    rev: 22.12.0
+    hooks:
+      - id: black
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.0.0
+    hooks:
+      - id: flake8
+  - repo: local
+    hooks:
+      - id: pending-migrations
+        name: Check for pending migrations
+        language: system
+        entry: venv/bin/python manage.py makemigrations --check --dry-run
+        types: [python]
+        pass_filenames: false
+      - id: stylelint
+        name: Run Stylelint
+        language: system
+        entry: npx stylelint "static/tailwind/main.css"
+        types: [css]
+        pass_filenames: false
+      - id: eslint
+        name: Run ESLint
+        language: system
+        entry: npx eslint --ext .js ./**/templates/js
+        types: [javascript]
+        pass_filenames: false

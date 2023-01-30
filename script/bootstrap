@@ -34,6 +34,9 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
 
+# Set up pre-commit
+pre-commit install
+
 if command -v gum &> /dev/null
 then
   cat self-destruct/next-steps.md | gum format
