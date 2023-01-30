@@ -1,0 +1,16 @@
+{
+    "editor.formatOnSave": false,
+    "[python]": {
+        "editor.formatOnSave": true,
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.stylelint": true,
+        "source.fixAll.eslint": true
+    },
+    "files.associations": {
+        "*.html": "django-html",
+        "*.js": "javascript",
+        "*.svg": "django-html",
+    },
+    "python.formatting.provider": "black"
+}
