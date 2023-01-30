@@ -1,2 +1,9 @@
+black
+dj-database-url
 django
+django-browser-reload
+django-debug-toolbar
+gunicorn
+pre-commit
 python-dotenv
+whitenoise
