@@ -38,9 +38,13 @@ python manage.py createsuperuser
 pre-commit install
 
 next_steps="
-**Next steps:**\n\n
+\n\n
+---\n\n
+🎉 **Next steps:**\n\n
 Visit https://github.com/piepworks/django-starter#next-steps\n\n
 Follow those instructions, replacing \`[project_folder]\` with \`${project_folder}\`.
+\n\n
+---\n\n
 "
 
 if command -v gum &> /dev/null

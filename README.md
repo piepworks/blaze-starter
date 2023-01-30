@@ -18,24 +18,42 @@ script/bootstrap
 
 Add/adjust various things in `[project_folder]/settings.py`:
 
+(Don’t forget to replace `[project_folder]` with your actual project folder’s name.)
+
 ```python
 import os
-# …
+# Other stuff…
 from django.core.management.utils import get_random_secret_key
 from dotenv import load_dotenv
+```
 
+```python
 # after BASE_DIR …
+
 load_dotenv(BASE_DIR / ".env")
 ```
 
 ```python
 SECRET_KEY = os.environ.get("SECRET_KEY", default=get_random_secret_key())
+# …
+DEBUG = int(os.environ.get("DEBUG", default=0))
+
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(",")
+CSRF_TRUSTED_ORIGINS = [os.environ.get("CSRF_TRUSTED_ORIGINS")]
 ```
 
 ```python
 INSTALLED_APPS = [
     "[project_name].core",
+    "debug_toolbar",
     # Other stuff…
+]
+```
+
+```python
+DATABASES = {
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"), conn_max_age=600),
+}
 ```
 
 ```python
@@ -50,7 +68,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 ```
 
-## To run the local server to work on things:
+## To run the local server to work on things
 
 ```shell
 script/start
