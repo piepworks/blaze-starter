@@ -27,8 +27,10 @@ cd ..
 rm $project_folder/core/apps.py
 
 # Add some new files.
-cp self-destruct/models.py $project_folder/core/
 cp self-destruct/admin.py $project_folder/core/
+cp self-destruct/models.py $project_folder/core/
+cp self-destruct/views.py $project_folder/core/
+cp self-destruct/tests.py $project_folder/core/
 
 python manage.py makemigrations
 python manage.py migrate
