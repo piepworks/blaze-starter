@@ -1,0 +1,17 @@
+@layer tw-base, custom-base, tw-components, custom-components, tw-utilities, custom-utilities;
+
+@layer tw-base { @tailwind base; }
+@layer tw-components { @tailwind components; }
+@layer tw-utilities { @tailwind utilities; }
+
+@layer custom-base {
+  /* Add stuff here. */
+}
+
+@layer custom-components {
+  /* Add stuff here. */
+}
+
+@layer custom-utilities {
+  /* Add stuff here. */
+}
