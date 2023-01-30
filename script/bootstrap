@@ -13,7 +13,7 @@ python -m pip install pip-tools
 pip-compile --resolver=backtracking
 python -m pip install -r requirements.txt
 
-touch .env
+cp example.env .env
 
 # Name the Django project with the same name as our base folder.
 django-admin startproject $project_folder .
@@ -41,13 +41,13 @@ next_steps="
 **Next steps:**
 \n
 \n- Run \`git add . && git commit -m 'Install django-starter.'\`
+\n- Generate a secret key: \`script/generate-django-key\`.
+\n- Put the key in your \`.env\` file as \`SECRET_KEY\`.
 \n\n
-In \`settings.py\`:
+In \`${project_folder}/settings.py\`:
 \n
 \n- Add \`\"${project_folder}.core\",\` to the top of your \`INSTALLED_APPS\`.
 \n- Add \`AUTH_USER_MODEL = \"core.User\"\` right above \`AUTH_PASSWORD_VALIDATORS = [\`.
-\n- Generate a secret key: \`script/generate-django-key\`.
-\n- Put the key in your \`.env\` file as \`SECRET_KEY\`.
 \n\n
 **To work on things:**
 \n
