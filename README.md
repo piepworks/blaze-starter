@@ -91,6 +91,14 @@ DEBUG_TOOLBAR_CONFIG = {
 
 ## To run the local server to work on things
 
+For Django only:
+
 ```shell
 script/start
+```
+
+For Django + Tailwind compilation:
+
+```shell
+npm run start
 ```
