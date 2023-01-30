@@ -31,6 +31,7 @@ cp self-destruct/admin.py $project_folder/core/
 cp self-destruct/models.py $project_folder/core/
 cp self-destruct/views.py $project_folder/core/
 cp self-destruct/tests.py $project_folder/core/
+cp self-destruct/urls.py $project_folder/
 mkdir -p static/
 
 # Set up pre-commit.
