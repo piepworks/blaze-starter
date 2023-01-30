@@ -38,20 +38,9 @@ python manage.py createsuperuser
 pre-commit install
 
 next_steps="
-**Next steps:**
-\n
-\n- Run \`git add . && git commit -m 'Install django-starter.'\`
-\n- Generate a secret key: \`script/generate-django-key\`.
-\n- Put the key in your \`.env\` file as \`SECRET_KEY\`.
-\n\n
-In \`${project_folder}/settings.py\`:
-\n
-\n- Add \`\"${project_folder}.core\",\` to the top of your \`INSTALLED_APPS\`.
-\n- Add \`AUTH_USER_MODEL = \"core.User\"\` right above \`AUTH_PASSWORD_VALIDATORS = [\`.
-\n\n
-**To work on things:**
-\n
-\n- \`script/start\`
+**Next steps:**\n\n
+Visit https://github.com/piepworks/django-starter#next-steps\n\n
+Follow those instructions, replacing \`[project_folder]\` with \`${project_folder}\`.
 "
 
 if command -v gum &> /dev/null
