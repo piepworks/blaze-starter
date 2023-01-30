@@ -64,12 +64,8 @@ MIDDLEWARE = [
 DATABASES = {
     "default": dj_database_url.parse(os.environ.get("DATABASE_URL"), conn_max_age=600),
 }
-```
 
-```python
 AUTH_USER_MODEL = "core.User"
-
-# Right before `AUTH_PASSWORD_VALIDATORS = [`
 ```
 
 ```python
@@ -95,7 +91,7 @@ DEBUG_TOOLBAR_CONFIG = {
 Only run this after you’ve made the changes/additions to `settings.py`.
 
 ```shell
-script/database-setup
+script/database-warmup
 ```
 
 ## To run the local server to work on things

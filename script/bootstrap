@@ -26,11 +26,12 @@ cd ..
 # Delete an extraneous file.
 rm $project_folder/core/apps.py
 
-# Add some new files.
+# Add some new files and a folder.
 cp self-destruct/admin.py $project_folder/core/
 cp self-destruct/models.py $project_folder/core/
 cp self-destruct/views.py $project_folder/core/
 cp self-destruct/tests.py $project_folder/core/
+mkdir -p static/
 
 # Set up pre-commit.
 pre-commit install
