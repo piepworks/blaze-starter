@@ -10,7 +10,7 @@ python3 -m venv --prompt . .venv
 .venv/bin/pip install -U pip setuptools wheel
 source .venv/bin/activate
 python -m pip install pip-tools
-pip-compile
+pip-compile --resolver=backtracking
 python -m pip install -r requirements.txt
 
 touch .env
