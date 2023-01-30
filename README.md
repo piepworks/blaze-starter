@@ -46,7 +46,16 @@ CSRF_TRUSTED_ORIGINS = [os.environ.get("CSRF_TRUSTED_ORIGINS")]
 INSTALLED_APPS = [
     "[project_name].core",
     "debug_toolbar",
+    "django_browser_reload",
     # Other stuff…
+]
+```
+
+```python
+MIDDLEWARE = [
+    # Other stuff…
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 ```
 
@@ -66,6 +75,18 @@ AUTH_USER_MODEL = "core.User"
 # After `STATIC_URL = "static/"` …
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
+```
+
+At the very end of the file:
+
+```python
+# Django Debug Toolbar
+
+INTERNAL_IPS = ["127.0.0.1"]
+DEBUG_TOOLBAR_CONFIG = {
+    # Un-comment to temporarily disable Django Debug Toolbar. Don't commit it.
+    # "SHOW_TOOLBAR_CALLBACK": lambda r: False,
+}
 ```
 
 ## To run the local server to work on things
