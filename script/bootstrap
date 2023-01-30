@@ -37,11 +37,26 @@ python manage.py createsuperuser
 # Set up pre-commit
 pre-commit install
 
+next_steps="
+**Next steps:**
+\n
+\n- Run \`git add .&&git commit -m 'Install django-starter.'\`
+\n\n
+In \`settings.py\`:
+\n
+\n- Add \`\"${project_folder}.core\",\` to the top of your \`INSTALLED_APPS\`.
+\n- Add \`AUTH_USER_MODEL = \"core.User\"\` right above \`AUTH_PASSWORD_VALIDATORS = [\`.
+\n\n
+**To work on things:**
+\n
+\n- \`script/start\`
+"
+
 if command -v gum &> /dev/null
 then
-  cat self-destruct/next-steps.md | gum format
+  echo $next_steps | gum format
 else
-  cat self-destruct/next-steps.md
+  echo $next_steps
 fi
 
 # Delete our starter stuff?
