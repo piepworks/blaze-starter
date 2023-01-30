@@ -21,7 +21,7 @@ repos:
       - id: pending-migrations
         name: Check for pending migrations
         language: system
-        entry: venv/bin/python manage.py makemigrations --check --dry-run
+        entry: .venv/bin/python manage.py makemigrations --check --dry-run
         types: [python]
         pass_filenames: false
       - id: stylelint
