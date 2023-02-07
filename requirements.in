@@ -5,6 +5,7 @@ django-browser-reload
 django-debug-toolbar
 djlint
 gunicorn
+ipython
 pre-commit
 python-dotenv
 whitenoise
