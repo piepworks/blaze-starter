@@ -3,6 +3,7 @@ dj-database-url
 django
 django-browser-reload
 django-debug-toolbar
+djlint
 gunicorn
 pre-commit
 python-dotenv

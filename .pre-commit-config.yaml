@@ -16,6 +16,13 @@ repos:
     rev: 6.0.0
     hooks:
       - id: flake8
+  - repo: https://github.com/Riverside-Healthcare/djLint
+    rev: v1.19.13
+    hooks:
+      - id: djlint-django
+        entry: djlint --profile=django
+        types_or: [html]
+        language: python
   - repo: local
     hooks:
       - id: pending-migrations
