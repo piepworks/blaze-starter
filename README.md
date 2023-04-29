@@ -103,13 +103,3 @@ For Django only:
 ```shell
 script/start
 ```
-
-For Django + Tailwind compilation:
-
-```shell
-npm run start
-```
-
-Note, you can safely ignore this warning ([it looks like it’ll be fixed eventually](https://github.com/tailwindlabs/tailwindcss/discussions/6694#discussioncomment-4716568)).
-
-> Nested `@tailwind` rules were detected, but are not supported.

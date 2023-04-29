@@ -5,11 +5,9 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "watch:tailwind": "postcss tailwind/main.css -o static/tailwind.css --watch --verbose",
-    "build:tailwind": "NODE_ENV=production postcss tailwind/main.css -o static/tailwind.css",
-    "dj": "script/start",
-    "start": "npm-run-all --parallel watch:tailwind dj",
-    "build": "npm-run-all build:*"
+    "dj": "script/start"
+    // "start": "npm-run-all --parallel watch:sass dj",
+    // "build": "npm-run-all build:*"
   },
   "devDependencies": {
   }

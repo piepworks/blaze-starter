@@ -41,7 +41,7 @@ pre-commit install
 
 # Install JS stuff.
 nvm install
-npm i -D tailwindcss stylelint-config-standard stylelint postcss-cli postcss npm-run-all eslint cssnano autoprefixer @tailwindcss/typography @tailwindcss/line-clamp @tailwindcss/forms @tailwindcss/aspect-ratio
+npm i -D stylelint-config-standard stylelint npm-run-all eslint
 
 next_steps="
 \n\n
