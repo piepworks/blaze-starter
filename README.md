@@ -2,6 +2,12 @@
 
 A little [Piepworks](https://piep.works) project.
 
+## Requirements
+
+- [macOS](https://www.apple.com/macos/)
+- [Python version 3](https://www.python.org/downloads/)
+- [Node Version Manager](https://github.com/nvm-sh/nvm)
+
 ## Installation
 
 To get started:
