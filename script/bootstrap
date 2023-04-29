@@ -1,5 +1,5 @@
 #!/bin/sh
-
+source $HOME/.nvm/nvm.sh
 # Get the name of the current folder.
 raw_folder=${PWD##*/}
 # Replace hypehens with underscores.
@@ -40,6 +40,7 @@ mkdir -p static/
 pre-commit install
 
 # Install JS stuff.
+nvm install
 npm i -D tailwindcss stylelint-config-standard stylelint postcss-cli postcss npm-run-all eslint cssnano autoprefixer @tailwindcss/typography @tailwindcss/line-clamp @tailwindcss/forms @tailwindcss/aspect-ratio
 
 next_steps="
