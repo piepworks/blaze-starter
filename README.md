@@ -86,10 +86,6 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # Django Debug Toolbar
 
 INTERNAL_IPS = ["127.0.0.1"]
-DEBUG_TOOLBAR_CONFIG = {
-    # Un-comment to temporarily disable Django Debug Toolbar. Don't commit it.
-    # "SHOW_TOOLBAR_CALLBACK": lambda r: False,
-}
 ```
 
 ### Warm up the database
