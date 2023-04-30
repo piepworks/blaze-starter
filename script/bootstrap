@@ -10,8 +10,8 @@ python3 -m venv --prompt . .venv
 .venv/bin/pip install -U pip setuptools wheel
 source .venv/bin/activate
 python -m pip install pip-tools
-pip-compile --resolver=backtracking
-python -m pip install -r requirements.txt
+pip-compile --resolver=backtracking requirements/requirements.in
+python -m pip install -r requirements/requirements.txt
 
 cp example.env .env
 

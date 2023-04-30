@@ -1,11 +1,11 @@
 black
 dj-database-url
-django
 django-browser-reload
 django-debug-toolbar
+Django<5.0
 djlint
+environs[django]
 gunicorn
 ipython
 pre-commit
-python-dotenv
 whitenoise
