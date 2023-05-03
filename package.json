@@ -5,10 +5,9 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "dj": "script/start"
-    // "start": "npm-run-all --parallel watch:sass dj",
-    // "build": "npm-run-all build:*"
   },
   "devDependencies": {
+    "stylelint": "^15.1.0",
+    "stylelint-config-standard": "^33.0.0"
   }
 }

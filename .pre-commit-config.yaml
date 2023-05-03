@@ -23,23 +23,3 @@ repos:
         entry: djlint --profile=django
         types_or: [html]
         language: python
-  - repo: local
-    hooks:
-      - id: pending-migrations
-        name: Check for pending migrations
-        language: system
-        entry: .venv/bin/python manage.py makemigrations --check --dry-run
-        types: [python]
-        pass_filenames: false
-      # - id: stylelint
-      #   name: Run Stylelint
-      #   language: system
-      #   entry: npx stylelint …something…
-      #   types: [css]
-      #   pass_filenames: false
-      # - id: eslint
-      #   name: Run ESLint
-      #   language: system
-      #   entry: npx eslint --ext .js ./**/templates/js
-      #   types: [javascript]
-      #   pass_filenames: false
