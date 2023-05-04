@@ -18,8 +18,11 @@ django-admin startproject \
 pip-compile --resolver=backtracking requirements/requirements.in
 python -m pip install -r requirements/requirements.txt
 pre-commit install
+echo "SECRET_KEY={{ secret_key }}" >> .env
 echo "DEBUG=True" >> .env
 echo "ALLOWED_HOSTS=*" >> .env
+echo "CSRF_TRUSTED_ORIGINS=http://localhost" >> .env
+echo "DATABASE_URL=sqlite:///db.sqlite3" >> .env
 
 # Warm up the database and static files
 python manage.py collectstatic
@@ -35,4 +38,4 @@ npm install
 # Start a new Git project
 git init --initial-branch=main&&git add .&&git commit -m "New project from Piepwork's Django Starter."
 
-echo "\nNow run `source .venv/bin/activate&&./manage.py runserver`"
+echo "\nNow run these commands:\n\nsource .venv/bin/activate\n./manage.py runserver"
