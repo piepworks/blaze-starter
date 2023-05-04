@@ -1,6 +1,15 @@
 # Django Starter
 
-A little [Piepworks](https://piep.works) project.
+A little [Piepworks](https://piep.works) project to bootstrap a new [Django](https://djangoproject.com) project.
+
+- 🐍 Uses Django's built in [`django-admin` `template` option](https://docs.djangoproject.com/en/stable/ref/django-admin/#cmdoption-startapp-template).
+- 🫥 Sets up [a custom User model](https://docs.djangoproject.com/en/stable/topics/auth/customizing/#auth-custom-user).
+- 🎁 Sets up [pip-compile](https://pypi.org/project/pip-tools/) for easy dependency management.
+- 🤹 Sets up [pre-commit](https://pre-commit.com) to keep your code clean and working properly.
+- 🤩 Inspired (and helped) by the works of these folks.
+  - [jefftriplett/django-startproject: Django Start Project template with batteries](https://github.com/jefftriplett/django-startproject)
+  - [oliverandrich/django-poetry-startproject: Django startproject template with some poetry.](https://github.com/oliverandrich/django-poetry-startproject)
+  - [adamchainz/django-startproject-templates](https://github.com/adamchainz/django-startproject-templates)
 
 ## Requirements
 
