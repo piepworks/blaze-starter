@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This is to initially set up a project. You probably don't need to
 # ever run it again.
@@ -18,7 +18,9 @@ django-admin startproject \
 pip-compile --resolver=backtracking requirements/requirements.in
 python -m pip install -r requirements/requirements.txt
 pre-commit install
-echo "SECRET_KEY={{ secret_key }}" >> .env
+
+# Setup .env file
+echo "SECRET_KEY=$(eval ./dev/generate-django-key)" >> .env
 echo "DEBUG=True" >> .env
 echo "ALLOWED_HOSTS=*" >> .env
 echo "CSRF_TRUSTED_ORIGINS=http://localhost" >> .env
@@ -38,4 +40,5 @@ npm install
 # Start a new Git project
 git init --initial-branch=main&&git add .&&git commit -m "New project from Piepwork's Django Starter."
 
-echo "\nNow run these commands:\n\nsource .venv/bin/activate\n./manage.py runserver"
+# Explain next steps
+echo -e "\nNow run these commands:\n\nsource .venv/bin/activate\n./manage.py runserver"
