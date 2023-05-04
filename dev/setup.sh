@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# This is to initially set up a project. You probably don't need to
+# ever run it again.
+
 raw_folder=${PWD##*/} # Get the name of the current folder.
 project_folder=${raw_folder//-/_} # Replace hyphens with underscores.
 
@@ -14,6 +17,15 @@ django-admin startproject \
   $project_folder .
 pip-compile --resolver=backtracking requirements/requirements.in
 python -m pip install -r requirements/requirements.txt
+pre-commit install
+echo "DEBUG=True" >> .env
+echo "ALLOWED_HOSTS=*" >> .env
+
+# Warm up the database and static files
+python manage.py collectstatic
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
 
 # Setup JS stuff
 source $HOME/.nvm/nvm.sh
@@ -22,3 +34,5 @@ npm install
 
 # Start a new Git project
 git init --initial-branch=main&&git add .&&git commit -m "New project from Piepwork's Django Starter."
+
+echo "\nNow run `source .venv/bin/activate&&./manage.py runserver`"
