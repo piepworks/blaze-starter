@@ -3,11 +3,17 @@
 # This is to initially set up a project. You probably don't need to
 # ever run it again.
 
+# Set up reference to your project folder.
 raw_folder=${PWD##*/} # Get the name of the current folder.
 project_folder=${raw_folder//-/_} # Replace hyphens with underscores.
 
+# Install Gum for nice interactive prompts and status indicators.
+# https://charm.sh
+# https://github.com/charmbracelet/gum
+brew install gum
+
 # Setup Python stuff
-python3 -m venv --prompt . .venv
+gum spin -s line --title 'Set up virtual environment' -- python3 -m venv --prompt . .venv
 .venv/bin/pip install -U pip setuptools wheel
 source .venv/bin/activate
 python -m pip install pip-tools Django
