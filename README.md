@@ -10,7 +10,11 @@ A little [Piepworks](https://piep.works) project.
 
 ## Installation
 
+Replace `your-project` with whatever you want.
+
 ```shell
+mkdir your-project
+cd your-project
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/piepworks/django-starter/main/dev/setup.sh)"
 ```
 
