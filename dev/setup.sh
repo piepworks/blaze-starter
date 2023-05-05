@@ -3,9 +3,15 @@
 # This is to initially set up a project. You probably don't need to
 # ever run it again.
 
-# Set up reference to your project folder.
+format_python_friendly () {
+  # 1. Replace hyphens and spaces with underscores.
+  # 2. Make it all lowercase
+  echo "$1" | tr '-' '_' | tr ' ' '_' | tr '[:upper:]' '[:lower:]'
+}
+
+# Get (a version of) the name of the current folder
 raw_folder=${PWD##*/} # Get the name of the current folder.
-current_folder=${raw_folder//-/_} # Replace hyphens with underscores.
+current_folder=$(format_python_friendly "$raw_folder")
 
 # Install Gum for nice interactive prompts and status indicators.
 # https://charm.sh
@@ -16,23 +22,21 @@ fi
 
 export GUM_SPIN_SPINNER='line'
 export GUM_SPIN_SHOW_OUTPUT=true
-echo -e "\n"
-export PROJECT_NAME="$(gum input --prompt "Enter a name for this project (separate words with underscores): " --value="$(echo $current_folder)" --placeholder="$(echo $current_folder)")"
+temp_name="$(gum input --prompt "Enter a name for this project: " --value="${current_folder}" --placeholder="${current_folder}")"
+export PROJECT_NAME=$(format_python_friendly "$temp_name")
 export PROJECT_FOLDER="$(gum input --prompt "Enter a project folder (leave as ‘.’ for the current folder): " --value="." --placeholder=".")"
 export USERNAME="$(gum input --prompt "Enter a username for the Django admin: " --value "$(whoami)")"
 export EMAIL="$(gum input --prompt "Enter an email for this user: " --placeholder "you@example.com")"
 export DJANGO_SUPERUSER_PASSWORD="$(gum input --password --prompt "Enter a password for this user: ")"
 
 gum format -- \
-  "## Project Settings"\
-  "Project name   $(gum style --foreground 212 $PROJECT_NAME)"\
-  "Project folder $(gum style --foreground 212 $PROJECT_FOLDER)"\
-  "Username       $(gum style --foreground 212 $USERNAME)"\
+  "## Project Settings" \
+  "Project name   $(gum style --foreground 212 $PROJECT_NAME)" \
+  "Project folder $(gum style --foreground 212 $PROJECT_FOLDER)" \
+  "Username       $(gum style --foreground 212 $USERNAME)" \
   "Email address  $(gum style --foreground 212 $EMAIL)"
 
-gum confirm "Does this look ok?" &&\
-  gum style --margin="2" "Here we go!" ||\
-  gum style --margin="2" "Ok, let’s start over." && exit 1
+gum confirm "Does this look ok?" && echo -e "\n Here we go!" || exit 1
 
 # Setup Python stuff
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
@@ -77,8 +81,8 @@ git init --initial-branch=main&&git add .&&git commit -m "New project from Piepw
 
 # Explain next steps
 gum format -- \
-  "## Next steps:"\
-  "source .venv/bin/activate"\
-  "./manage.py runserver"\
-  "## If you need to change your password:"\
+  "## Next steps:" \
+  "source .venv/bin/activate" \
+  "./manage.py runserver" \
+  "## If you need to change your password:" \
   "./manage.py changepassword ${USERNAME}"
