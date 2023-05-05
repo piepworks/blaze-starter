@@ -5,7 +5,7 @@
 
 # Set up reference to your project folder.
 raw_folder=${PWD##*/} # Get the name of the current folder.
-project_folder=${raw_folder//-/_} # Replace hyphens with underscores.
+current_folder=${raw_folder//-/_} # Replace hyphens with underscores.
 
 # Install Gum for nice interactive prompts and status indicators.
 # https://charm.sh
@@ -16,9 +16,23 @@ fi
 
 export GUM_SPIN_SPINNER='line'
 export GUM_SPIN_SHOW_OUTPUT=true
+echo -e "\n"
+export PROJECT_NAME="$(gum input --prompt "Enter a name for this project (separate words with underscores): " --value="$(echo $current_folder)" --placeholder="$(echo $current_folder)")"
+export PROJECT_FOLDER="$(gum input --prompt "Enter a project folder (leave as ‘.’ for the current folder): " --value="." --placeholder=".")"
 export USERNAME="$(gum input --prompt "Enter a username for the Django admin: " --value "$(whoami)")"
-export EMAIL="$(gum input --prompt "Enter an email for the Django admin: " --placeholder "you@example.com")"
-export DJANGO_SUPERUSER_PASSWORD="$(gum input --password --prompt "Enter a password for the Django admin: ")"
+export EMAIL="$(gum input --prompt "Enter an email for this user: " --placeholder "you@example.com")"
+export DJANGO_SUPERUSER_PASSWORD="$(gum input --password --prompt "Enter a password for this user: ")"
+
+gum format -- \
+  "## Project Settings"\
+  "Project name   $(gum style --foreground 212 $PROJECT_NAME)"\
+  "Project folder $(gum style --foreground 212 $PROJECT_FOLDER)"\
+  "Username       $(gum style --foreground 212 $USERNAME)"\
+  "Email address  $(gum style --foreground 212 $EMAIL)"
+
+gum confirm "Does this look ok?" &&\
+  gum style --margin="2" "Here we go!" ||\
+  gum style --margin="2" "Ok, let’s start over." && exit 1
 
 # Setup Python stuff
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
@@ -30,7 +44,7 @@ gum spin --title "Warm up virtual environment" -- python -m pip install pip-tool
 gum spin --title "Install Django Starter" -- django-admin startproject \
   --extension=ini,py,toml,yaml,yml \
   --template=https://github.com/piepworks/django-starter/archive/main.zip \
-  $project_folder .
+  $PROJECT_NAME $PROJECT_FOLDER
 gum spin --title "Install Python dependencies" -- pip-compile --resolver=backtracking requirements/requirements.in
 gum spin --title "Install Python dependencies" -- python -m pip install -r requirements/requirements.txt
 gum spin --title "Install Python dependencies" -- pre-commit install
@@ -67,4 +81,4 @@ gum format -- \
   "source .venv/bin/activate"\
   "./manage.py runserver"\
   "## If you need to change your password:"\
-  "./manage.py changepassword $(echo $USERNAME)"
+  "./manage.py changepassword ${USERNAME}"
