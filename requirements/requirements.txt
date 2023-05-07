@@ -34,7 +34,7 @@ dj-database-url==2.0.0
     #   environs
 dj-email-url==1.0.6
     # via environs
-django==4.2
+django==4.2.1
     # via
     #   -r requirements/requirements.in
     #   dj-database-url
@@ -64,9 +64,9 @@ html-tag-names==0.1.2
     # via djlint
 html-void-elements==0.1.0
     # via djlint
-identify==2.5.23
+identify==2.5.24
     # via pre-commit
-ipython==8.13.1
+ipython==8.13.2
     # via -r requirements/requirements.in
 jedi==0.18.2
     # via ipython
@@ -100,7 +100,7 @@ platformdirs==3.5.0
     # via
     #   black
     #   virtualenv
-pre-commit==3.2.2
+pre-commit==3.3.1
     # via -r requirements/requirements.in
 prompt-toolkit==3.0.38
     # via ipython
@@ -116,7 +116,7 @@ pyyaml==6.0
     # via
     #   djlint
     #   pre-commit
-regex==2023.3.23
+regex==2023.5.5
     # via djlint
 six==1.16.0
     # via
