@@ -3,6 +3,9 @@
 # This is to initially set up a project. You probably don't need to
 # ever run it again.
 
+# Allow exiting the script with ctrl+c any time.
+set -e
+
 format_python_friendly () {
   # 1. Replace hyphens and spaces with underscores.
   # 2. Make it all lowercase
