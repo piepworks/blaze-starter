@@ -38,6 +38,14 @@ gum format -- \
 
 gum confirm "Does this look ok?" && echo -e "\n Here we go!" || exit 1
 
+NEXT_STEP_ADDENDUM=""
+if [ "${PROJECT_FOLDER}" != "." ]; then
+  mkdir $PROJECT_FOLDER
+  cd $PROJECT_FOLDER
+
+  NEXT_STEP_ADDENDUM="cd $PROJECT_FOLDER"
+fi
+
 # Setup Python stuff
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
   "Installing $(gum style --foreground 212 'Python') goodies…"
@@ -48,7 +56,7 @@ gum spin --title "Warm up virtual environment" -- python -m pip install pip-tool
 gum spin --title "Install Django Starter" -- django-admin startproject \
   --extension=ini,py,toml,yaml,yml \
   --template=https://github.com/piepworks/django-starter/archive/main.zip \
-  $PROJECT_NAME $PROJECT_FOLDER
+  $PROJECT_NAME .
 gum spin --title "Install Python dependencies" -- pip-compile --resolver=backtracking requirements/requirements.in
 gum spin --title "Install Python dependencies" -- python -m pip install -r requirements/requirements.txt
 gum spin --title "Install Python dependencies" -- pre-commit install
@@ -82,6 +90,7 @@ git init --initial-branch=main&&git add .&&git commit -m "New project from Piepw
 # Explain next steps
 gum format -- \
   "## Next steps:" \
+  "${NEXT_STEP_ADDENDUM}" \
   "source .venv/bin/activate" \
   "./manage.py runserver" \
   "## If you need to change your password:" \

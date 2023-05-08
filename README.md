@@ -24,8 +24,6 @@ A little [Piepworks](https://piep.works) project to bootstrap a new [Django](htt
 Replace `your-project` with whatever you want.
 
 ```shell
-mkdir your-project
-cd your-project
 /bin/bash -c "$(curl -fsSL https://piep.works/scripts/django-starter)"
 ```
 
