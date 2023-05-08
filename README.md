@@ -6,6 +6,7 @@ A little [Piepworks](https://piep.works) project to bootstrap a new [Django](htt
 - 🫥 Sets up [a custom User model](https://docs.djangoproject.com/en/stable/topics/auth/customizing/#auth-custom-user).
 - 🎁 [pip-compile](https://pypi.org/project/pip-tools/) for easy dependency management.
 - 🤹 [pre-commit](https://pre-commit.com) to keep your code clean and working properly.
+- 🐎 One horsepower is all you need!
 - 🤩 Inspired (and helped) by the works of these folks. Thank you!
   - [jefftriplett/django-startproject: Django Start Project template with batteries](https://github.com/jefftriplett/django-startproject)
   - [oliverandrich/django-poetry-startproject: Django startproject template with some poetry.](https://github.com/oliverandrich/django-poetry-startproject)
