@@ -27,6 +27,8 @@ Replace `your-project` with whatever you want.
 /bin/bash -c "$(curl -fsSL https://piep.works/scripts/django-starter)"
 ```
 
+[Here's the script that command runs.](https://github.com/piepworks/django-starter/blob/main/dev/setup.sh)
+
 <details>
 <summary>Here's what the <code>curl</code> flags mean if you're interested.</summary>
   <ul>
