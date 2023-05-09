@@ -3,8 +3,8 @@
 # This is to initially set up a project. You probably don't need to
 # ever run it again.
 
-export GUM_SPIN_SPINNER='line'
-export GUM_SPIN_SHOW_OUTPUT=true
+# Allow exiting the script with ctrl+c
+set -e
 
 format_python_friendly () {
   # 1. Replace hyphens and spaces with underscores.
@@ -36,11 +36,13 @@ if ! command -v gum &> /dev/null; then
   brew install gum
 fi
 
+export GUM_SPIN_SPINNER='line'
+export GUM_SPIN_SHOW_OUTPUT=true
 temp_name="$(require "gum input --prompt 'Enter a name for this project: ' --value='${current_folder}' --placeholder='${current_folder}'")"
-export PROJECT_NAME=$(format_python_friendly "$temp_name")
-export PROJECT_FOLDER="$(require "gum input --prompt 'Enter a project folder (leave as ‘.’ for the current folder): ' --value='.' --placeholder='.'")"
-export USERNAME="$(require "gum input --prompt 'Enter a username for the Django admin: ' --value '$(whoami)'")"
-export EMAIL="$(require "gum input --prompt 'Enter an email for this user: ' --placeholder 'you@example.com'")"
+PROJECT_NAME=$(format_python_friendly "$temp_name")
+PROJECT_FOLDER="$(require "gum input --prompt 'Enter a project folder (leave as ‘.’ for the current folder): ' --value='.' --placeholder='.'")"
+USERNAME="$(require "gum input --prompt 'Enter a username for the Django admin: ' --value '$(whoami)'")"
+EMAIL="$(require "gum input --prompt 'Enter an email for this user: ' --placeholder 'you@example.com'")"
 export DJANGO_SUPERUSER_PASSWORD="$(require "gum input --password --prompt 'Enter a password for this user: '")"
 
 gum format -- \
@@ -94,7 +96,7 @@ gum spin --title "Creating initial superuser account" -- python manage.py create
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
   "Installing $(gum style --foreground 212 'JavaScript') goodies…"
 source $HOME/.nvm/nvm.sh
-gum spin --title "Making sure we’re using the right version of Node" -- nvm install
+gum spin --title "Making sure we’re using the right version of Node" -- sleep 1&&nvm install
 gum spin --title "Installing JavaScript dependencies" -- npm install
 
 # Start a new Git project
