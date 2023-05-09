@@ -36,6 +36,7 @@ if ! command -v gum &> /dev/null; then
   brew install gum
 fi
 
+# Ask a few questions to get going.
 export GUM_SPIN_SPINNER='line'
 export GUM_SPIN_SHOW_OUTPUT=true
 temp_name="$(require "gum input --prompt 'Enter a name for this project: ' --value='${current_folder}' --placeholder='${current_folder}'")"

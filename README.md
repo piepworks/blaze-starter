@@ -21,7 +21,7 @@ A little [Piepworks](https://piep.works) project to bootstrap a new [Django](htt
 
 ## Installation
 
-Replace `your-project` with whatever you want.
+Run the following command in your Terminal app.
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://piep.works/scripts/django-starter)"
