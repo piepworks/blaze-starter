@@ -6,10 +6,25 @@
 # Allow exiting the script with ctrl+c any time.
 set -e
 
+export GUM_SPIN_SPINNER='line'
+export GUM_SPIN_SHOW_OUTPUT=true
+
 format_python_friendly () {
   # 1. Replace hyphens and spaces with underscores.
   # 2. Make it all lowercase
   echo "$1" | tr '-' '_' | tr ' ' '_' | tr '[:upper:]' '[:lower:]'
+}
+
+require () {
+  set -e
+  while true; do
+    input=$(eval "$@")
+    if [[ "$input" != "" ]]
+    then
+      echo "$input"
+      break
+    fi
+  done
 }
 
 # Get (a version of) the name of the current folder
@@ -23,14 +38,12 @@ if ! command -v gum &> /dev/null; then
   brew install gum
 fi
 
-export GUM_SPIN_SPINNER='line'
-export GUM_SPIN_SHOW_OUTPUT=true
-temp_name="$(gum input --prompt "Enter a name for this project: " --value="${current_folder}" --placeholder="${current_folder}")"
+temp_name="$(require "gum input --prompt 'Enter a name for this project: ' --value='${current_folder}' --placeholder='${current_folder}'")"
 export PROJECT_NAME=$(format_python_friendly "$temp_name")
-export PROJECT_FOLDER="$(gum input --prompt "Enter a project folder (leave as ‘.’ for the current folder): " --value="." --placeholder=".")"
-export USERNAME="$(gum input --prompt "Enter a username for the Django admin: " --value "$(whoami)")"
-export EMAIL="$(gum input --prompt "Enter an email for this user: " --placeholder "you@example.com")"
-export DJANGO_SUPERUSER_PASSWORD="$(gum input --password --prompt "Enter a password for this user: ")"
+export PROJECT_FOLDER="$(require "gum input --prompt 'Enter a project folder (leave as ‘.’ for the current folder): ' --value='.' --placeholder='.'")"
+export USERNAME="$(require "gum input --prompt 'Enter a username for the Django admin: ' --value '$(whoami)'")"
+export EMAIL="$(require "gum input --prompt 'Enter an email for this user: ' --placeholder 'you@example.com'")"
+export DJANGO_SUPERUSER_PASSWORD="$(require "gum input --password --prompt 'Enter a password for this user: '")"
 
 gum format -- \
   "## Project Settings" \
