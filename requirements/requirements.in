@@ -8,4 +8,5 @@ environs[django]
 gunicorn
 ipython
 pre-commit
+pytest-django
 whitenoise
