@@ -1,5 +1,6 @@
 black
 dj-database-url
+django-admin-extra-buttons
 django-browser-reload
 django-debug-toolbar
 Django<5.0

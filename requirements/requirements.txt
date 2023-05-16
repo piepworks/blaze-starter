@@ -43,6 +43,8 @@ django==4.2.1
     #   dj-database-url
     #   django-browser-reload
     #   django-debug-toolbar
+django-admin-extra-buttons==1.5.6
+    # via -r requirements/requirements.in
 django-browser-reload==1.8.0
     # via -r requirements/requirements.in
 django-cache-url==3.4.4
