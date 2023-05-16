@@ -1,5 +1,6 @@
 [tool.black]
 target-version = ['py311']
+include = '\.py-tpl$'
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
