@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "ms-python.black-formatter",
+        "batisteo.vscode-django",
+        "monosans.djlint"
+    ]
+}
