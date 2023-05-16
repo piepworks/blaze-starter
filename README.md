@@ -24,10 +24,12 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
 
 <details>
   <summary>Requirements</summary>
-  <li><a href="https://www.apple.com/macos/">macOS</a></li>
-  <li><a href="https://brew.sh">Homebrew</a></li>
-  <li><a href="https://www.python.org/downloads/">Python version 3</a></li>
-  <li><a href="https://github.com/nvm-sh/nvm">Node Version Manager</a></li>
+  <ul>
+    <li><a href="https://www.apple.com/macos/">macOS</a></li>
+    <li><a href="https://brew.sh">Homebrew</a></li>
+    <li><a href="https://www.python.org/downloads/">Python version 3</a></li>
+    <li><a href="https://github.com/nvm-sh/nvm">Node Version Manager</a></li>
+  </ul>
 </details>
 
 💌 [Sign up for the newsletter!](https://buttondown.email/blaze.horse/)

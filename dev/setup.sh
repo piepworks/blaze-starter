@@ -101,7 +101,7 @@ gum spin --title "Making sure we’re using the right version of Node" -- sleep 
 gum spin --title "Installing JavaScript dependencies" -- npm install
 
 # Start a new Git project
-git init --initial-branch=main&&git add .&&git commit -m "New project from Blaze.horse / Hippocampus."
+git init --initial-branch=main&&git add .&&git commit -m "New project from 🔥.🐴 / Hippocampus."
 gum spin --title "Installing Git pre-commit hooks" -- pre-commit install
 
 # Explain next steps
