@@ -1,0 +1,5 @@
+#!/bin/sh
+
+python3 -m venv --prompt . .venv
+.venv/bin/pip install -U pip setuptools wheel
+.venv/bin/python -m pip install -r requirements/requirements.txt
