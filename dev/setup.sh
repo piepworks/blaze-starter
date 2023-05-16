@@ -41,10 +41,21 @@ export GUM_SPIN_SPINNER='line'
 export GUM_SPIN_SHOW_OUTPUT=true
 temp_name="$(require "gum input --prompt 'Enter a name for this project: ' --value='${current_folder}' --placeholder='${current_folder}'")"
 PROJECT_NAME=$(format_python_friendly "$temp_name")
-PROJECT_FOLDER="$(require "gum input --prompt 'Enter a project folder (leave as ‘.’ for the current folder): ' --value='.' --placeholder='.'")"
+PROJECT_FOLDER="$(gum input --prompt "Enter a project folder (leave blank to use the current folder, ${raw_folder}): " --placeholder='project-folder')"
 USERNAME="$(require "gum input --prompt 'Enter a username for the Django admin: ' --value '$(whoami)'")"
 EMAIL="$(require "gum input --prompt 'Enter an email for this user: ' --placeholder 'you@example.com'")"
 export DJANGO_SUPERUSER_PASSWORD="$(require "gum input --password --prompt 'Enter a password for this user: '")"
+
+if [ "${PROJECT_FOLDER}" == "" ]; then
+  PROJECT_FOLDER=$raw_folder
+  NEXT_STEP_ADDENDUM=""
+else
+  mkdir $PROJECT_FOLDER
+  cd $PROJECT_FOLDER
+
+  NEXT_STEP_ADDENDUM="cd $PROJECT_FOLDER"
+  PROJECT_FOLDER="${raw_folder}/${PROJECT_FOLDER}"
+fi
 
 gum format -- \
   "## Project Settings" \
@@ -55,13 +66,6 @@ gum format -- \
 
 gum confirm "Does this look ok?" && echo -e "\n Here we go!" || exit 1
 
-NEXT_STEP_ADDENDUM=""
-if [ "${PROJECT_FOLDER}" != "." ]; then
-  mkdir $PROJECT_FOLDER
-  cd $PROJECT_FOLDER
-
-  NEXT_STEP_ADDENDUM="cd $PROJECT_FOLDER"
-fi
 
 # Setup Python stuff
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
