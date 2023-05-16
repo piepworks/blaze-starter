@@ -18,7 +18,7 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
   <p>Only pay when you’re ready to launch your project! We want to make sure you get exactly what you need before money changes hands.</p>
 </details>
 
-[Sign up to the newsletter!](https://buttondown.email/blaze.horse/)
+[Sign up for the newsletter!](https://buttondown.email/blaze.horse/)
 
 ## Requirements
 
