@@ -1,16 +1,24 @@
-# Django Starter
+# Codename: _[Hippocampus](https://en.wikipedia.org/wiki/Hippocampus_(mythology))_
 
-A little [Piepworks](https://piep.works) project to bootstrap a new [Django](https://djangoproject.com) project.
+From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books](https://listsofbooks.com). We’ve distilled what we’ve learned into an easy-to-use Django starter project that’ll set you up for success!
 
-- 🐍 Uses Django's built in [`django-admin` `template` option](https://docs.djangoproject.com/en/stable/ref/django-admin/#cmdoption-startapp-template).
-- 🫥 Sets up [a custom User model](https://docs.djangoproject.com/en/stable/topics/auth/customizing/#auth-custom-user).
-- 🎁 [pip-compile](https://pypi.org/project/pip-tools/) for easy dependency management.
-- 🤹 [pre-commit](https://pre-commit.com) to keep your code clean and working properly.
-- 🐎 One horsepower is all you need!
-- 🤩 Inspired (and helped) by the works of these folks. Thank you!
-  - [jefftriplett/django-startproject: Django Start Project template with batteries](https://github.com/jefftriplett/django-startproject)
-  - [oliverandrich/django-poetry-startproject: Django startproject template with some poetry.](https://github.com/oliverandrich/django-poetry-startproject)
-  - [adamchainz/django-startproject-templates](https://github.com/adamchainz/django-startproject-templates)
+<details>
+  <summary role="button" class="primary"><del>Batteries</del> <u>Reins and Saddle</u> included!</summary>
+  <ul>
+    <li>🐍 Uses Django’s built-in <a href="https://docs.djangoproject.com/en/stable/ref/django-admin/#cmdoption-startapp-template">django-admin --template option</a>.</li>
+    <li>🫥 Sets up <a href="https://docs.djangoproject.com/en/stable/topics/auth/customizing/#auth-custom-user">a custom User model</a>.</li>
+    <li>🎁 <a href="https://pypi.org/project/pip-tools/">pip-compile</a> for easy dependency management.</li>
+    <li>📐 <a href="https://pre-commit.com">pre-commit</a> to keep your code clean and working properly.</li>
+    <li>🫀 Sets you up to build <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement">progressively-enhanced</a>, accessible websites and applications.</li>
+  </ul>
+</details>
+
+<details>
+  <summary role="button" class="primary">Free to try!</summary>
+  <p>Only pay when you’re ready to launch your project! We want to make sure you get exactly what you need before money changes hands.</p>
+</details>
+
+[Sign up to the newsletter!](https://buttondown.email/blaze.horse/)
 
 ## Requirements
 
@@ -24,10 +32,10 @@ A little [Piepworks](https://piep.works) project to bootstrap a new [Django](htt
 Run the following command in your Terminal app.
 
 ```shell
-/bin/bash -c "$(curl -fsSL https://blaze.horse/scripts/django-starter)"
+/bin/bash -c "$(curl -fsSL https://blaze.horse/hippocampus/install)"
 ```
 
-[Here's the script that command runs.](https://github.com/piepworks/django-starter/blob/main/dev/setup.sh)
+[Here's the script that command runs.](https://github.com/piepworks/hippocampus/blob/main/dev/setup.sh)
 
 <details>
 <summary>Here's what the <code>curl</code> flags mean if you're interested.</summary>
@@ -38,3 +46,8 @@ Run the following command in your Terminal app.
     <li><code>-L</code> = "If the server reports that the requested page has moved to a different location (indicated with a Location: header and a 3XX response code), this option will make curl redo the request on the new place."</li>
   </ul>
 </details>
+
+## 🤩 Inspired (and helped) by the works of these folks. Thank you!
+- [jefftriplett/django-startproject: Django Start Project template with batteries](https://github.com/jefftriplett/django-startproject)
+- [oliverandrich/django-poetry-startproject: Django startproject template with some poetry.](https://github.com/oliverandrich/django-poetry-startproject)
+- [adamchainz/django-startproject-templates](https://github.com/adamchainz/django-startproject-templates)
