@@ -13,6 +13,7 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
     <li>🫥 Sets up <a href="https://docs.djangoproject.com/en/stable/topics/auth/customizing/#auth-custom-user">a custom User model</a>.</li>
     <li>🎁 <a href="https://pypi.org/project/pip-tools/">pip-compile</a> for easy dependency management.</li>
     <li>📐 <a href="https://pre-commit.com">pre-commit</a> to keep your code clean and working properly.</li>
+    <li>🧪 <a href="https://pytest-django.readthedocs.io/en/latest/">pytest</a> for fast, easy-to-write tests.</li>
     <li>🫀 Sets you up to build <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement">progressively-enhanced</a>, accessible websites and applications.</li>
   </ul>
 </details>
@@ -23,7 +24,7 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
 </details>
 
 <details>
-  <summary>Requirements</summary>
+  <summary>Local system requirements</summary>
   <ul>
     <li><a href="https://www.apple.com/macos/">macOS</a></li>
     <li><a href="https://brew.sh">Homebrew</a></li>

@@ -66,7 +66,6 @@ gum format -- \
 
 gum confirm "Does this look ok?" && echo -e "\n Here we go!" || exit 1
 
-
 # Setup Python stuff
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
   "Installing $(gum style --foreground 212 'Python') goodies…"
