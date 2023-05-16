@@ -1,6 +1,10 @@
 # Codename: _[Hippocampus](https://en.wikipedia.org/wiki/Hippocampus_(mythology))_
 
-From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books](https://listsofbooks.com). We’ve distilled what we’ve learned into an easy-to-use Django starter project that’ll set you up for success!
+## 🔥.🐴
+
+## Get your next [Django](https://www.djangoproject.com/start/overview/) project out the starting gate in a hurry!
+
+From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books](https://listsofbooks.com). We’ve distilled what we’ve learned into an easy-to-use starter project that’ll set you up for success!
 
 <details>
   <summary role="button" class="primary"><del>Batteries</del> <u>Reins and Saddle</u> included!</summary>
@@ -18,14 +22,16 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
   <p>Only pay when you’re ready to launch your project! We want to make sure you get exactly what you need before money changes hands.</p>
 </details>
 
-[Sign up for the newsletter!](https://buttondown.email/blaze.horse/)
+<details>
+  <summary>Requirements</summary>
+  <li><a href="https://www.apple.com/macos/">macOS</a></li>
+  <li><a href="https://brew.sh">Homebrew</a></li>
+  <li><a href="https://www.python.org/downloads/">Python version 3</a></li>
+  <li><a href="https://github.com/nvm-sh/nvm">Node Version Manager</a></li>
+</details>
 
-## Requirements
+💌 [Sign up for the newsletter!](https://buttondown.email/blaze.horse/)
 
-- [macOS](https://www.apple.com/macos/)
-- [Homebrew](https://brew.sh)
-- [Python version 3](https://www.python.org/downloads/)
-- [Node Version Manager](https://github.com/nvm-sh/nvm)
 
 ## Installation
 
@@ -38,7 +44,7 @@ Run the following command in your Terminal app.
 [Here's the script that command runs.](https://github.com/piepworks/hippocampus/blob/main/dev/setup.sh)
 
 <details>
-<summary>Here's what the <code>curl</code> flags mean if you're interested.</summary>
+  <summary>Here's what the <code>curl</code> flags mean if you're interested.</summary>
   <ul>
     <li><code>-f</code> = "Fail fast with no output at all on server errors."</li>
     <li><code>-s</code> = "Silent or quiet mode."</li>
