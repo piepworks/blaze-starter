@@ -70,7 +70,7 @@ gum spin --title "Setting up Python virtual environment" -- python3 -m venv --pr
 gum spin --title "Warming up virtual environment" -- .venv/bin/pip install -U pip setuptools wheel
 source .venv/bin/activate
 gum spin --title "Warming up virtual environment" -- python -m pip install pip-tools Django
-gum spin --title "Installing Django Starter" -- django-admin startproject \
+gum spin --title "Installing Hippocampus" -- django-admin startproject \
   --extension=ini,py,toml,yaml,yml \
   --template=https://github.com/piepworks/django-starter/archive/main.zip \
   $PROJECT_NAME .
@@ -101,7 +101,7 @@ gum spin --title "Making sure we’re using the right version of Node" -- sleep 
 gum spin --title "Installing JavaScript dependencies" -- npm install
 
 # Start a new Git project
-git init --initial-branch=main&&git add .&&git commit -m "New project from Piepwork's Django Starter."
+git init --initial-branch=main&&git add .&&git commit -m "New project from Blaze.horse / Hippocampus."
 gum spin --title "Installing Git pre-commit hooks" -- pre-commit install
 
 # Explain next steps
