@@ -74,7 +74,7 @@ gum spin --title "Warming up virtual environment" -- .venv/bin/pip install -U pi
 source .venv/bin/activate
 gum spin --title "Warming up virtual environment" -- python -m pip install pip-tools Django
 gum spin --title "Installing Hippocampus" -- django-admin startproject \
-  --extension=ini,py,toml,yaml,yml \
+  --exclude=.git,__pycache__,.env \
   --template=https://github.com/piepworks/django-starter/archive/main.zip \
   $PROJECT_NAME .
 gum spin --title "Installing Python dependencies" -- pip-compile --resolver=backtracking requirements/requirements.in
