@@ -3,6 +3,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 from django.views.generic.base import TemplateView
+from config.settings import ALLOWED_HOSTS
 
 urlpatterns = [
     # TODO: Remove this template and add your own.
@@ -10,7 +11,11 @@ urlpatterns = [
         "", TemplateView.as_view(template_name="placeholder.html"), name="placeholder"
     ),
     # TODO: Change the `admin/` path to something custom.
-    path(settings.ADMIN_URL, admin.site.urls),
+    path(
+        settings.ADMIN_URL,
+        admin.site.urls,
+        {"extra_context": {"ALLOWED_HOST": ALLOWED_HOSTS[0]}},
+    ),
 ]
 
 if settings.DEBUG:
