@@ -1,5 +1,7 @@
 {% extends "admin/base.html" %}
 {% block pretitle %}
-<div><a href="https://example.com/?host={{ ALLOWED_HOST }}">Check registration status</a></div>
-{{ block.super }}
+  {% if user.is_authenticated %}
+    <div><a href="https://example.com/?host={{ ALLOWED_HOST }}">Check registration status</a></div>
+    {{ block.super }}
+  {% endif %}
 {% endblock pretitle %}
