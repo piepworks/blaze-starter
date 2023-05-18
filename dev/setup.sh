@@ -42,7 +42,6 @@ export GUM_SPIN_SHOW_OUTPUT=true
 temp_name="$(require "gum input --prompt 'Enter a name for this project: ' --value='${current_folder}' --placeholder='${current_folder}'")"
 PROJECT_NAME=$(format_python_friendly "$temp_name")
 PROJECT_FOLDER="$(gum input --prompt "Enter a project folder (leave blank to use the current folder, ${raw_folder}): " --placeholder='project-folder')"
-USERNAME="$(require "gum input --prompt 'Enter a username for the Django admin: ' --value '$(whoami)'")"
 EMAIL="$(require "gum input --prompt 'Enter an email for this user: ' --placeholder 'you@example.com'")"
 export DJANGO_SUPERUSER_PASSWORD="$(require "gum input --password --prompt 'Enter a password for this user: '")"
 
@@ -61,7 +60,6 @@ gum format -- \
   "## Project Settings" \
   "Project name   $(gum style --foreground 212 $PROJECT_NAME)" \
   "Project folder $(gum style --foreground 212 $PROJECT_FOLDER)" \
-  "Username       $(gum style --foreground 212 $USERNAME)" \
   "Email address  $(gum style --foreground 212 $EMAIL)"
 
 gum confirm "Does this look ok?" && echo -e "\n Here we go!" || exit 1
@@ -93,8 +91,7 @@ gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
 gum spin --title "Collecting static files" -- python manage.py collectstatic
 gum spin --title "Warming up the database" -- python manage.py makemigrations
 gum spin --title "Warming up the database" -- python manage.py migrate
-gum spin --title "Creating initial superuser account" -- python manage.py createsuperuser \
-  --noinput --username=$USERNAME --email=$EMAIL
+gum spin --title "Creating initial superuser account" -- python manage.py createsuperuser --noinput --email=$EMAIL
 
 # Setup JS stuff
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
