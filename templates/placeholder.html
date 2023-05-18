@@ -1,17 +1,7 @@
-{# djlint:off #}{% load static %}<!DOCTYPE html>{# djlint:on #}
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A very interesting website.">
-  <title>🔥.🐴 / Hippocampus by Piepworks</title>
-  <link rel="stylesheet" href="{% static 'css/vendor/pico-1.5.9.min.css' %}">
-  <style>
-    body { padding: 3rem; }
-  </style>
-</head>
-<body>
-  <h1>🔥.🐴 / Hippocampus by <a href="https://piep.works">Piepworks</a></h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}🔥.🐴 / Hippocampus by Piepworks{% endblock title %}
+
+{% block content %}
+<h1>🔥.🐴 / Hippocampus by Piepworks</h1>
+{% endblock content %}
