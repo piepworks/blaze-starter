@@ -1,7 +1,10 @@
 {
     "editor.formatOnSave": false,
     "[python]": {
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": true
+    },
+    "[django-html]": {
+        "editor.tabSize": 2
     },
     "editor.codeActionsOnSave": {
         "source.fixAll.stylelint": true,
@@ -11,7 +14,7 @@
         "*.py-tpl": "python",
         "*.html": "django-html",
         "*.js": "javascript",
-        "*.svg": "django-html",
+        "*.svg": "django-html"
     },
     "python.formatting.provider": "black"
 }
