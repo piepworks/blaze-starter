@@ -2,6 +2,7 @@ black
 dj-database-url
 django-browser-reload
 django-debug-toolbar
+django-extensions
 Django<5.0
 djlint
 environs[django]

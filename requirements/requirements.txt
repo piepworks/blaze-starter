@@ -43,11 +43,14 @@ django==4.2.1
     #   dj-database-url
     #   django-browser-reload
     #   django-debug-toolbar
+    #   django-extensions
 django-browser-reload==1.8.0
     # via -r requirements/requirements.in
 django-cache-url==3.4.4
     # via environs
 django-debug-toolbar==4.0.0
+    # via -r requirements/requirements.in
+django-extensions==3.2.1
     # via -r requirements/requirements.in
 djlint==1.25.0
     # via -r requirements/requirements.in
