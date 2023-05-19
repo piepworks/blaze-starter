@@ -3,5 +3,13 @@
 {% block title %}🔥.🐴 / Hippocampus by Piepworks{% endblock title %}
 
 {% block content %}
-<h1>🔥.🐴 / Hippocampus by Piepworks</h1>
+  <h1>🔥.🐴 / Hippocampus by Piepworks</h1>
+
+  {% if request.user.is_authenticated %}
+    <p>You’re logged in as {{ request.user }}!</p>
+    <p>Now you can see <a href="{% url 'private-page' %}">the private page</a>.</p>
+    <p><a href="{% url 'logout' %}">Log out</a></p>
+  {% else %}
+    <p><a href="{% url 'login' %}">Log in</a></p>
+  {% endif %}
 {% endblock content %}

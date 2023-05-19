@@ -167,6 +167,8 @@ if DEBUG:
 
 # Our settings
 
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
+ADMIN_EMAIL_FROM = env("ADMIN_EMAIL_FROM", default="admin@example.com")
+ADMIN_EMAIL_TO = env("ADMIN_EMAIL_TO", default="admin@example.com")
 ADMIN_URL = env("ADMIN_URL", default="admin/")
-
-SITE_ID = 1

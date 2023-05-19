@@ -42,7 +42,7 @@ export GUM_SPIN_SHOW_OUTPUT=true
 temp_name="$(require "gum input --prompt 'Enter a name for this project: ' --value='${current_folder}' --placeholder='${current_folder}'")"
 PROJECT_NAME=$(format_python_friendly "$temp_name")
 PROJECT_FOLDER="$(gum input --prompt "Enter a project folder (leave blank to use the current folder, ${raw_folder}): " --placeholder='project-folder')"
-EMAIL="$(require "gum input --prompt 'Enter an email for this user: ' --placeholder 'you@example.com'")"
+EMAIL="$(require "gum input --prompt 'Enter an email for the Django admin: ' --placeholder 'you@example.com'")"
 export DJANGO_SUPERUSER_PASSWORD="$(require "gum input --password --prompt 'Enter a password for this user: '")"
 
 if [ "${PROJECT_FOLDER}" == "" ]; then
@@ -111,4 +111,4 @@ gum format -- \
   "source .venv/bin/activate" \
   "./manage.py runserver" \
   "## If you need to change your password:" \
-  "./manage.py changepassword ${USERNAME}"
+  "./manage.py changepassword '${EMAIL}'"
