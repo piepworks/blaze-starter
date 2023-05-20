@@ -140,6 +140,11 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+# For favicons and whatnot.
+WHITENOISE_ROOT = BASE_DIR / "static_nonversioned"
+if not DEBUG:
+    WHITENOISE_MAX_AGE = 60 * 60 * 24  # One day
+
 STORAGES = {
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",

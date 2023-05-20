@@ -1,7 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
+from django.conf import settings
 from django.urls import reverse
+from django.http import FileResponse
 from django.contrib.auth.decorators import login_required
+from django.contrib.sites.shortcuts import get_current_site
+from django.views.decorators.cache import cache_control
+from django.views.decorators.http import require_GET
 from django.contrib.sites.shortcuts import get_current_site
 from .forms import RegisterForm
 from .utils import send_email_to_admin
@@ -16,6 +21,13 @@ def placeholder(request):
 def private_page(request):
     context = {}
     return render(request, "private.html", context)
+
+
+@require_GET
+@cache_control(max_age=60 * 60 * 24, immutable=True, public=True)  # One day
+def favicon(request):
+    file = (settings.BASE_DIR / "static" / "img" / "seahorse-64x64.png").open("rb")
+    return FileResponse(file)
 
 
 def register(request):

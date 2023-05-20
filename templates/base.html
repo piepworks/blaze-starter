@@ -5,14 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A very interesting website.">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <title>{% block title %}{% endblock title %}</title>
   <link rel="stylesheet" href="{% static 'css/vendor/pico-1.5.9.min.css' %}">
-  <style>
-    body { padding: 3rem; }
-  </style>
+  <style>footer small { font-size: 0.75rem; }</style>
 </head>
 <body>
-  {% block content %}
-  {% endblock content %}
+  <main class="container">
+    {% block content %}
+    {% endblock content %}
+  </main>
+  <footer class="container">
+    <small><a href="https://www.flaticon.com/free-icon/seahorse_1864489">Seahorse icon from Freepik on Flaticon.com</a></small>
+  </footer>
 </body>
 </html>
