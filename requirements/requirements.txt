@@ -48,11 +48,11 @@ django-browser-reload==1.8.0
     # via -r requirements/requirements.in
 django-cache-url==3.4.4
     # via environs
-django-debug-toolbar==4.0.0
+django-debug-toolbar==4.1.0
     # via -r requirements/requirements.in
 django-extensions==3.2.1
     # via -r requirements/requirements.in
-djlint==1.25.0
+djlint==1.28.0
     # via -r requirements/requirements.in
 editorconfig==0.12.3
     # via
@@ -82,13 +82,15 @@ jsbeautifier==1.14.7
     # via
     #   cssbeautifier
     #   djlint
+json5==0.9.14
+    # via djlint
 marshmallow==3.19.0
     # via environs
 matplotlib-inline==0.1.6
     # via ipython
 mypy-extensions==1.0.0
     # via black
-nodeenv==1.7.0
+nodeenv==1.8.0
     # via pre-commit
 packaging==23.1
     # via
@@ -108,13 +110,13 @@ pickleshare==0.7.5
     # via ipython
 pip-tools==6.13.0
     # via -r requirements/requirements.in
-platformdirs==3.5.0
+platformdirs==3.5.1
     # via
     #   black
     #   virtualenv
 pluggy==1.0.0
     # via pytest
-pre-commit==3.3.1
+pre-commit==3.3.2
     # via -r requirements/requirements.in
 prompt-toolkit==3.0.38
     # via ipython
