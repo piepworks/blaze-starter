@@ -1,13 +1,15 @@
-# Codename: _[Hippocampus](https://en.wikipedia.org/wiki/Hippocampus_(mythology))_
+# Blaze.horse — Django Starter Kit
 
-## 🔥.🐴
+**🔥.🐴**
 
 ## Get your next [Django](https://www.djangoproject.com/start/overview/) project out the starting gate in a hurry!
+
+Big tech thinks everyone needs to [build aircraft carriers](https://youtu.be/KrPsyr8Ig6M?t=841) when all you need is a horse.
 
 From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books](https://listsofbooks.com). We’ve distilled what we’ve learned into an easy-to-use starter project that’ll set you up for success!
 
 <details>
-  <summary role="button" class="primary"><del>Batteries</del> <u>Reins and Saddle</u> included!</summary>
+  <summary><del>Batteries</del> <u>Reins and Saddle</u> included!</summary>
   <ul>
     <li>🐍 Uses Django’s built-in <a href="https://docs.djangoproject.com/en/stable/ref/django-admin/#cmdoption-startapp-template">django-admin --template option</a>.</li>
     <li>🫥 Sets up <a href="https://docs.djangoproject.com/en/stable/topics/auth/customizing/#auth-custom-user">a custom User model</a>.</li>
@@ -19,7 +21,7 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
 </details>
 
 <details>
-  <summary role="button" class="primary">Free to try!</summary>
+  <summary>Free to try!</summary>
   <p>Only pay when you’re ready to launch your project! We want to make sure you get exactly what you need before money changes hands.</p>
 </details>
 
@@ -41,10 +43,10 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
 Run the following command in your Terminal app.
 
 ```shell
-/bin/bash -c "$(curl -fsSL https://blaze.horse/hippocampus/install)"
+/bin/bash -c "$(curl -fsSL https://blaze.horse/django-starter/install)"
 ```
 
-[Here's the script that command runs.](https://github.com/piepworks/hippocampus/blob/main/dev/setup.sh)
+[Here's the script that command runs.](https://github.com/piepworks/django-starter/blob/main/dev/setup.sh)
 
 <details>
   <summary>Here's what the <code>curl</code> flags mean if you're interested.</summary>
