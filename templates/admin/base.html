@@ -1,7 +1,15 @@
 {% extends "admin/base.html" %}
+{% block extrahead %}
+  <style>
+    #license_status { text-align: right; }
+  </style>
+{% endblock extrahead %}
+
 {% block pretitle %}
   {% if user.is_authenticated %}
-    <div><a href="https://example.com/?host={{ ALLOWED_HOST }}">Check registration status</a></div>
+    <div id="license_status">
+      <a href="https://hub.piep.works"><img height="20" width="auto" src="https://hub.piep.works/badge" alt="License status"></a>
+    </div>
     {{ block.super }}
   {% endif %}
 {% endblock pretitle %}
