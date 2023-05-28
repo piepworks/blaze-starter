@@ -157,12 +157,16 @@ MEDIA_ROOT = BASE_DIR / "media"
 if DEBUG:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 else:
-    email = env.dj_email_url("EMAIL_URL", default="smtp://maildev")
-    EMAIL_HOST = email["EMAIL_HOST"]
-    EMAIL_HOST_PASSWORD = email["EMAIL_HOST_PASSWORD"]
-    EMAIL_HOST_USER = email["EMAIL_HOST_USER"]
-    EMAIL_PORT = email["EMAIL_PORT"]
-    EMAIL_USE_TLS = email["EMAIL_USE_TLS"]
+    EMAIL_HOST = env("EMAIL_HOST")
+    EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
+    EMAIL_HOST_USER = env("EMAIL_HOST_USER")
+    EMAIL_PORT = env("EMAIL_PORT")
+    EMAIL_USE_TLS = env.bool("EMAIL_USE_TLS", default=True)
+
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="email@example.com")
+SERVER_EMAIL = env("DEFAULT_FROM_EMAIL", default="email@example.com")
+ADMIN_EMAIL_FROM = env("ADMIN_EMAIL_FROM", default="email@example.com")
+ADMIN_EMAIL_TO = env("ADMIN_EMAIL_TO", default="email@example.com")
 
 # Parse cache URLS, e.g "redis://localhost:6379/0"
 CACHES = {"default": env.dj_cache_url("CACHE_URL", default="locmem://")}
@@ -175,6 +179,4 @@ if DEBUG:
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
-ADMIN_EMAIL_FROM = env("ADMIN_EMAIL_FROM", default="admin@example.com")
-ADMIN_EMAIL_TO = env("ADMIN_EMAIL_TO", default="admin@example.com")
 ADMIN_URL = env("ADMIN_URL", default="admin/")
