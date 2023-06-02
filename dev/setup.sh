@@ -25,6 +25,9 @@ require () {
   done
 }
 
+ADMIN_FOLDER_NAMES=("castle" "theoffice" "clubhouse" "batcave" "froghaven" "grotto" "headquarters")
+ADMIN_FOLDER_NAME=${ADMIN_FOLDER_NAMES[ $RANDOM % ${#ADMIN_FOLDER_NAMES[@]} ]}
+
 # Get (a version of) the name of the current folder
 raw_folder=${PWD##*/} # Get the name of the current folder.
 current_folder=$(format_python_friendly "$raw_folder")
@@ -84,6 +87,7 @@ echo "DEBUG=True" >> .env
 echo "ALLOWED_HOSTS=*" >> .env
 echo "CSRF_TRUSTED_ORIGINS=http://localhost" >> .env
 echo "DATABASE_URL=sqlite:///db.sqlite3" >> .env
+echo "ADMIN_URL=$admin_folder_name" >> .env
 
 # Warm up the database and static files
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
@@ -110,5 +114,7 @@ gum format -- \
   "${NEXT_STEP_ADDENDUM}" \
   "source .venv/bin/activate" \
   "./manage.py runserver" \
+  "Log into your admin at 'http://127.0.0.1:8000/${ADMIN_FOLDER_NAME}'" \
+  "(You can change that URL in your .env file variable ADMIN_URL)" \
   "## If you need to change your password:" \
   "./manage.py changepassword '${EMAIL}'"
