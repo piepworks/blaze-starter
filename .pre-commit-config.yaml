@@ -24,3 +24,11 @@ repos:
         entry: djlint --profile=django
         types_or: [html]
         language: python
+  - repo: local
+    hooks:
+      - id: eslint
+        name: Run ESLint
+        language: system
+        entry: npx eslint --ext .js ./templates/js
+        types: [javascript]
+        pass_filenames: false

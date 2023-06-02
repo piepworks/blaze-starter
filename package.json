@@ -4,9 +4,9 @@
   "author": "Your Name <you@example.com>",
   "license": "UNLICENSED",
   "private": true,
-  "scripts": {
-  },
+  "scripts": {},
   "devDependencies": {
+    "eslint": "^8.41.0",
     "stylelint": "^15.1.0",
     "stylelint-config-standard": "^33.0.0"
   }
