@@ -82,12 +82,22 @@ gum spin --title "Installing Python dependencies" -- pip-compile --resolver=back
 gum spin --title "Installing Python dependencies" -- python -m pip install -r requirements/requirements.txt
 
 # Setup .env file
-echo "SECRET_KEY=$(eval ./dev/generate-django-key)" >> .env
-echo "DEBUG=True" >> .env
-echo "ALLOWED_HOSTS=*" >> .env
-echo "CSRF_TRUSTED_ORIGINS=http://localhost" >> .env
-echo "DATABASE_URL=sqlite:///db.sqlite3" >> .env
-echo "ADMIN_URL=$admin_folder_name" >> .env
+echo "SECRET_KEY=$(eval ./dev/generate-django-key)"                 >> .env
+echo "DEBUG=True"                                                   >> .env
+echo "ALLOWED_HOSTS=*"                                              >> .env
+echo "CSRF_TRUSTED_ORIGINS=http://localhost"                        >> .env
+echo "------------------------------------------------------------" >> .env
+echo "DATABASE_URL=sqlite:///db.sqlite3"                            >> .env
+echo "# If you want to use PostgreSQL instead of SQLite:"           >> .env
+echo "#   1) Add psycopg[binary] to requirements/requirements.in"   >> .env
+echo "#   2) run dev/update-venv"                                   >> .env
+echo "#   3) Create a local database"                               >> .env
+echo "#   4) Uncomment and update the following setting:"           >> .env
+echo "# DATABASE_URL=postgres://user@database_server/database_name" >> .env
+echo "#   5) Run the following command:"                            >> .env
+echo "#     ./manage.py migrate && ./manage.py createsuperuser"     >> .env
+echo "------------------------------------------------------------" >> .env
+echo "ADMIN_URL=$ADMIN_FOLDER_NAME/"                                >> .env
 
 # Warm up the database and static files
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
@@ -115,6 +125,6 @@ gum format -- \
   "source .venv/bin/activate" \
   "./manage.py runserver" \
   "Log into your admin at 'http://127.0.0.1:8000/${ADMIN_FOLDER_NAME}'" \
-  "(You can change that URL in your .env file variable ADMIN_URL)" \
+  "(You can change that URL [and other settings] in your .env file)" \
   "## If you need to change your password:" \
   "./manage.py changepassword '${EMAIL}'"
