@@ -38,3 +38,9 @@ repos:
         entry: npx eslint --ext .js ./templates/js
         types: [javascript]
         pass_filenames: false
+      - id: stylelint
+        name: Run Stylelint
+        language: system
+        entry: npx stylelint "**/*.{css,scss}"
+        types: [css, scss]
+        pass_filenames: false
