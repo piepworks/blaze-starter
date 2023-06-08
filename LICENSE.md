@@ -2,7 +2,7 @@
 
 **Version 1**
 
-Published: _May 31, 2023_  
+Published: _June 8, 2023_  
 Source: <https://hub.piep.works/django-starter/eula/1>
 
 ## About this Agreement
@@ -157,6 +157,12 @@ You may also _not_:
 Technical support is **provided as described on Our website** at <https://blaze.horse>. **No representations or guarantees** are made regarding the response time in which support questions are answered, however We will do Our best to respond quickly.
 
 We reserve the right to **limit technical support for free licenses**.
+
+## Refund Policy
+
+We offer a 14-day, money back refund policy if the Project didn't work out for Your project.
+
+If you need a refund, please get in touch directly at <blaze.horse@piepworks.com>.
 
 ## No Warranty
 
