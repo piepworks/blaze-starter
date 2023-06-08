@@ -43,7 +43,6 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
 
 💌 [Sign up for the newsletter!](https://buttondown.email/blaze.horse/)
 
-
 ## Installation
 
 Run the following command in your Terminal app.
@@ -65,6 +64,7 @@ Run the following command in your Terminal app.
 </details>
 
 ## 🤩 Inspired (and helped) by the works of these folks. Thank you!
+
 - [jefftriplett/django-startproject: Django Start Project template with batteries](https://github.com/jefftriplett/django-startproject)
 - [oliverandrich/django-poetry-startproject: Django startproject template with some poetry.](https://github.com/oliverandrich/django-poetry-startproject)
 - [adamchainz/django-startproject-templates](https://github.com/adamchainz/django-startproject-templates)

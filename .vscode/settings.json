@@ -1,20 +1,17 @@
 {
-    "editor.formatOnSave": false,
-    "[python]": {
-        "editor.formatOnSave": true
-    },
-    "[django-html]": {
-        "editor.tabSize": 2
-    },
-    "editor.codeActionsOnSave": {
-        "source.fixAll.stylelint": true,
-        "source.fixAll.eslint": true
-    },
-    "files.associations": {
-        "*.py-tpl": "python",
-        "*.html": "django-html",
-        "*.js": "javascript",
-        "*.svg": "django-html"
-    },
-    "python.formatting.provider": "black"
+  "editor.formatOnSave": true,
+  "[django-html]": {
+    "editor.tabSize": 2
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true
+  },
+  "files.associations": {
+    "*.py-tpl": "python",
+    "*.html": "django-html",
+    "*.js": "javascript",
+    "*.svg": "django-html"
+  },
+  "python.formatting.provider": "black"
 }

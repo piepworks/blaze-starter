@@ -1,10 +1,8 @@
 module.exports = {
-  'extends': 'stylelint-config-standard',
-  'rules': {
-    'indentation': 2,
-    'string-quotes': 'single',
+  extends: 'stylelint-config-standard',
+  rules: {
     'declaration-empty-line-before': 'never',
     'no-descending-specificity': null,
   },
-  'ignoreFiles': ['static/css/vendor/**'],
+  ignoreFiles: ['static/css/vendor/**'],
 };

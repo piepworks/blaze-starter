@@ -132,18 +132,18 @@ The following uses of the Project are _not_ covered by this Agreement and will r
 - Direct or indirect use of the Project in **critical infrastructure** (e.g. water and energy services, public health, financial services, public security services) or **high-risk environments** (e.g. handling of harmful or dangerous materials). The use in Websites without connection to core processes is allowed.
 - Use of the Project for Websites that contain **misinformation, hate speech or discriminating content** based on age, gender, gender identity, race, sexuality, religion, nationality, serious illnesses or disabilities, no matter who authored this content. Misinformation is defined as content that is false or misleading and may lead to significant risk of physical or societal harm.
 - Use of the Project by **companies or individuals who**:
-    - lobby for, promote, derive income from or are invested in:
-        - the production of tobacco or weapons,
-        - any prison or jail operated for profit,
-        - any action or facility that supports or contributes to:
-            - gambling, adversely addictive behaviors or
-            - deforestation.
-    - lobby against, or derive income from actions that discourage or frustrate:
-        - peace,
-        - access to the rights set out in the Universal Declaration of Human Rights and the Convention on the Rights of the Child,
-        - peaceful assembly and association (including worker associations),
-        - a safe environment or action to curtail the use of fossil fuels or to prevent climate change or
-        - democratic processes.
+  - lobby for, promote, derive income from or are invested in:
+    - the production of tobacco or weapons,
+    - any prison or jail operated for profit,
+    - any action or facility that supports or contributes to:
+      - gambling, adversely addictive behaviors or
+      - deforestation.
+  - lobby against, or derive income from actions that discourage or frustrate:
+    - peace,
+    - access to the rights set out in the Universal Declaration of Human Rights and the Convention on the Rights of the Child,
+    - peaceful assembly and association (including worker associations),
+    - a safe environment or action to curtail the use of fossil fuels or to prevent climate change or
+    - democratic processes.
 
 ### Other Restrictions
 
