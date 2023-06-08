@@ -134,7 +134,8 @@ The following uses of the Project are _not_ covered by this Agreement and will r
 - Use of the Project by **companies or individuals who**:
   - lobby for, promote, derive income from or are invested in:
     - the production of tobacco or weapons,
-    - any prison or jail operated for profit,
+    - any prison or jail,
+    - cryptocurrency, NFTs, web3, or any other blockchain-related technology,
     - any action or facility that supports or contributes to:
       - gambling, adversely addictive behaviors or
       - deforestation.
