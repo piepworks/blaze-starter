@@ -1,5 +1,11 @@
-@import 'vendor/pico-1.5.9.min.css';
+@import url('vendor/pico-1.5.9.min.css');
 
-footer small {
-  font-size: 0.75rem;
+footer {
+  & small {
+    font-size: 0.75rem;
+  }
+
+  & .attribution {
+    opacity: 0.5;
+  }
 }
