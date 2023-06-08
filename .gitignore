@@ -6,3 +6,4 @@ __pycache__/
 *.sqlite*
 node_modules/
 staticfiles/
+static/css/*

@@ -4,5 +4,5 @@ module.exports = {
     'declaration-empty-line-before': 'never',
     'no-descending-specificity': null,
   },
-  ignoreFiles: ['static/css/vendor/**'],
+  ignoreFiles: ['static_src/css/vendor/**'],
 };
