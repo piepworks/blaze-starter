@@ -113,6 +113,7 @@ gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
 source $HOME/.nvm/nvm.sh
 gum spin --title "Making sure we’re using the right version of Node" -- sleep 1&&nvm install
 gum spin --title "Installing JavaScript dependencies" -- npm install
+gum spin --title "Building PostCSS files" -- npm run build
 
 # Start a new Git project
 git init --initial-branch=main&&git add .&&git commit -m "New project from 🔥.🐴 Django Starter Kit."
@@ -124,6 +125,10 @@ gum format -- \
   "${NEXT_STEP_ADDENDUM}" \
   "source .venv/bin/activate" \
   "./manage.py runserver" \
+  "" \
+  "…or, if you want to watch and build with PostCSS while running your dev server…" \
+  "npm run dev" \
+  "" \
   "Log into your admin at 'http://127.0.0.1:8000/${ADMIN_FOLDER_NAME}'" \
   "(You can change that URL [and other settings] in your .env file)" \
   "## If you need to change your password:" \
