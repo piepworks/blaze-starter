@@ -2,7 +2,7 @@
 
 {% block usertools %}
   {% if user.is_authenticated %}
-    <div id="license_status"><a href="https://hub.piep.works"><img height="20" width="auto" src="https://hub.piep.works/badge" alt="License status"></a></div>
+    <div id="license_status"><a href="https://hub.piep.works"><img height="20" width="auto" src="https://hub.piep.works/badge{% if ALLOWED_HOST != '*' %}?domain={{ ALLOWED_HOST }}{% endif %}" alt="License status"></a></div>
   {% endif %}
   {{ block.super }}
 {% endblock usertools %}
