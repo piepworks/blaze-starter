@@ -44,6 +44,7 @@ django==4.2.2
     #   django-browser-reload
     #   django-debug-toolbar
     #   django-extensions
+    #   django-htmx
 django-browser-reload==1.9.0
     # via -r requirements/requirements.in
 django-cache-url==3.4.4
@@ -51,6 +52,8 @@ django-cache-url==3.4.4
 django-debug-toolbar==4.1.0
     # via -r requirements/requirements.in
 django-extensions==3.2.3
+    # via -r requirements/requirements.in
+django-htmx==1.14.0
     # via -r requirements/requirements.in
 djlint==1.30.2
     # via -r requirements/requirements.in

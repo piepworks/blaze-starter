@@ -51,6 +51,7 @@ INSTALLED_APPS += [
     "debug_toolbar",
     "django_browser_reload",
     "django_extensions",
+    "django_htmx",
 ]
 
 # Our apps
@@ -69,6 +70,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "django_htmx.middleware.HtmxMiddleware",
     "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 

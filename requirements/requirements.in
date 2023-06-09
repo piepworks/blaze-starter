@@ -3,6 +3,7 @@ dj-database-url
 django-browser-reload
 django-debug-toolbar
 django-extensions
+django-htmx
 Django<5.0
 djlint
 environs[django]
