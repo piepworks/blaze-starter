@@ -9,6 +9,7 @@ from core import views
 urlpatterns = [
     path("", views.placeholder, name="index"),
     path("private-page", views.private_page, name="private-page"),
+    path("favicon.ico", views.favicon),
     path("register/", views.register, name="register"),
     path("accounts/", include("django.contrib.auth.urls")),
     path(
