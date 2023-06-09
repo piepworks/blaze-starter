@@ -101,7 +101,7 @@ Assuming you customized the app name, you should next be able to accept that “
 
 Create and load your environment variables. Create a file in the root of your project called `fly.env`. You can base this on `example-production.env`. `fly.env` should already be ignored in your `.gitignore` file, but make sure, because we're about to put server secrets in it!
 
-Note, you can generate a new `SECRET_KEY` by running the command `dev/generate-secret-key`.
+Note, you can generate a new `SECRET_KEY` by running the command `dev/generate-django-key`.
 
 Once that's set up how you want it, load it into Fly.
 
@@ -131,6 +131,6 @@ python manage.py createsuperuser
 exit
 ```
 
-Now you should be up and running!
+You should be up and running! Now would be a good time to [purchase a license](https://hub.piep.works)! 😉
 
-Let us know if you run into any problems! <blaze.horse@piepworks.com>
+Let us know if you have questions or run into any problems! <blaze.horse@piepworks.com>
