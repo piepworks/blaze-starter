@@ -1,4 +1,4 @@
-{# djlint:off #}{% load static %}<!DOCTYPE html>{# djlint:on #}
+{# djlint:off #}{% load static django_htmx %}<!DOCTYPE html>{# djlint:on #}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -23,7 +23,7 @@
   <footer class="container">
     <small><a class="attribution" href="https://www.flaticon.com/free-icon/seahorse_1864489">Seahorse icon from Freepik on Flaticon.com</a></small>
   </footer>
-  <script src="{% static 'js/vendor/htmx-1.8.6.min.js' %}" defer></script>
+  <script src="{% static 'js/vendor/htmx-1.9.2.min.js' %}" defer></script>
   {% django_htmx_script %}
   <script>{% include 'js/placeholder.js' %}</script>
 </body>
