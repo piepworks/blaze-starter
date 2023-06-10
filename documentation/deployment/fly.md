@@ -93,6 +93,7 @@ fly launch
 It'll now ask a few questions:
 
 - Answer **Y** when it asks “Would you like to copy its configuration to the new app?”
+- Answer **N** when it asks to overwrite your `.dockerignore`
 - Answer **N** when it asks to overwrite your `Dockerfile`
 - Answer **N** when it asks to set up PostgreSQL
 - Answer **N** when it asks to set up Upstash Redis
@@ -109,13 +110,7 @@ Once that's set up how you want it, load it into Fly.
 fly secrets import < fly.env
 ```
 
-Set up persistent storage for the default SQLite database.
-
-```sh
-fly volumes create storage
-```
-
-It's gonna try to get you not to do this, but it’s ok. Answer **Y** then choose the same region as you did for your app.
+Persistent storage for your SQLite database should be set up for you automatically based on the settings you already pasted in.
 
 Deploy your code.
 
