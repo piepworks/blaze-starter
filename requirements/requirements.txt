@@ -111,6 +111,8 @@ pexpect==4.8.0
     # via ipython
 pickleshare==0.7.5
     # via ipython
+pip-lock==2.9.0
+    # via -r requirements/requirements.in
 pip-tools==6.13.0
     # via -r requirements/requirements.in
 platformdirs==3.5.1

@@ -9,6 +9,7 @@ djlint
 environs[django]
 gunicorn
 ipython
+pip-lock
 pip-tools
 pre-commit
 pytest-django
