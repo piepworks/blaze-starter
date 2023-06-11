@@ -63,6 +63,10 @@ Run the following command in your Terminal app.
   </ul>
 </details>
 
+## Demo Application
+
+You can view a demo application built with this starter kit here: https://github.com/piepworks/blazehorse-demo
+
 ## 🤩 Inspired (and helped) by the works of these folks. Thank you!
 
 - [jefftriplett/django-startproject: Django Start Project template with batteries](https://github.com/jefftriplett/django-startproject)
