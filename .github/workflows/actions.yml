@@ -1,4 +1,4 @@
-name: CI
+name: Test App Built with Starter Kit
 
 on:
   pull_request:
@@ -6,45 +6,43 @@ on:
     branches:
       - main
 
-env:
-  DOCKER_BUILDKIT: '1'
-
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: Tests with Python
 
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3.5.0
         with:
-          fetch-depth: 1
-          path: ./src/github.com/${{ github.repository }}-git
-
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: Install dependencies
+          node-version: v18.12.1
+      - name: Install dependencies, run tests
         run: |
-          python -m pip install --upgrade pip
-          python -m pip install "django<5.0"
-
-      - name: Create a project based on our settings
-        run: |
-          django-admin startproject \
-              --extension=ini,py,yml \
-              --template=./src/github.com/${{ github.repository }}-git/ \
-              test_project
-
-      - name: Docker - Build image from starter project
-        run: |
+          mkdir test_project
           cd test_project
-          docker-compose pull
-          docker-compose build
-
-      - name: Docker - Test generated starter project
-        run: |
-          cd test_project
-          docker-compose run --rm web pytest
+          python3 -m venv --prompt . .venv
+          .venv/bin/pip install -U pip setuptools wheel
+          .venv/bin/python -m pip install pip-tools Django
+          .venv/bin/django-admin startproject --exclude=.git,__pycache__,.env --template=https://github.com/piepworks/django-starter/archive/main.zip test_project .
+          .venv/bin/pip-compile --resolver=backtracking requirements/requirements.in
+          .venv/bin/python -m pip install -r requirements/requirements.txt
+          .venv/bin/python manage.py makemigrations
+          .venv/bin/python manage.py migrate --noinput
+          .venv/bin/python manage.py collectstatic --noinput
+          npm install
+          npm run build
+          .venv/bin/pytest
+        env:
+          DEBUG: 0
+          ALLOWED_HOSTS: '*'
+          CSRF_TRUSTED_ORIGINS: ${{ vars.CSRF_TRUSTED_ORIGINS }}
+          ADMIN_URL: ${{ secrets.ADMIN_URL }}
+          ADMIN_EMAIL_FROM: ${{ secrets.ADMIN_EMAIL_FROM }}
+          ADMIN_EMAIL_TO: ${{ secrets.ADMIN_EMAIL_TO }}
+          DEFAULT_FROM_EMAIL: ${{ secrets.DEFAULT_FROM_EMAIL }}
+          SERVER_EMAIL: ${{ secrets.SERVER_EMAIL }}
+          EMAIL_BACKEND: ${{ vars.EMAIL_BACKEND }}
+          EMAIL_HOST: 'example.com'
+          EMAIL_PORT: '587'
+          EMAIL_HOST_USER: 'test'
+          EMAIL_HOST_PASSWORD: 'fakepassword'
+          EMAIL_USE_TLS: '1'
