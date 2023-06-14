@@ -115,10 +115,6 @@ gum spin --title "Making sure we’re using the right version of Node" -- sleep 
 gum spin --title "Installing JavaScript dependencies" -- npm install
 gum spin --title "Building PostCSS files" -- npm run build
 
-# Delete Docker stuff for GitHub Actions?
-# rm Dockerfile
-# rm docker-compose.yml
-
 # Start a new Git project
 git init --initial-branch=main&&git add .&&git commit -m "New project from 🔥.🐴 Django Starter Kit."
 gum spin --title "Installing Git pre-commit hooks" -- pre-commit install
