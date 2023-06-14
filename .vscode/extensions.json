@@ -3,6 +3,7 @@
     "ms-python.black-formatter",
     "batisteo.vscode-django",
     "esbenp.prettier-vscode",
-    "monosans.djlint"
+    "monosans.djlint",
+    "github.vscode-github-actions"
   ]
 }
