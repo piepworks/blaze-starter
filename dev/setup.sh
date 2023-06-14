@@ -116,7 +116,7 @@ gum spin --title "Installing JavaScript dependencies" -- npm install
 gum spin --title "Building PostCSS files" -- npm run build
 
 # Start a new Git project
-git init --initial-branch=main&&git add .&&git commit -m "New project from 🔥.🐴 Django Starter Kit."
+git init --initial-branch=main&&git add .&&git commit -m "New project from Blaze.horse — Django Starter Kit."
 gum spin --title "Installing Git pre-commit hooks" -- pre-commit install
 
 # Explain next steps
