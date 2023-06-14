@@ -1,12 +1,12 @@
 # Blaze.horse — Django Starter Kit
 
-**🔥.🐴**
+<img src="https://blaze.horse/assets/icons/seahorse.svg" alt="Seahorse icon" width="200" height="200">
 
 ## Get your next [Django](https://www.djangoproject.com/start/overview/) project out the starting gate in a hurry!
 
-Big tech thinks everyone needs to [build aircraft carriers](https://youtu.be/KrPsyr8Ig6M?t=841) when all you need is a horse.
+Big tech thinks everyone needs to [build aircraft carriers](https://youtu.be/KrPsyr8Ig6M?t=841), but all you need is a horse.
 
-From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books](https://listsofbooks.com). We’ve distilled what we’ve learned into an easy-to-use starter kit, making a hundred little decisions so you can just get working on your project!
+From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books](https://listsofbooks.com). We’ve distilled what we’ve learned, making all the little picky decisions so you don’t have to: just get to work on your project!
 
 <details open>
   <summary><del>Batteries</del> <u>Reins and Saddle</u> included!</summary>
