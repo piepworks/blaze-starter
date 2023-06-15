@@ -19,12 +19,10 @@ repos:
     hooks:
       - id: flake8
   - repo: https://github.com/Riverside-Healthcare/djLint
-    rev: v1.25.0
+    rev: v1.30.2
     hooks:
+      - id: djlint-reformat-django
       - id: djlint-django
-        entry: djlint --profile=django
-        types_or: [html]
-        language: python
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: 'v3.0.0-alpha.9-for-vscode'
     hooks:
@@ -46,6 +44,6 @@ repos:
       - id: stylelint
         name: Run Stylelint
         language: system
-        entry: npx stylelint "**/*.{css,scss}"
-        types: [css, scss]
+        entry: npx stylelint "static_src/css/*.css"
+        types: [css]
         pass_filenames: false
