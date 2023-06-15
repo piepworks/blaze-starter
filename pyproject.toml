@@ -5,3 +5,10 @@ include = '\.py-tpl$'
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "config.settings"
 python_files = ["test_*.py", "*_test.py", "testing/python/*.py"]
+
+[tool.djlint]
+# H017: Void tags should be self closing.
+# H031:	Consider adding meta keywords.
+ignore = "H017,H031"
+preserve_blank_lines = true
+indent = 2

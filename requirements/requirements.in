@@ -1,4 +1,5 @@
 black
+coverage
 dj-database-url
 django-browser-reload
 django-debug-toolbar

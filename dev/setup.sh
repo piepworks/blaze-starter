@@ -3,6 +3,29 @@
 # This is to initially set up a project. You probably don't need to
 # ever run it again.
 
+# Check for arguments
+VERSION="main"
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -v|--version)
+      VERSION="$2"
+      shift
+      shift
+      ;;
+    -*|--*)
+      echo "Unknown option $1"
+      exit 1
+      ;;
+    *)
+      POSITIONAL_ARGS+=("$1") # save positional arguments
+      shift
+      ;;
+  esac
+done
+set -- "${POSITIONAL_ARGS[@]}" # restore positional parameters
+# ----------------------
+# End of arguments check
+
 # Allow exiting the script with ctrl+c
 set -e
 
@@ -76,7 +99,7 @@ source .venv/bin/activate
 gum spin --title "Warming up virtual environment" -- python -m pip install pip-tools Django
 gum spin --title "Installing Django Starter Kit" -- django-admin startproject \
   --exclude=.git,__pycache__,.env \
-  --template=https://github.com/piepworks/django-starter/archive/main.zip \
+  --template=https://github.com/piepworks/django-starter/archive/$VERSION.zip \
   $PROJECT_NAME .
 gum spin --title "Installing Python dependencies" -- pip-compile --resolver=backtracking requirements/requirements.in
 gum spin --title "Installing Python dependencies" -- python -m pip install -r requirements/requirements.txt

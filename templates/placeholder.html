@@ -1,15 +1,31 @@
 {% extends "base.html" %}
 
-{% block title %}Blaze.horse — Django Starter Kit by Piepworks{% endblock title %}
+{% block title %}
+  Blaze.horse — Django Starter Kit
+{% endblock title %}
 
 {% block content %}
-  <h1>Blaze.horse — Django Starter Kit by Piepworks</h1>
+  <header>
+    <div class="icon">
+      <img src="{% static 'img/seahorse.svg' %}"
+           height="200"
+           width="200"
+           alt="Seahorse icon">
+    </div>
+    <h1>Blaze.horse — Django Starter Kit</h1>
+  </header>
 
   {% if request.user.is_authenticated %}
     <p>You’re logged in as {{ request.user }}!</p>
-    <p>Now you can see <a href="{% url 'private-page' %}">the private page</a>.</p>
-    <p><a href="{% url 'logout' %}">Log out</a></p>
+    <p>
+      Now you can see <a href="{% url 'private-page' %}">the private page</a>.
+    </p>
+    <p>
+      <a href="{% url 'logout' %}">Log out</a>
+    </p>
   {% else %}
-    <p><a href="{% url 'login' %}">Log in</a></p>
+    <p>
+      <a href="{% url 'login' %}">Log in</a>
+    </p>
   {% endif %}
 {% endblock content %}
