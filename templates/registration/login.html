@@ -1,17 +1,23 @@
 {% extends "registration/base.html" %}
 
-{% block title %}Sign in{% endblock title %}
+{% block title %}
+  Sign in
+{% endblock title %}
 
 {% block content %}
   {% block heading %}
     <h1>Sign in to your account</h1>
-    <p>Or <a href="{% url 'register' %}">register for a new account</a></p>
+    <p>
+      Or <a href="{% url 'register' %}">register for a new account</a>
+    </p>
   {% endblock heading %}
 
   {% block form %}
     <form method="post">
       {% csrf_token %}
-      <fieldset>{{ form.as_div }}</fieldset>
+      <fieldset>
+        {{ form.as_div }}
+      </fieldset>
       <button>Sign in</button>
     </form>
     <a href="{% url 'password_reset' %}">Forgot your password?</a>

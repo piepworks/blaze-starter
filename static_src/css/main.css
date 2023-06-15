@@ -1,11 +1,14 @@
 @import url('vendor/pico-1.5.9.min.css');
 
+header {
+  & .icon {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
 footer {
   & small {
     font-size: 0.75rem;
-  }
-
-  & .attribution {
-    opacity: 0.5;
   }
 }
