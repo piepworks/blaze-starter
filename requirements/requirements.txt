@@ -25,6 +25,8 @@ click==8.1.3
     #   pip-tools
 colorama==0.4.6
     # via djlint
+coverage==7.2.7
+    # via -r requirements/requirements.in
 cssbeautifier==1.14.8
     # via djlint
 decorator==5.1.1

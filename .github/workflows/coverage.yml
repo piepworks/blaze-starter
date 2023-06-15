@@ -9,9 +9,13 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    name: Build project & check test coverage
 
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
       - uses: actions/setup-node@v3.5.0
         with:
           node-version: v18.12.1
@@ -22,7 +26,7 @@ jobs:
           python3 -m venv --prompt . .venv
           .venv/bin/pip install -U pip setuptools wheel
           .venv/bin/python -m pip install pip-tools Django
-          .venv/bin/django-admin startproject --exclude=.git,__pycache__,.env --template=https://github.com/piepworks/django-starter/archive/main.zip test_project .
+          .venv/bin/django-admin startproject --exclude=.git,__pycache__,.env --template=https://github.com/piepworks/django-starter/archive/${BRANCH_NAME}.zip test_project .
           .venv/bin/pip-compile --resolver=backtracking requirements/requirements.in
           .venv/bin/python -m pip install -r requirements/requirements.txt
           .venv/bin/python manage.py makemigrations
@@ -30,8 +34,10 @@ jobs:
           .venv/bin/python manage.py collectstatic --noinput
           npm install
           npm run build
-          .venv/bin/pytest
+          .venv/bin/coverage run .venv/bin/pytest
+          .venv/bin/coverage xml
         env:
+          BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
           DEBUG: 0
           ALLOWED_HOSTS: '*'
           CSRF_TRUSTED_ORIGINS: ${{ vars.CSRF_TRUSTED_ORIGINS }}
@@ -46,3 +52,9 @@ jobs:
           EMAIL_HOST_USER: 'test'
           EMAIL_HOST_PASSWORD: 'fakepassword'
           EMAIL_USE_TLS: '1'
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          files: coverage.xml
