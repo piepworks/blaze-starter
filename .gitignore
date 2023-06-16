@@ -11,3 +11,4 @@ staticfiles/
 static/css/*.css
 static/css/*.map
 htmlcov/
+.coverage
