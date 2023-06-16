@@ -63,9 +63,10 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
   </ul>
 </details>
 
-## Demo Application
+## Demos
 
-You can view a demo application built with this starter kit here: https://github.com/piepworks/blazehorse-demo
+- [Screencast of the installation process](https://asciinema.org/a/591894)
+- [Demo application built with this starter kit](https://github.com/piepworks/blazehorse-demo)
 
 ## 🤩 Inspired (and helped) by the works of these folks. Thank you!
 
