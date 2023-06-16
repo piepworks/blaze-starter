@@ -93,20 +93,23 @@ if [ "${PROJECT_FOLDER}" == "" ]; then
   PROJECT_FOLDER=$raw_folder
   NEXT_STEP_ADDENDUM=""
 else
-  mkdir $PROJECT_FOLDER
-  cd $PROJECT_FOLDER
-
   NEXT_STEP_ADDENDUM="cd $PROJECT_FOLDER"
-  PROJECT_FOLDER="${raw_folder}/${PROJECT_FOLDER}"
+  PROJECT_FOLDER_PATH="${raw_folder}/${PROJECT_FOLDER}"
 fi
 
 gum format -- \
   "## Project Settings" \
   "Project name   $(gum style --foreground 212 $PROJECT_NAME)" \
-  "Project folder $(gum style --foreground 212 $PROJECT_FOLDER)" \
+  "Project folder $(gum style --foreground 212 $PROJECT_FOLDER_PATH)" \
   "Email address  $(gum style --foreground 212 $EMAIL)"
 
 gum confirm "Does this look ok?" && echo -e "\n Here we go!" || exit 1
+
+# Create a folder if needed
+if [ "${PROJECT_FOLDER}" != "" ]; then
+  mkdir $PROJECT_FOLDER
+  cd $PROJECT_FOLDER
+fi
 
 # Setup Python stuff
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
@@ -168,6 +171,7 @@ gum format -- \
   "./manage.py runserver" \
   "" \
   "…or, if you want to watch and build with PostCSS while running your dev server…" \
+  "" \
   "npm run dev" \
   "" \
   "Log into your admin at 'http://127.0.0.1:8000/${ADMIN_FOLDER_NAME}'" \
