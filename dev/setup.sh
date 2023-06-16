@@ -55,11 +55,29 @@ ADMIN_FOLDER_NAME=${ADMIN_FOLDER_NAMES[ $RANDOM % ${#ADMIN_FOLDER_NAMES[@]} ]}
 raw_folder=${PWD##*/} # Get the name of the current folder.
 current_folder=$(format_python_friendly "$raw_folder")
 
+# Make sure we have Homebrew intalled.
+if ! command -v brew &> /dev/null; then
+  gum format -- \
+    "## Whoops!" \
+    "Homebrew is required and you don’t seem to have it installed:" \
+    "https://brew.sh"
+  exit
+fi
+
 # Install Gum for nice interactive prompts and status indicators.
 # https://charm.sh
 # https://github.com/charmbracelet/gum
 if ! command -v gum &> /dev/null; then
   brew install gum
+fi
+
+# Make sure we have NVM installed.
+if [ ! -d "$HOME/.nvm/.git" ]; then
+  gum format -- \
+    "## Whoops!" \
+    "NVM is required and you don’t seem to have it installed:" \
+    "https://github.com/nvm-sh/nvm#installing-and-updating"
+  exit
 fi
 
 # Ask a few questions to get going.
