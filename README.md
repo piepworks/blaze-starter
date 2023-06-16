@@ -10,7 +10,7 @@ Big tech thinks everyone needs to [build aircraft carriers](https://youtu.be/KrP
 
 From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books](https://listsofbooks.com). We’ve distilled what we’ve learned, making all the little picky decisions so you don’t have to: just get to work on your project!
 
-<details open>
+<details>
   <summary><del>Batteries</del> <u>Reins and Saddle</u> included!</summary>
   <ul>
     <li>🐍 Uses Django’s built-in <a href="https://docs.djangoproject.com/en/stable/ref/django-admin/#cmdoption-startapp-template">django-admin --template option</a>.</li>
@@ -33,7 +33,7 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
   <p>Only pay when you’re ready to launch your project! We want to make sure you get exactly what you need before money changes hands.</p>
 </details>
 
-<details>
+<details open>
   <summary>Local system requirements</summary>
   <ul>
     <li><a href="https://www.apple.com/macos/">macOS</a></li>
@@ -46,8 +46,6 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
 💌 [Sign up for the newsletter!](https://buttondown.email/blaze.horse/)
 
 ## Installation
-
-Run the following command in your Terminal app.
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://blaze.horse/django-starter/install)"
