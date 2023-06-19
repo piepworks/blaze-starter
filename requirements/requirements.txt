@@ -117,11 +117,11 @@ pip-lock==2.10.0
     # via -r requirements/requirements.in
 pip-tools==6.13.0
     # via -r requirements/requirements.in
-platformdirs==3.5.3
+platformdirs==3.6.0
     # via
     #   black
     #   virtualenv
-pluggy==1.0.0
+pluggy==1.1.0
     # via pytest
 pre-commit==3.3.3
     # via -r requirements/requirements.in
@@ -166,13 +166,13 @@ traitlets==5.9.0
     #   matplotlib-inline
 typing-extensions==4.6.3
     # via dj-database-url
-virtualenv==20.23.0
+virtualenv==20.23.1
     # via pre-commit
 wcwidth==0.2.6
     # via prompt-toolkit
 wheel==0.40.0
     # via pip-tools
-whitenoise==6.4.0
+whitenoise==6.5.0
     # via -r requirements/requirements.in
 
 # The following packages are considered to be unsafe in a requirements file:
