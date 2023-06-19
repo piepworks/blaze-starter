@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# This is for testing the Blaze.horse — Django Starter Kit itself.
+
+gum confirm "Create test build folder (./.test_project/) and run automated tests?" || exit 1
+
+mkdir .test_project
+cd .test_project
+python3 -m venv --prompt . .venv
+.venv/bin/pip install -U pip setuptools wheel
+.venv/bin/python -m pip install pip-tools Django
+.venv/bin/django-admin startproject --template=../ test_project .
+.venv/bin/pip-compile --resolver=backtracking requirements/requirements.in
+.venv/bin/python -m pip install -r requirements/requirements.txt
+.venv/bin/python manage.py makemigrations
+.venv/bin/python manage.py migrate --noinput
+.venv/bin/python manage.py collectstatic --noinput
+nvm install
+npm install
+npm run build
+.venv/bin/pytest
+
+gum format -- "## To delete the test build folder, run the command:" "dev/test-build-reset"

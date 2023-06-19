@@ -12,3 +12,4 @@ static/css/*.css
 static/css/*.map
 htmlcov/
 .coverage
+.test_project/

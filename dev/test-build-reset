@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# This is for testing the Blaze.horse — Django Starter Kit itself.
+
+gum confirm "Delete test build folder (./.test_project/)?" && rm -rf .test_project
