@@ -141,6 +141,7 @@ echo "# DATABASE_URL=postgres://user@database_server/database_name" >> .env
 echo "#   5) Run the following command:"                            >> .env
 echo "#     ./manage.py migrate && ./manage.py createsuperuser"     >> .env
 echo "------------------------------------------------------------" >> .env
+echo "# CACHE_URL=redis://localhost:6379/"                          >> .env
 echo "ADMIN_URL=$ADMIN_FOLDER_NAME/"                                >> .env
 
 # Warm up the database and static files
