@@ -15,6 +15,7 @@ python3 -m venv --prompt . .venv
 .venv/bin/python manage.py makemigrations
 .venv/bin/python manage.py migrate --noinput
 .venv/bin/python manage.py collectstatic --noinput
+source $HOME/.nvm/nvm.sh
 nvm install
 npm install
 npm run build
