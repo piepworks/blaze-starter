@@ -119,11 +119,11 @@ pip-lock==2.10.0
     # via -r requirements/requirements.in
 pip-tools==6.13.0
     # via -r requirements/requirements.in
-platformdirs==3.6.0
+platformdirs==3.7.0
     # via
     #   black
     #   virtualenv
-pluggy==1.1.0
+pluggy==1.2.0
     # via pytest
 pre-commit==3.3.3
     # via -r requirements/requirements.in
