@@ -1,6 +1,9 @@
 # Blaze.horse — Django Starter Kit
 
-[![Build Status](https://github.com/piepworks/django-starter/actions/workflows/coverage.yml/badge.svg)](https://github.com/piepworks/django-starter/actions/workflows/coverage.yml) [![codecov](https://codecov.io/gh/piepworks/django-starter/branch/main/graph/badge.svg?token=5V3K1650SC)](https://codecov.io/gh/piepworks/django-starter)
+[![Build Status](https://github.com/piepworks/django-starter/actions/workflows/coverage.yml/badge.svg)](https://github.com/piepworks/django-starter/actions/workflows/coverage.yml)
+[![codecov](https://codecov.io/gh/piepworks/django-starter/branch/main/graph/badge.svg?token=5V3K1650SC)](https://codecov.io/gh/piepworks/django-starter)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![pre-commit: enabled](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 <img src="https://blaze.horse/assets/icons/seahorse.svg" alt="Seahorse icon" width="200" height="200">
 
