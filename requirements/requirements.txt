@@ -119,7 +119,7 @@ pip-lock==2.10.0
     # via -r requirements/requirements.in
 pip-tools==6.13.0
     # via -r requirements/requirements.in
-platformdirs==3.7.0
+platformdirs==3.8.0
     # via
     #   black
     #   virtualenv
@@ -137,7 +137,7 @@ pygments==2.15.1
     # via ipython
 pyproject-hooks==1.0.0
     # via build
-pytest==7.3.2
+pytest==7.4.0
     # via pytest-django
 pytest-django==4.5.2
     # via -r requirements/requirements.in
@@ -147,7 +147,7 @@ pyyaml==6.0
     # via
     #   djlint
     #   pre-commit
-redis[hiredis]==4.5.5
+redis[hiredis]==4.6.0
     # via -r requirements/requirements.in
 regex==2023.6.3
     # via djlint
