@@ -4,6 +4,8 @@
 [![codecov](https://codecov.io/gh/piepworks/django-starter/branch/main/graph/badge.svg?token=5V3K1650SC)](https://codecov.io/gh/piepworks/django-starter)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pre-commit: enabled](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![Django version 4.2.x](https://img.shields.io/badge/Django-4.2.x-blue?logo=django&logoColor=green)](https://djangoproject.com)
+[![Python version 3.11.x](https://img.shields.io/badge/Python-3.11.x-blue?logo=python&logoColor=ffd440)](https://www.python.org)
 
 <img src="https://blaze.horse/assets/icons/seahorse.svg" alt="Seahorse icon" width="200" height="200">
 
