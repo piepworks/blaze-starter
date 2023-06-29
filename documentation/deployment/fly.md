@@ -159,10 +159,10 @@ Once that's set up how you want it, load it into Fly
 fly secrets import < fly.env
 ```
 
-Deploy your code
+Deploy your app (we want "high availability" set to false because we want to run on a single machine and Fly defaults to starting two, which would make Litestream unhappy)
 
 ```sh
-fly deploy
+fly deploy --ha=false
 ```
 
 Log in and create your a superuser account
