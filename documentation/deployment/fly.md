@@ -107,7 +107,12 @@ litestream restore -if-db-not-exists -if-replica-exists -o "$DB_DIR/db.sqlite" "
 
 chmod -R a+rwX /db
 
-exec litestream replicate -config litestream.yml
+# Copy our Litestream config to the default location so we don't have to add a
+# `-config` argument to every command.
+mv /etc/litestream.yml /etc/litestream.yml-example
+cp /code/litestream.yml /etc/litestream.yml
+
+exec litestream replicate
 ```
 
 Create a `litestream.yml` file in the root of your project
