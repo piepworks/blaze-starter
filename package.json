@@ -19,9 +19,9 @@
     "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
-    "postcss-nesting": "^11.2.2",
-    "prettier": "2.8.8",
+    "postcss-nesting": "^12.0.0",
+    "prettier": "3.0.0",
     "stylelint": "^15.1.0",
-    "stylelint-config-standard": "^33.0.0"
+    "stylelint-config-standard": "^34.0.0"
   }
 }
