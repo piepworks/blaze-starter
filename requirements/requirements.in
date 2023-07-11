@@ -8,6 +8,7 @@ django-htmx
 Django<5.0
 djlint
 environs[django]
+flake8
 gunicorn
 ipython
 pip-lock
