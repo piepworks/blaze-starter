@@ -143,6 +143,10 @@ echo "------------------------------------------------------------" >> .env
 echo "# CACHE_URL=redis://localhost:6379/"                          >> .env
 echo "ADMIN_URL=$ADMIN_FOLDER_NAME/"                                >> .env
 
+# Setup e2e/playwright.env file
+echo "PLAYWRIGHT_USERNAME=$EMAIL"                     >> e2e/playwright.env
+echo "PLAYWRIGHT_PASSWORD=$DJANGO_SUPERUSER_PASSWORD" >> e2e/playwright.env
+
 # Append to pre-commit hooks
 echo "      - id: playwright"             >> .pre-commit-config.yaml
 echo "        name: Run Playwright"       >> .pre-commit-config.yaml
