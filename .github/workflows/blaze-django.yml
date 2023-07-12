@@ -47,10 +47,10 @@ jobs:
           DEFAULT_FROM_EMAIL: ${{ secrets.DEFAULT_FROM_EMAIL }}
           SERVER_EMAIL: ${{ secrets.SERVER_EMAIL }}
           EMAIL_BACKEND: ${{ vars.EMAIL_BACKEND }}
-          EMAIL_HOST: 'example.com'
-          EMAIL_PORT: '587'
-          EMAIL_HOST_USER: 'test'
-          EMAIL_HOST_PASSWORD: 'fakepassword'
+          EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
+          EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
+          EMAIL_HOST_USER: ${{ secrets.EMAIL_HOST_USER }}
+          EMAIL_HOST_PASSWORD: ${{ secrets.EMAIL_HOST_PASSWORD }}
           EMAIL_USE_TLS: '1'
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3

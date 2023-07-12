@@ -1,16 +1,16 @@
 name: Playwright Tests for App Built with Starter Kit
 on: [push, pull_request]
 env:
-  SECRET_KEY: ${{ secrets.SECRET_KEY }}
-  DEBUG: ${{ secrets.DEBUG }}
-  ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
-  CSRF_TRUSTED_ORIGINS: ${{ secrets.CSRF_TRUSTED_ORIGINS }}
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+  DEBUG: 0
+  ALLOWED_HOSTS: '*'
+  CSRF_TRUSTED_ORIGINS: ${{ vars.CSRF_TRUSTED_ORIGINS }}
   EMAIL_BACKEND: ${{ secrets.EMAIL_BACKEND }}
   EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
   EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
   EMAIL_HOST_USER: ${{ secrets.EMAIL_HOST_USER }}
   EMAIL_HOST_PASSWORD: ${{ secrets.EMAIL_HOST_PASSWORD }}
-  EMAIL_USE_TLS: ${{ secrets.EMAIL_USE_TLS }}
+  EMAIL_USE_TLS: 1
   PLAYWRIGHT_USERNAME: ${{ secrets.PLAYWRIGHT_USERNAME }}
   PLAYWRIGHT_PASSWORD: ${{ secrets.PLAYWRIGHT_PASSWORD }}
 jobs:
@@ -24,24 +24,31 @@ jobs:
           node-version: 18
       - name: Install Django bits
         run: |
-          python3 -m venv --prompt . venv
-          venv/bin/pip install -U pip setuptools wheel
-          venv/bin/python -m pip install -r requirements/requirements.txt
-          venv/bin/python manage.py migrate --noinput
-          venv/bin/python manage.py loaddata e2e/django-fixtures.json
+          mkdir test_project
+          cd test_project
+          python3 -m venv --prompt . .venv
+          .venv/bin/pip install -U pip setuptools wheel
+          .venv/bin/python -m pip install pip-tools Django
+          .venv/bin/django-admin startproject --exclude=.git,__pycache__,.env --template=https://github.com/piepworks/django-starter/archive/${BRANCH_NAME}.zip test_project .
+          .venv/bin/pip-compile --resolver=backtracking requirements/requirements.in
+          .venv/bin/python -m pip install -r requirements/requirements.txt
+          .venv/bin/python manage.py makemigrations
+          .venv/bin/python manage.py migrate --noinput
+          .venv/bin/python manage.py loaddata e2e/django-fixtures.json
+          .venv/bin/python manage.py collectstatic --noinput
           npm install
           npm run build
       - name: Install dependencies
-        run: npm ci
+        run: cd test_project && npm ci
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: cd test_project && npx playwright install --with-deps
       - name: Run Playwright tests
-        run: CREATE_USER=True npx playwright test --ignore-snapshots
+        run: cd test_project && CREATE_USER=True npx playwright test --ignore-snapshots
       - uses: actions/upload-artifact@v3
         if: always()
         with:
           name: artifacts
           path: |
-            playwright-report/
-            test-results/
+            test_project/playwright-report/
+            test_project/test-results/
           retention-days: 2
