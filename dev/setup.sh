@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# This is to initially set up a project. You probably don't need to
-# ever run it again.
+# This is to initially set up a new project from the Blaze.horse — Django Starter Kit
 
 # Check for arguments
 VERSION="main"
@@ -151,6 +150,12 @@ echo "        language: system"           >> .pre-commit-config.yaml
 echo "        entry: npx playwright test" >> .pre-commit-config.yaml
 echo "        files: \.(css|html|js)$"    >> .pre-commit-config.yaml
 echo "        pass_filenames: false"      >> .pre-commit-config.yaml
+
+# Delete files related to the starter kit project itself
+# These have no meaning on a generated project
+rm .github/workflows/blaze-*
+rm dev/setup.sh # Local version of this file
+rm dev/test-build* # Scripts for testing project generation
 
 # Warm up the database and static files
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
