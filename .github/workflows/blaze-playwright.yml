@@ -1,0 +1,47 @@
+name: Playwright Tests for App Built with Starter Kit
+on: [push, pull_request]
+env:
+  SECRET_KEY: ${{ secrets.SECRET_KEY }}
+  DEBUG: ${{ secrets.DEBUG }}
+  ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
+  CSRF_TRUSTED_ORIGINS: ${{ secrets.CSRF_TRUSTED_ORIGINS }}
+  EMAIL_BACKEND: ${{ secrets.EMAIL_BACKEND }}
+  EMAIL_HOST: ${{ secrets.EMAIL_HOST }}
+  EMAIL_PORT: ${{ secrets.EMAIL_PORT }}
+  EMAIL_HOST_USER: ${{ secrets.EMAIL_HOST_USER }}
+  EMAIL_HOST_PASSWORD: ${{ secrets.EMAIL_HOST_PASSWORD }}
+  EMAIL_USE_TLS: ${{ secrets.EMAIL_USE_TLS }}
+  PLAYWRIGHT_USERNAME: ${{ secrets.PLAYWRIGHT_USERNAME }}
+  PLAYWRIGHT_PASSWORD: ${{ secrets.PLAYWRIGHT_PASSWORD }}
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install Django bits
+        run: |
+          python3 -m venv --prompt . venv
+          venv/bin/pip install -U pip setuptools wheel
+          venv/bin/python -m pip install -r requirements/requirements.txt
+          venv/bin/python manage.py migrate --noinput
+          venv/bin/python manage.py loaddata e2e/django-fixtures.json
+          npm install
+          npm run build
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
+        run: CREATE_USER=True npx playwright test --ignore-snapshots
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: artifacts
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 2
