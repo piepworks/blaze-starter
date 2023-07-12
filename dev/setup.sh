@@ -144,6 +144,14 @@ echo "------------------------------------------------------------" >> .env
 echo "# CACHE_URL=redis://localhost:6379/"                          >> .env
 echo "ADMIN_URL=$ADMIN_FOLDER_NAME/"                                >> .env
 
+# Append to pre-commit hooks
+echo "      - id: playwright"             >> .pre-commit-config.yaml
+echo "        name: Run Playwright"       >> .pre-commit-config.yaml
+echo "        language: system"           >> .pre-commit-config.yaml
+echo "        entry: npx playwright test" >> .pre-commit-config.yaml
+echo "        files: \.(css|html|js)$"    >> .pre-commit-config.yaml
+echo "        pass_filenames: false"      >> .pre-commit-config.yaml
+
 # Warm up the database and static files
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
   "Warming up $(gum style --foreground 212 'database') and $(gum style --foreground 212 'static files')…"

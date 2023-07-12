@@ -22,6 +22,11 @@ case $yn in
         npm install
         npm run build
         .venv/bin/pytest
+        npx playwright install --with-deps
+
+        # Run Playwright tests with a new user
+        printf "CREATE_USER=True\nPLAYWRIGHT_USERNAME=tester@example.com\nPLAYWRIGHT_PASSWORD=tester_password" >> ../e2e/playwright.env
+        npx playwright test
 
         read -p "Delete test build folder (./.test_project/)? (Y/N) " yn2
         case $yn2 in
@@ -33,6 +38,7 @@ case $yn in
                 echo "To delete test build folder later, run 'dev/test-build-reset'"
                 ;;
         esac
+
         ;;
     *)
         echo ""
