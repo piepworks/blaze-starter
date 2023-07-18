@@ -1,13 +1,15 @@
 # [Blaze.horse](https://blaze.horse) Django Starter Kit _End User License Agreement_
 
-**Version 1**
+**Version 2**
 
-Published: _June 8, 2023_  
-Source: <https://hub.piep.works/django-starter/eula/1>
+TL;DR changes from v1: **FREE FOR PERSONAL (NON-COMMERCIAL) USE**
+
+Published: _July 18, 2023_  
+Source: <https://hub.piep.works/django-starter/eula/2>
 
 ## About this Agreement
 
-While the Blaze.horse **Django Starter Kit** (the **"Project"**) source code is publicly available, it is **not free**. To use the Project in production, you need to [purchase a license](https://hub.piep.works).
+While the Blaze.horse **Django Starter Kit** (the **"Project"**) source code is publicly available, it is **not free** for commercial use. To use the Project in production for commercial purposes, you need to [purchase a license](https://hub.piep.works).
 
 This End User License Agreement (the **"Agreement"**) is fundamental to the relationship between you and us. Therefore we recommend to read this Agreement carefully before you download, install or use the Project.
 
@@ -17,21 +19,21 @@ If you do not agree to this Agreement, please do not download, install or use th
 
 Before we get started with the conditions of the Agreement, let's define the terms that will be used throughout it:
 
-- When we refer to **"You"**, we mean the licensee. Before purchasing the Project, that's the individual or company that has downloaded and/or installed the Project for a Development Installation or Private Installation. When used for a Public Site, the licensee is the individual or company that has purchased the the Project license. If you work on a client project and have purchased the the Project license for your client, you (and _not_ the client) are the licensee.
+- When we refer to **"You"**, we mean the licensee. Before purchasing the Project, that's the individual or company that has downloaded and/or installed the Project for a Development Installation or Private Installation. This also includes individuals using the Project for non-commercial purposes.When used for a commercial Public Site, the licensee is the individual or company that has purchased the the Project license. If you work on a client project and have purchased the the Project license for your client, you (and _not_ the client) are the licensee.
 - When we refer to **"We"**/**"Us"**/**"Our"**, we mean the licensor, Piepworks LLC. You can find Our company and contact information on <https://piep.works>.
 - A **"Website"** is a single the Project project that is defined by its domain name and root directory (e.g. `https://sub.example.com` or `https://example.com/example/`). Each (sub)domain and root directory is a separate Website, even if the projects are related in any way.
 - A **"Development Installation"** is a Website that is installed purely for the purposes of development and client preview. It must only be accessible by a restricted number of users (like on a personal computer, on a server in a network with restricted access or when protecting a staging website with a password that only a restricted number of users know).
 - A **"Private Installation"** is a Website that is installed purely for personal use. It must only be accessible by You and Your family.
-- A **"Public Site"** is a Website that is _neither_ a Development Installation, a Private Installation nor an Extension Demo.
+- A **"Public Site"** is a Website that is _neither_ a Development Installation or a Private Installation.
 - An **"Update"** is defined as a the Project release which adds smaller new features, minor functionality enhancements or bug fixes. This class of release is identified by the change of the revision to the right of the first decimal point, e.g. 3.1 to 3.2, 3.X.1 to 3.X.2 or 3.X.X.1 to 3.X.X.2.
 - An **"Upgrade"** is a major Project release which incorporates major new features or enhancements that increase the core functionality of the Project to a larger extent. This class of release is identified by the change of the revision to the left of the first decimal point, e.g. 3.X to 4.0.
 - The **"Source Code"** is defined as the contents of all files that are provided with the Project and that make the Project work. This includes (but is not limited to) all Python, JavaScript, JSON, HTML and CSS files as well as all related image and other media files.
 
 Every time you see one of these capitalized terms in the following text, it has the meaning that has been explained above.
 
-## Usage for a Public Site
+## Usage for a Non-Personal / Commercial Public Site
 
-Installing the Project on or using it for a Public Site requires a [paid license](https://hub.piep.works).
+Installing the Project on or using it for a Non-Personal / Commercial Public Site requires a [paid license](https://hub.piep.works).
 
 As the Project is software and software is intangible, We don't sell it as such. Instead, this Agreement grants a license for each purchase to install and use a single instance of the Project on a **specific Website**. Additional Project licenses must be purchased in order to install and use the Project on **additional Websites**.
 
@@ -50,6 +52,10 @@ Our order process is conducted by Our online reseller [Paddle.com](https://paddl
 The Project can be used **for free in the following cases**.
 
 Please note that the restrictions and all other clauses of this Agreement also apply to free licenses. You may especially _not_ alter or circumvent the licensing features.
+
+## Personal / Non-Commercial Use
+
+Blaze.horse is **100% free for personal (non-commercial) use**. Want to try out the easiest way to get going with Django? Knock yourself out! Spread the word!
 
 ### Usage for a Development Installation
 
