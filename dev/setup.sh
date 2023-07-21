@@ -132,18 +132,7 @@ echo "SECRET_KEY=$(eval ./dev/generate-django-key)"                 >> .env
 echo "DEBUG=True"                                                   >> .env
 echo "ALLOWED_HOSTS=*"                                              >> .env
 echo "CSRF_TRUSTED_ORIGINS=http://localhost"                        >> .env
-echo "------------------------------------------------------------" >> .env
 echo "DATABASE_URL=sqlite:///db.sqlite3"                            >> .env
-echo "# If you want to use PostgreSQL instead of SQLite:"           >> .env
-echo "#   1) Add psycopg[binary] to requirements/requirements.in"   >> .env
-echo "#   2) run dev/update-venv"                                   >> .env
-echo "#   3) Create a local database"                               >> .env
-echo "#   4) Uncomment and update the following setting:"           >> .env
-echo "# DATABASE_URL=postgres://user@database_server/database_name" >> .env
-echo "#   5) Run the following command:"                            >> .env
-echo "#     ./manage.py migrate && ./manage.py createsuperuser"     >> .env
-echo "------------------------------------------------------------" >> .env
-echo "# CACHE_URL=redis://localhost:6379/"                          >> .env
 echo "ADMIN_URL=$ADMIN_FOLDER_NAME/"                                >> .env
 
 # Setup e2e/playwright.env file
@@ -199,6 +188,7 @@ gum format -- \
   "## Next steps:" \
   "${NEXT_STEP_ADDENDUM}" \
   "source .venv/bin/activate" \
+  "" \
   "./manage.py runserver" \
   "" \
   "…or, if you want to watch and build with PostCSS while running your dev server…" \
@@ -206,6 +196,9 @@ gum format -- \
   "npm run dev" \
   "" \
   "Log into your admin at 'http://127.0.0.1:8000/${ADMIN_FOLDER_NAME}'" \
-  "(You can change that URL [and other settings] in your .env file)" \
+  "You can change that URL (and other settings) in your .env file" \
   "## If you need to change your password:" \
-  "./manage.py changepassword '${EMAIL}'"
+  "./manage.py changepassword '${EMAIL}'" \
+  "" \
+  "## For instructions on how to deploy to Fly.io:" \
+  "documentation/deployment/fly.md"

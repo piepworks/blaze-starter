@@ -1,0 +1,5 @@
+exec: gunicorn --bind :8000 --workers 2 config.wsgi
+dbs:
+  - path: '$DB_DIR/db.sqlite'
+    replicas:
+      - url: '$S3_DB_URL'
