@@ -87,6 +87,8 @@ PROJECT_NAME=$(format_python_friendly "$temp_name")
 PROJECT_FOLDER="$(gum input --prompt "Enter a project folder (leave blank to use the current folder, ${raw_folder}): " --placeholder='project-folder')"
 EMAIL="$(require "gum input --prompt 'Enter an email for the Django admin: ' --placeholder 'you@example.com'")"
 export DJANGO_SUPERUSER_PASSWORD="$(require "gum input --password --prompt 'Enter a password for this user: '")"
+echo "What type of project is this?"
+PROJECT_TYPE="$(require "gum choose 'Commercial' 'Personal'")"
 
 if [ "${PROJECT_FOLDER}" == "" ]; then
   PROJECT_FOLDER=$raw_folder
@@ -100,7 +102,8 @@ gum format -- \
   "## Project Settings" \
   "Project name   $(gum style --foreground 212 $PROJECT_NAME)" \
   "Project folder $(gum style --foreground 212 $PROJECT_FOLDER_PATH)" \
-  "Email address  $(gum style --foreground 212 $EMAIL)"
+  "Email address  $(gum style --foreground 212 $EMAIL)" \
+  "Project type   $(gum style --foreground 212 $PROJECT_TYPE)"
 
 gum confirm "Does this look ok?" && echo -e "\n Here we go!" || exit 1
 
@@ -144,7 +147,8 @@ echo "# CACHE_URL=redis://localhost:6379/"                          >> .env
 echo "ADMIN_URL=$ADMIN_FOLDER_NAME/"                                >> .env
 
 # Setup e2e/playwright.env file
-echo "PLAYWRIGHT_USERNAME=$EMAIL"                     >> e2e/playwright.env
+touch e2e/playwright.env
+echo "PLAYWRIGHT_USERNAME=$EMAIL"                      > e2e/playwright.env
 echo "PLAYWRIGHT_PASSWORD=$DJANGO_SUPERUSER_PASSWORD" >> e2e/playwright.env
 
 # Append to pre-commit hooks
@@ -160,6 +164,15 @@ echo "        pass_filenames: false"      >> .pre-commit-config.yaml
 rm .github/workflows/blaze-*
 rm dev/setup.sh # Local version of this file
 rm dev/test-build* # Scripts for testing project generation
+
+# Set up the right admin template for the kind of badge it should display
+if [ "${PROJECT_TYPE}" == "Personal" ]; then
+  rm templates/admin/base-commercial.html
+  mv templates/admin/base-personal.html templates/admin/base.html
+else
+  rm templates/admin/base-personal.html
+  mv templates/admin/base-commercial.html templates/admin/base.html
+fi
 
 # Warm up the database and static files
 gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
