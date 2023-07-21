@@ -176,11 +176,6 @@ CACHES = {"default": env.dj_cache_url("CACHE_URL", default="locmem://")}
 if DEBUG:
     INTERNAL_IPS = ["127.0.0.1"]
 
-# Redis
-# https://fly.io/django-beats/caching-in-django-with-redis/
-# https://docs.djangoproject.com/en/stable/topics/cache/#redis
-CACHES = {"default": env.dj_cache_url("CACHE_URL", default="locmem://")}
-
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 ADMIN_URL = env("ADMIN_URL", default="admin/")

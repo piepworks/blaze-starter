@@ -73,8 +73,6 @@ flake8==6.0.0
     # via -r requirements/requirements.in
 gunicorn==20.1.0
     # via -r requirements/requirements.in
-hiredis==2.2.3
-    # via redis
 html-tag-names==0.1.2
     # via djlint
 html-void-elements==0.1.0
@@ -155,8 +153,6 @@ pyyaml==6.0
     # via
     #   djlint
     #   pre-commit
-redis[hiredis]==4.6.0
-    # via -r requirements/requirements.in
 regex==2023.6.3
     # via djlint
 six==1.16.0

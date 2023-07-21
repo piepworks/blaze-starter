@@ -15,5 +15,4 @@ pip-lock
 pip-tools
 pre-commit
 pytest-django
-redis[hiredis]
 whitenoise
