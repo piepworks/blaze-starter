@@ -2,4 +2,14 @@
 
 # This is for testing the Blaze.horse — Django Starter Kit itself.
 
-gum confirm "Delete test build folder (./.test_project/)?" && rm -rf .test_project
+echo ""
+read -p "Delete test build folder (./.test_project/)? (Y/N) " yn2
+case $yn2 in
+    [Yy])
+        rm -rf .test_project
+        ;;
+    *)
+        echo ""
+        echo "Okie doke"
+        ;;
+esac

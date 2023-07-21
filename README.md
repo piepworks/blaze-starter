@@ -1,11 +1,13 @@
 # Blaze.horse — Django Starter Kit
 
-[![Build Status](https://github.com/piepworks/django-starter/actions/workflows/coverage.yml/badge.svg)](https://github.com/piepworks/django-starter/actions/workflows/coverage.yml)
-[![codecov](https://codecov.io/gh/piepworks/django-starter/branch/main/graph/badge.svg?token=5V3K1650SC)](https://codecov.io/gh/piepworks/django-starter)
+[![Build Status](https://github.com/piepworks/blaze-starter/actions/workflows/coverage.yml/badge.svg)](https://github.com/piepworks/blaze-starter/actions/workflows/coverage.yml)
+[![codecov](https://codecov.io/gh/piepworks/blaze-starter/branch/main/graph/badge.svg?token=5V3K1650SC)](https://codecov.io/gh/piepworks/blaze-starter)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pre-commit: enabled](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Django version 4.2.x](https://img.shields.io/badge/Django-4.2.x-blue?logo=django&logoColor=green)](https://djangoproject.com)
 [![Python version 3.11.x](https://img.shields.io/badge/Python-3.11.x-blue?logo=python&logoColor=ffd440)](https://www.python.org)
+[![SQLite: in production](https://img.shields.io/badge/SQLite-in_production-blue?logo=sqlite&logoColor=green)](https://sqlite.org)
+[![Playwright: enabled](https://img.shields.io/badge/Playwright-enabled-brightgreen?logo=playwright)](https://playwright.dev)
 
 <img src="https://blaze.horse/assets/icons/seahorse.svg" alt="Seahorse icon" width="200" height="200">
 
@@ -34,8 +36,10 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
 </details>
 
 <details>
-  <summary>Free to try!</summary>
+  <summary>Free for personal, non-commercial use! Free to try (for everyone)!</summary>
+  <p>100% free for all personal, non-commercial use! Start a new website without one of those over-hyped static site generators! <i>You deserve tried and true, old school dynamic content!</i></p>
   <p>Only pay when you’re ready to launch your project! We want to make sure you get exactly what you need before money changes hands.</p>
+  <p>At just <a href="https://hub.piep.works">$100 USD</a> (per-site, one time!) for a license, it’s a fantastic investment to jumpstart a new project!</p>
 </details>
 
 <details open>
@@ -53,10 +57,10 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
 ## Installation
 
 ```shell
-/bin/bash -c "$(curl -fsSL https://blaze.horse/django-starter/install)"
+/bin/bash -c "$(curl -fsSL https://blaze.horse/blaze-starter/install)"
 ```
 
-[Here's the script that command runs.](https://github.com/piepworks/django-starter/blob/main/dev/setup.sh)
+[Here's the script that command runs.](https://github.com/piepworks/blaze-starter/blob/main/dev/setup.sh)
 
 <details>
   <summary>Here's what the <code>curl</code> flags mean if you're interested.</summary>

@@ -2,23 +2,46 @@
 
 # This is for testing the Blaze.horse — Django Starter Kit itself.
 
-gum confirm "Create test build folder (./.test_project/) and run automated tests?" || exit 1
+echo ""
+read -p "Create test build folder (./.test_project/) and run automated tests? (Y/N) " yn
+case $yn in
+    [Yy])
+        mkdir .test_project
+        cd .test_project
+        python3 -m venv --prompt . .venv
+        .venv/bin/pip install -U pip setuptools wheel
+        .venv/bin/python -m pip install pip-tools Django
+        .venv/bin/django-admin startproject --template=../ test_project .
+        .venv/bin/pip-compile --resolver=backtracking requirements/requirements.in
+        .venv/bin/python -m pip install -r requirements/requirements.txt
+        .venv/bin/python manage.py makemigrations
+        .venv/bin/python manage.py migrate --noinput
+        .venv/bin/python manage.py collectstatic --noinput
+        source $HOME/.nvm/nvm.sh
+        nvm install
+        npm install
+        npm run build
+        .venv/bin/pytest
+        npx playwright install --with-deps
 
-mkdir .test_project
-cd .test_project
-python3 -m venv --prompt . .venv
-.venv/bin/pip install -U pip setuptools wheel
-.venv/bin/python -m pip install pip-tools Django
-.venv/bin/django-admin startproject --template=../ test_project .
-.venv/bin/pip-compile --resolver=backtracking requirements/requirements.in
-.venv/bin/python -m pip install -r requirements/requirements.txt
-.venv/bin/python manage.py makemigrations
-.venv/bin/python manage.py migrate --noinput
-.venv/bin/python manage.py collectstatic --noinput
-source $HOME/.nvm/nvm.sh
-nvm install
-npm install
-npm run build
-.venv/bin/pytest
+        # Run Playwright tests with a new user
+        printf "CREATE_USER=True\nPLAYWRIGHT_USERNAME=tester@example.com\nPLAYWRIGHT_PASSWORD=tester_password" >> ../e2e/playwright.env
+        npx playwright test
 
-gum format -- "## To delete the test build folder, run the command:" "dev/test-build-reset"
+        read -p "Delete test build folder (./.test_project/)? (Y/N) " yn2
+        case $yn2 in
+            [Yy])
+                cd .. && rm -rf .test_project
+                ;;
+            *)
+                echo ""
+                echo "To delete test build folder later, run 'dev/test-build-reset'"
+                ;;
+        esac
+
+        ;;
+    *)
+        echo ""
+        echo "Okie doke"
+        ;;
+esac
