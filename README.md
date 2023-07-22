@@ -10,6 +10,8 @@
 [![SQLite: in production](https://img.shields.io/badge/SQLite-in_production-blue?logo=sqlite&logoColor=green)](https://litestream.io)
 [![Playwright: enabled](https://img.shields.io/badge/Playwright-enabled-brightgreen?logo=playwright)](https://playwright.dev)
 
+[![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/piepworks)
+
 <img src="https://blaze.horse/assets/icons/seahorse.svg" alt="Seahorse icon" width="200" height="200">
 
 ## Get your next [Django](https://www.djangoproject.com/start/overview/) project out the starting gate in a hurry!
