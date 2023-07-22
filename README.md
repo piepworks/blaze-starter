@@ -1,12 +1,13 @@
 # Blaze.horse — Django Starter Kit
 
-[![Build Status](https://github.com/piepworks/blaze-starter/actions/workflows/coverage.yml/badge.svg)](https://github.com/piepworks/blaze-starter/actions/workflows/coverage.yml)
+[![Django Tests Status](https://github.com/piepworks/blaze-starter/actions/workflows/blaze-django.yml/badge.svg)](https://github.com/piepworks/blaze-starter/actions/workflows/blaze-django.yml)
+[![Playwright Tests Status](https://github.com/piepworks/blaze-starter/actions/workflows/blaze-playwright.yml/badge.svg)](https://github.com/piepworks/blaze-starter/actions/workflows/blaze-playwright.yml)
 [![codecov](https://codecov.io/gh/piepworks/blaze-starter/branch/main/graph/badge.svg?token=5V3K1650SC)](https://codecov.io/gh/piepworks/blaze-starter)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pre-commit: enabled](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Django version 4.2.x](https://img.shields.io/badge/Django-4.2.x-blue?logo=django&logoColor=green)](https://djangoproject.com)
 [![Python version 3.11.x](https://img.shields.io/badge/Python-3.11.x-blue?logo=python&logoColor=ffd440)](https://www.python.org)
-[![SQLite: in production](https://img.shields.io/badge/SQLite-in_production-blue?logo=sqlite&logoColor=green)](https://sqlite.org)
+[![SQLite: in production](https://img.shields.io/badge/SQLite-in_production-blue?logo=sqlite&logoColor=green)](https://litestream.io)
 [![Playwright: enabled](https://img.shields.io/badge/Playwright-enabled-brightgreen?logo=playwright)](https://playwright.dev)
 
 <img src="https://blaze.horse/assets/icons/seahorse.svg" alt="Seahorse icon" width="200" height="200">
@@ -28,9 +29,11 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
         <li>Email addresses are the usernames: the most sensible default!</li>
       </ul>
     </li>
-    <li>🎁 <a href="https://pypi.org/project/pip-tools/">pip-compile</a> for easy dependency management.</li>
+    <li>🎁 <a href="https://pypi.org/project/pip-tools/">pip-tools</a> for easy dependency management.</li>
     <li>📐 <a href="https://pre-commit.com">pre-commit</a> to keep your code clean and working properly.</li>
     <li>🧪 <a href="https://pytest-django.readthedocs.io/en/latest/">pytest</a> for fast, easy-to-write tests.</li>
+    <li>🎭 <a href="https://playwright.dev">Playwright</a> for robust browser testing, including visual regression tests!
+    <li>🔷 <a href="https://litestream.io/">Litestream</a> for effortless SQLite support in “serverless” environments</li>
     <li>🫀 Sets you up to build <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement">progressively-enhanced</a>, accessible websites and applications.</li>
   </ul>
 </details>
@@ -57,7 +60,7 @@ From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books
 ## Installation
 
 ```shell
-/bin/bash -c "$(curl -fsSL https://blaze.horse/blaze-starter/install)"
+/bin/bash -c "$(curl -fsSL https://blaze.horse/starter/install)"
 ```
 
 [Here's the script that command runs.](https://github.com/piepworks/blaze-starter/blob/main/dev/setup.sh)
