@@ -18,7 +18,7 @@ build==0.10.0
     # via pip-tools
 cfgv==3.3.1
     # via pre-commit
-click==8.1.4
+click==8.1.6
     # via
     #   black
     #   djlint
@@ -27,11 +27,11 @@ colorama==0.4.6
     # via djlint
 coverage==7.2.7
     # via -r requirements/requirements.in
-cssbeautifier==1.14.8
+cssbeautifier==1.14.9
     # via djlint
 decorator==5.1.1
     # via ipython
-distlib==0.3.6
+distlib==0.3.7
     # via virtualenv
 dj-database-url==2.0.0
     # via
@@ -57,7 +57,7 @@ django-extensions==3.2.3
     # via -r requirements/requirements.in
 django-htmx==1.16.0
     # via -r requirements/requirements.in
-djlint==1.31.1
+djlint==1.32.1
     # via -r requirements/requirements.in
 editorconfig==0.12.3
     # via
@@ -71,13 +71,13 @@ filelock==3.12.2
     # via virtualenv
 flake8==6.0.0
     # via -r requirements/requirements.in
-gunicorn==20.1.0
+gunicorn==21.2.0
     # via -r requirements/requirements.in
 html-tag-names==0.1.2
     # via djlint
 html-void-elements==0.1.0
     # via djlint
-identify==2.5.24
+identify==2.5.26
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
@@ -85,13 +85,13 @@ ipython==8.14.0
     # via -r requirements/requirements.in
 jedi==0.18.2
     # via ipython
-jsbeautifier==1.14.8
+jsbeautifier==1.14.9
     # via
     #   cssbeautifier
     #   djlint
 json5==0.9.14
     # via djlint
-marshmallow==3.19.0
+marshmallow==3.20.1
     # via environs
 matplotlib-inline==0.1.6
     # via ipython
@@ -105,6 +105,7 @@ packaging==23.1
     # via
     #   black
     #   build
+    #   gunicorn
     #   marshmallow
     #   pytest
 parso==0.8.3
@@ -119,9 +120,9 @@ pickleshare==0.7.5
     # via ipython
 pip-lock==2.11.0
     # via -r requirements/requirements.in
-pip-tools==6.14.0
+pip-tools==7.1.0
     # via -r requirements/requirements.in
-platformdirs==3.8.1
+platformdirs==3.9.1
     # via
     #   black
     #   virtualenv
@@ -149,7 +150,7 @@ pytest-django==4.5.2
     # via -r requirements/requirements.in
 python-dotenv==1.0.0
     # via environs
-pyyaml==6.0
+pyyaml==6.0.1
     # via
     #   djlint
     #   pre-commit
@@ -174,11 +175,11 @@ traitlets==5.9.0
     #   matplotlib-inline
 typing-extensions==4.7.1
     # via dj-database-url
-virtualenv==20.23.1
+virtualenv==20.24.2
     # via pre-commit
 wcwidth==0.2.6
     # via prompt-toolkit
-wheel==0.40.0
+wheel==0.41.0
     # via pip-tools
 whitenoise==6.5.0
     # via -r requirements/requirements.in
