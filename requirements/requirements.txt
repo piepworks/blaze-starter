@@ -120,7 +120,7 @@ pickleshare==0.7.5
     # via ipython
 pip-lock==2.11.0
     # via -r requirements/requirements.in
-pip-tools==7.1.0
+pip-tools==7.3.0
     # via -r requirements/requirements.in
 platformdirs==3.10.0
     # via
@@ -140,7 +140,7 @@ pycodestyle==2.11.0
     # via flake8
 pyflakes==3.1.0
     # via flake8
-pygments==2.15.1
+pygments==2.16.1
     # via ipython
 pyproject-hooks==1.0.0
     # via build
@@ -154,7 +154,7 @@ pyyaml==6.0.1
     # via
     #   djlint
     #   pre-commit
-regex==2023.6.3
+regex==2023.8.8
     # via djlint
 six==1.16.0
     # via
@@ -167,7 +167,7 @@ sqlparse==0.4.4
     #   django-debug-toolbar
 stack-data==0.6.2
     # via ipython
-tqdm==4.65.0
+tqdm==4.66.0
     # via djlint
 traitlets==5.9.0
     # via
@@ -179,7 +179,7 @@ virtualenv==20.24.2
     # via pre-commit
 wcwidth==0.2.6
     # via prompt-toolkit
-wheel==0.41.0
+wheel==0.41.1
     # via pip-tools
 whitenoise==6.5.0
     # via -r requirements/requirements.in
