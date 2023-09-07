@@ -12,7 +12,7 @@
 
 [![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/piepworks)
 
-<img src="https://blaze.horse/assets/icons/seahorse.svg" alt="Seahorse icon" width="200" height="200">
+<img src="https://blaze.horse/icons/seahorse.svg" alt="Seahorse icon" width="200" height="200">
 
 ## Get your next [Django](https://www.djangoproject.com/start/overview/) project out the starting gate in a hurry!
 
