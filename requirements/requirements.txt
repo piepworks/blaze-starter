@@ -12,7 +12,7 @@ asttokens==2.4.0
     # via stack-data
 backcall==0.2.0
     # via ipython
-black==23.9.0
+black==23.9.1
     # via -r requirements/requirements.in
 build==1.0.3
     # via pip-tools
@@ -67,7 +67,7 @@ environs[django]==9.5.0
     # via -r requirements/requirements.in
 executing==1.2.0
     # via stack-data
-filelock==3.12.3
+filelock==3.12.4
     # via virtualenv
 flake8==6.1.0
     # via -r requirements/requirements.in
@@ -77,7 +77,7 @@ html-tag-names==0.1.2
     # via djlint
 html-void-elements==0.1.0
     # via djlint
-identify==2.5.27
+identify==2.5.29
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
@@ -169,7 +169,7 @@ stack-data==0.6.2
     # via ipython
 tqdm==4.66.1
     # via djlint
-traitlets==5.9.0
+traitlets==5.10.0
     # via
     #   ipython
     #   matplotlib-inline
