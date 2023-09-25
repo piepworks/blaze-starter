@@ -57,7 +57,7 @@ django-extensions==3.2.3
     # via -r requirements/requirements.in
 django-htmx==1.16.0
     # via -r requirements/requirements.in
-djlint==1.32.1
+djlint==1.34.0
     # via -r requirements/requirements.in
 editorconfig==0.12.3
     # via
@@ -173,7 +173,7 @@ traitlets==5.10.0
     # via
     #   ipython
     #   matplotlib-inline
-typing-extensions==4.7.1
+typing-extensions==4.8.0
     # via dj-database-url
 virtualenv==20.24.5
     # via pre-commit
