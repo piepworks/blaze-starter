@@ -25,7 +25,7 @@ click==8.1.7
     #   pip-tools
 colorama==0.4.6
     # via djlint
-coverage==7.3.1
+coverage==7.3.2
     # via -r requirements/requirements.in
 cssbeautifier==1.14.9
     # via djlint
@@ -39,7 +39,7 @@ dj-database-url==2.1.0
     #   environs
 dj-email-url==1.0.6
     # via environs
-django==4.2.5
+django==4.2.6
     # via
     #   -r requirements/requirements.in
     #   dj-database-url
@@ -81,9 +81,9 @@ identify==2.5.30
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
-ipython==8.16.0
+ipython==8.16.1
     # via -r requirements/requirements.in
-jedi==0.19.0
+jedi==0.19.1
     # via ipython
 jsbeautifier==1.14.9
     # via
@@ -122,7 +122,7 @@ pip-lock==2.11.0
     # via -r requirements/requirements.in
 pip-tools==7.3.0
     # via -r requirements/requirements.in
-platformdirs==3.10.0
+platformdirs==3.11.0
     # via
     #   black
     #   virtualenv
@@ -154,7 +154,7 @@ pyyaml==6.0.1
     # via
     #   djlint
     #   pre-commit
-regex==2023.8.8
+regex==2023.10.3
     # via djlint
 six==1.16.0
     # via
@@ -169,7 +169,7 @@ stack-data==0.6.3
     # via ipython
 tqdm==4.66.1
     # via djlint
-traitlets==5.10.1
+traitlets==5.11.2
     # via
     #   ipython
     #   matplotlib-inline
