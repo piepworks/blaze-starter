@@ -8,11 +8,9 @@ appnope==0.1.3
     # via ipython
 asgiref==3.7.2
     # via django
-asttokens==2.4.0
+asttokens==2.4.1
     # via stack-data
-backcall==0.2.0
-    # via ipython
-black==23.10.0
+black==23.10.1
     # via -r requirements/requirements.in
 build==1.0.3
     # via pip-tools
@@ -39,7 +37,7 @@ dj-database-url==2.1.0
     #   environs
 dj-email-url==1.0.6
     # via environs
-django==4.2.6
+django==4.2.7
     # via
     #   -r requirements/requirements.in
     #   dj-database-url
@@ -65,9 +63,9 @@ editorconfig==0.12.3
     #   jsbeautifier
 environs[django]==9.5.0
     # via -r requirements/requirements.in
-executing==2.0.0
+executing==2.0.1
     # via stack-data
-filelock==3.12.4
+filelock==3.13.1
     # via virtualenv
 flake8==6.1.0
     # via -r requirements/requirements.in
@@ -77,11 +75,11 @@ html-tag-names==0.1.2
     # via djlint
 html-void-elements==0.1.0
     # via djlint
-identify==2.5.30
+identify==2.5.31
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
-ipython==8.16.1
+ipython==8.17.2
     # via -r requirements/requirements.in
 jedi==0.19.1
     # via ipython
@@ -116,8 +114,6 @@ pathspec==0.11.2
     #   djlint
 pexpect==4.8.0
     # via ipython
-pickleshare==0.7.5
-    # via ipython
 pip-lock==2.11.0
     # via -r requirements/requirements.in
 pip-tools==7.3.0
@@ -144,9 +140,9 @@ pygments==2.16.1
     # via ipython
 pyproject-hooks==1.0.0
     # via build
-pytest==7.4.2
+pytest==7.4.3
     # via pytest-django
-pytest-django==4.5.2
+pytest-django==4.6.0
     # via -r requirements/requirements.in
 python-dotenv==1.0.0
     # via environs
@@ -169,17 +165,17 @@ stack-data==0.6.3
     # via ipython
 tqdm==4.66.1
     # via djlint
-traitlets==5.11.2
+traitlets==5.13.0
     # via
     #   ipython
     #   matplotlib-inline
 typing-extensions==4.8.0
     # via dj-database-url
-virtualenv==20.24.5
+virtualenv==20.24.6
     # via pre-commit
-wcwidth==0.2.8
+wcwidth==0.2.9
     # via prompt-toolkit
-wheel==0.41.2
+wheel==0.41.3
     # via pip-tools
 whitenoise==6.6.0
     # via -r requirements/requirements.in
