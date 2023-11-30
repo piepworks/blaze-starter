@@ -4,8 +4,6 @@
 #
 #    pip-compile requirements/requirements.in
 #
-appnope==0.1.3
-    # via ipython
 asgiref==3.7.2
     # via
     #   django
@@ -82,7 +80,7 @@ identify==2.5.32
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
-ipython==8.17.2
+ipython==8.18.1
     # via -r requirements/requirements.in
 jedi==0.19.1
     # via ipython
@@ -115,7 +113,7 @@ pathspec==0.11.2
     # via
     #   black
     #   djlint
-pexpect==4.8.0
+pexpect==4.9.0
     # via ipython
 pip-lock==2.11.0
     # via -r requirements/requirements.in
@@ -168,7 +166,7 @@ stack-data==0.6.3
     # via ipython
 tqdm==4.66.1
     # via djlint
-traitlets==5.13.0
+traitlets==5.14.0
     # via
     #   ipython
     #   matplotlib-inline
@@ -178,7 +176,7 @@ virtualenv==20.24.7
     # via pre-commit
 wcwidth==0.2.12
     # via prompt-toolkit
-wheel==0.41.3
+wheel==0.42.0
     # via pip-tools
 whitenoise==6.6.0
     # via -r requirements/requirements.in
