@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/
 from django.core.management.utils import get_random_secret_key
 from pathlib import Path
 from environs import Env
+from warnings import filterwarnings
 
 env = Env()
 # Read .env into os.environ
@@ -179,3 +180,8 @@ if DEBUG:
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 ADMIN_URL = env("ADMIN_URL", default="admin/")
+
+filterwarnings(
+    "ignore", "The FORMS_URLFIELD_ASSUME_HTTPS transitional setting is deprecated."
+)
+FORMS_URLFIELD_ASSUME_HTTPS = True

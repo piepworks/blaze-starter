@@ -5,7 +5,7 @@ django-browser-reload
 django-debug-toolbar
 django-extensions
 django-htmx
-Django<5.0
+Django
 djlint
 environs[django]
 flake8
