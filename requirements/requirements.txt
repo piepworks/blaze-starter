@@ -38,7 +38,7 @@ dj-database-url==2.1.0
     #   environs
 dj-email-url==1.0.6
     # via environs
-django==5.0
+django==5.0.1
     # via
     #   -r requirements/requirements.in
     #   dj-database-url
@@ -68,7 +68,7 @@ executing==2.0.1
     # via stack-data
 filelock==3.13.1
     # via virtualenv
-flake8==6.1.0
+flake8==7.0.0
     # via -r requirements/requirements.in
 gunicorn==21.2.0
     # via -r requirements/requirements.in
@@ -135,13 +135,13 @@ pure-eval==0.2.2
     # via stack-data
 pycodestyle==2.11.1
     # via flake8
-pyflakes==3.1.0
+pyflakes==3.2.0
     # via flake8
 pygments==2.17.2
     # via ipython
 pyproject-hooks==1.0.0
     # via build
-pytest==7.4.3
+pytest==7.4.4
     # via pytest-django
 pytest-django==4.7.0
     # via -r requirements/requirements.in
@@ -166,7 +166,7 @@ stack-data==0.6.3
     # via ipython
 tqdm==4.66.1
     # via djlint
-traitlets==5.14.0
+traitlets==5.14.1
     # via
     #   ipython
     #   matplotlib-inline
