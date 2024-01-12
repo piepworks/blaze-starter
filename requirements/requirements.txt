@@ -62,7 +62,7 @@ editorconfig==0.12.3
     # via
     #   cssbeautifier
     #   jsbeautifier
-environs[django]==10.0.0
+environs[django]==10.3.0
     # via -r requirements/requirements.in
 executing==2.0.1
     # via stack-data
@@ -80,7 +80,7 @@ identify==2.5.33
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
-ipython==8.19.0
+ipython==8.20.0
     # via -r requirements/requirements.in
 jedi==0.19.1
     # via ipython
@@ -90,7 +90,7 @@ jsbeautifier==1.14.11
     #   djlint
 json5==0.9.14
     # via djlint
-marshmallow==3.20.1
+marshmallow==3.20.2
     # via environs
 matplotlib-inline==0.1.6
     # via ipython
@@ -174,7 +174,7 @@ typing-extensions==4.9.0
     # via dj-database-url
 virtualenv==20.25.0
     # via pre-commit
-wcwidth==0.2.12
+wcwidth==0.2.13
     # via prompt-toolkit
 wheel==0.42.0
     # via pip-tools
