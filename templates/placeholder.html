@@ -21,9 +21,10 @@
     <p>
       Now you can see <a href="{% url 'private-page' %}">the private page</a>.
     </p>
-    <p>
-      <a href="{% url 'logout' %}">Log out</a>
-    </p>
+    <form method="post" action="{% url 'logout' %}">
+      {% csrf_token %}
+      <button>Log out</button>
+    </form>
   {% else %}
     <p>
       <a href="{% url 'login' %}">Log in</a>

@@ -8,7 +8,8 @@
   <h1>Private page!</h1>
 
   <p>Logged in as {{ request.user }}</p>
-  <p>
-    <a href="{% url 'logout' %}">Log out</a>
-  </p>
+  <form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button>Log out</button>
+  </form>
 {% endblock content %}
