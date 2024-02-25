@@ -24,7 +24,7 @@ click==8.1.7
     #   pip-tools
 colorama==0.4.6
     # via djlint
-coverage==7.4.1
+coverage==7.4.3
     # via -r requirements/requirements.in
 cssbeautifier==1.15.1
     # via djlint
@@ -76,11 +76,11 @@ html-tag-names==0.1.2
     # via djlint
 html-void-elements==0.1.0
     # via djlint
-identify==2.5.34
+identify==2.5.35
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
-ipython==8.21.0
+ipython==8.22.1
     # via -r requirements/requirements.in
 jedi==0.19.1
     # via ipython
@@ -88,7 +88,7 @@ jsbeautifier==1.15.1
     # via
     #   cssbeautifier
     #   djlint
-json5==0.9.14
+json5==0.9.17
     # via djlint
 marshmallow==3.20.2
     # via environs
@@ -125,7 +125,7 @@ platformdirs==4.2.0
     #   virtualenv
 pluggy==1.4.0
     # via pytest
-pre-commit==3.6.1
+pre-commit==3.6.2
     # via -r requirements/requirements.in
 prompt-toolkit==3.0.43
     # via ipython
@@ -143,7 +143,7 @@ pyproject-hooks==1.0.0
     # via
     #   build
     #   pip-tools
-pytest==8.0.1
+pytest==8.0.2
     # via pytest-django
 pytest-django==4.8.0
     # via -r requirements/requirements.in
@@ -174,7 +174,7 @@ traitlets==5.14.1
     #   matplotlib-inline
 typing-extensions==4.9.0
     # via dj-database-url
-virtualenv==20.25.0
+virtualenv==20.25.1
     # via pre-commit
 wcwidth==0.2.13
     # via prompt-toolkit
