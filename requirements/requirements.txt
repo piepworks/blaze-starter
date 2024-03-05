@@ -13,7 +13,7 @@ asttokens==2.4.1
     # via stack-data
 black==24.2.0
     # via -r requirements/requirements.in
-build==1.0.3
+build==1.1.1
     # via pip-tools
 cfgv==3.4.0
     # via pre-commit
@@ -38,7 +38,7 @@ dj-database-url==2.1.0
     #   environs
 dj-email-url==1.0.6
     # via environs
-django==5.0.2
+django==5.0.3
     # via
     #   -r requirements/requirements.in
     #   dj-database-url
@@ -54,7 +54,7 @@ django-debug-toolbar==4.3.0
     # via -r requirements/requirements.in
 django-extensions==3.2.3
     # via -r requirements/requirements.in
-django-htmx==1.17.2
+django-htmx==1.17.3
     # via -r requirements/requirements.in
 djlint==1.34.1
     # via -r requirements/requirements.in
@@ -62,7 +62,7 @@ editorconfig==0.12.4
     # via
     #   cssbeautifier
     #   jsbeautifier
-environs[django]==10.3.0
+environs[django]==11.0.0
     # via -r requirements/requirements.in
 executing==2.0.1
     # via stack-data
@@ -80,7 +80,7 @@ identify==2.5.35
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
-ipython==8.22.1
+ipython==8.22.2
     # via -r requirements/requirements.in
 jedi==0.19.1
     # via ipython
@@ -88,9 +88,9 @@ jsbeautifier==1.15.1
     # via
     #   cssbeautifier
     #   djlint
-json5==0.9.17
+json5==0.9.20
     # via djlint
-marshmallow==3.20.2
+marshmallow==3.21.1
     # via environs
 matplotlib-inline==0.1.6
     # via ipython
@@ -172,7 +172,7 @@ traitlets==5.14.1
     # via
     #   ipython
     #   matplotlib-inline
-typing-extensions==4.9.0
+typing-extensions==4.10.0
     # via dj-database-url
 virtualenv==20.25.1
     # via pre-commit
