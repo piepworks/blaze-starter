@@ -11,7 +11,7 @@ asgiref==3.7.2
     #   django-htmx
 asttokens==2.4.1
     # via stack-data
-black==24.2.0
+black==24.3.0
     # via -r requirements/requirements.in
 build==1.1.1
     # via pip-tools
@@ -24,7 +24,7 @@ click==8.1.7
     #   pip-tools
 colorama==0.4.6
     # via djlint
-coverage==7.4.3
+coverage==7.4.4
     # via -r requirements/requirements.in
 cssbeautifier==1.15.1
     # via djlint
@@ -88,7 +88,7 @@ jsbeautifier==1.15.1
     # via
     #   cssbeautifier
     #   djlint
-json5==0.9.20
+json5==0.9.24
     # via djlint
 marshmallow==3.21.1
     # via environs
@@ -100,7 +100,7 @@ mypy-extensions==1.0.0
     # via black
 nodeenv==1.8.0
     # via pre-commit
-packaging==23.2
+packaging==24.0
     # via
     #   black
     #   build
@@ -117,7 +117,7 @@ pexpect==4.9.0
     # via ipython
 pip-lock==2.11.0
     # via -r requirements/requirements.in
-pip-tools==7.4.0
+pip-tools==7.4.1
     # via -r requirements/requirements.in
 platformdirs==4.2.0
     # via
@@ -143,7 +143,7 @@ pyproject-hooks==1.0.0
     # via
     #   build
     #   pip-tools
-pytest==8.0.2
+pytest==8.1.1
     # via pytest-django
 pytest-django==4.8.0
     # via -r requirements/requirements.in
@@ -168,7 +168,7 @@ stack-data==0.6.3
     # via ipython
 tqdm==4.66.2
     # via djlint
-traitlets==5.14.1
+traitlets==5.14.2
     # via
     #   ipython
     #   matplotlib-inline
@@ -178,7 +178,7 @@ virtualenv==20.25.1
     # via pre-commit
 wcwidth==0.2.13
     # via prompt-toolkit
-wheel==0.42.0
+wheel==0.43.0
     # via pip-tools
 whitenoise==6.6.0
     # via -r requirements/requirements.in
