@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements/requirements.in
 #
-asgiref==3.7.2
+asgiref==3.8.1
     # via
     #   django
     #   django-browser-reload
@@ -125,7 +125,7 @@ platformdirs==4.2.0
     #   virtualenv
 pluggy==1.4.0
     # via pytest
-pre-commit==3.6.2
+pre-commit==3.7.0
     # via -r requirements/requirements.in
 prompt-toolkit==3.0.43
     # via ipython
