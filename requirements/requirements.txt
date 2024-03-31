@@ -13,7 +13,7 @@ asttokens==2.4.1
     # via stack-data
 black==24.3.0
     # via -r requirements/requirements.in
-build==1.1.1
+build==1.2.1
     # via pip-tools
 cfgv==3.4.0
     # via pre-commit
@@ -66,7 +66,7 @@ environs[django]==11.0.0
     # via -r requirements/requirements.in
 executing==2.0.1
     # via stack-data
-filelock==3.13.1
+filelock==3.13.3
     # via virtualenv
 flake8==7.0.0
     # via -r requirements/requirements.in
@@ -80,7 +80,7 @@ identify==2.5.35
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
-ipython==8.22.2
+ipython==8.23.0
     # via -r requirements/requirements.in
 jedi==0.19.1
     # via ipython
@@ -173,7 +173,9 @@ traitlets==5.14.2
     #   ipython
     #   matplotlib-inline
 typing-extensions==4.10.0
-    # via dj-database-url
+    # via
+    #   dj-database-url
+    #   ipython
 virtualenv==20.25.1
     # via pre-commit
 wcwidth==0.2.13
