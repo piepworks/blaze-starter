@@ -38,7 +38,7 @@ dj-database-url==2.1.0
     #   environs
 dj-email-url==1.0.6
     # via environs
-django==5.0.3
+django==5.0.4
     # via
     #   -r requirements/requirements.in
     #   dj-database-url
@@ -107,7 +107,7 @@ packaging==24.0
     #   gunicorn
     #   marshmallow
     #   pytest
-parso==0.8.3
+parso==0.8.4
     # via jedi
 pathspec==0.12.1
     # via
@@ -172,7 +172,7 @@ traitlets==5.14.2
     # via
     #   ipython
     #   matplotlib-inline
-typing-extensions==4.10.0
+typing-extensions==4.11.0
     # via
     #   dj-database-url
     #   ipython
