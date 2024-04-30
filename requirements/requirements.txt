@@ -11,7 +11,7 @@ asgiref==3.8.1
     #   django-htmx
 asttokens==2.4.1
     # via stack-data
-black==24.3.0
+black==24.4.2
     # via -r requirements/requirements.in
 build==1.2.1
     # via pip-tools
@@ -24,7 +24,7 @@ click==8.1.7
     #   pip-tools
 colorama==0.4.6
     # via djlint
-coverage==7.4.4
+coverage==7.5.0
     # via -r requirements/requirements.in
 cssbeautifier==1.15.1
     # via djlint
@@ -66,21 +66,21 @@ environs[django]==11.0.0
     # via -r requirements/requirements.in
 executing==2.0.1
     # via stack-data
-filelock==3.13.3
+filelock==3.14.0
     # via virtualenv
 flake8==7.0.0
     # via -r requirements/requirements.in
-gunicorn==21.2.0
+gunicorn==22.0.0
     # via -r requirements/requirements.in
 html-tag-names==0.1.2
     # via djlint
 html-void-elements==0.1.0
     # via djlint
-identify==2.5.35
+identify==2.5.36
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
-ipython==8.23.0
+ipython==8.24.0
     # via -r requirements/requirements.in
 jedi==0.19.1
     # via ipython
@@ -88,11 +88,11 @@ jsbeautifier==1.15.1
     # via
     #   cssbeautifier
     #   djlint
-json5==0.9.24
+json5==0.9.25
     # via djlint
 marshmallow==3.21.1
     # via environs
-matplotlib-inline==0.1.6
+matplotlib-inline==0.1.7
     # via ipython
 mccabe==0.7.0
     # via flake8
@@ -119,11 +119,11 @@ pip-lock==2.11.0
     # via -r requirements/requirements.in
 pip-tools==7.4.1
     # via -r requirements/requirements.in
-platformdirs==4.2.0
+platformdirs==4.2.1
     # via
     #   black
     #   virtualenv
-pluggy==1.4.0
+pluggy==1.5.0
     # via pytest
 pre-commit==3.7.0
     # via -r requirements/requirements.in
@@ -139,11 +139,11 @@ pyflakes==3.2.0
     # via flake8
 pygments==2.17.2
     # via ipython
-pyproject-hooks==1.0.0
+pyproject-hooks==1.1.0
     # via
     #   build
     #   pip-tools
-pytest==8.1.1
+pytest==8.2.0
     # via pytest-django
 pytest-django==4.8.0
     # via -r requirements/requirements.in
@@ -160,7 +160,7 @@ six==1.16.0
     #   asttokens
     #   cssbeautifier
     #   jsbeautifier
-sqlparse==0.4.4
+sqlparse==0.5.0
     # via
     #   django
     #   django-debug-toolbar
@@ -168,7 +168,7 @@ stack-data==0.6.3
     # via ipython
 tqdm==4.66.2
     # via djlint
-traitlets==5.14.2
+traitlets==5.14.3
     # via
     #   ipython
     #   matplotlib-inline
@@ -176,7 +176,7 @@ typing-extensions==4.11.0
     # via
     #   dj-database-url
     #   ipython
-virtualenv==20.25.1
+virtualenv==20.26.1
     # via pre-commit
 wcwidth==0.2.13
     # via prompt-toolkit
