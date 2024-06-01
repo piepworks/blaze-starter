@@ -52,6 +52,7 @@ INSTALLED_APPS += [
     "debug_toolbar",
     "django_browser_reload",
     "django_extensions",
+    "honeypot",
     "django_htmx",
     "django_registration",
 ]
@@ -186,6 +187,8 @@ filterwarnings(
     "ignore", "The FORMS_URLFIELD_ASSUME_HTTPS transitional setting is deprecated."
 )
 FORMS_URLFIELD_ASSUME_HTTPS = True
+
+HONEYPOT_FIELD_NAME = "phonenumber"
 
 # django-registration
 ACCOUNT_ACTIVATION_DAYS = 2

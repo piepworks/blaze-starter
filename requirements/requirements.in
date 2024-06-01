@@ -5,6 +5,7 @@ Django
 django-browser-reload
 django-debug-toolbar
 django-extensions
+django-honeypot
 django-htmx
 django-registration
 djlint

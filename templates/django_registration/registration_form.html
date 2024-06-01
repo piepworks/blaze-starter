@@ -1,5 +1,5 @@
 {% extends "registration/base.html" %}
-{% load static %}
+{% load static honeypot %}
 
 {% block title %}
   Create an account
@@ -15,6 +15,7 @@
 {% block form %}
   <form method="post">
     {% csrf_token %}
+    {% render_honeypot_field "phonenumber" %}
     <fieldset>
       {{ form.as_div }}
     </fieldset>

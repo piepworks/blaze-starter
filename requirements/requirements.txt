@@ -47,6 +47,7 @@ django==5.0.6
     #   django-browser-reload
     #   django-debug-toolbar
     #   django-extensions
+    #   django-honeypot
     #   django-htmx
     #   django-registration
 django-browser-reload==1.12.1
@@ -56,6 +57,8 @@ django-cache-url==3.4.5
 django-debug-toolbar==4.4.2
     # via -r requirements/requirements.in
 django-extensions==3.2.3
+    # via -r requirements/requirements.in
+django-honeypot==1.2.0
     # via -r requirements/requirements.in
 django-htmx==1.17.3
     # via -r requirements/requirements.in
