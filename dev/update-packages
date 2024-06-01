@@ -1,4 +1,0 @@
-#!/bin/sh
-
-pip-compile --upgrade --resolver=backtracking requirements/requirements.in
-.venv/bin/python -m pip install -r requirements/requirements.txt

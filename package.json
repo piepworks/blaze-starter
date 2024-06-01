@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "dj": "python manage.py runserver",
+    "dj": ".venv/bin/python manage.py runserver",
     "build:postcss": "NODE_ENV=production postcss static_src/css/main.css -o static/css/main.css",
     "watch:postcss": "postcss static_src/css/main.css -o static/css/main.css --watch --verbose",
     "dev": "npm-run-all --parallel watch:postcss dj",
