@@ -1,11 +1,12 @@
 black
 coverage
 dj-database-url
+Django
 django-browser-reload
 django-debug-toolbar
 django-extensions
 django-htmx
-Django
+django-registration
 djlint
 environs[django]
 flake8

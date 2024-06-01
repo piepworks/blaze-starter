@@ -1,0 +1,5 @@
+Your're almost done creating your account
+
+Follow this link to activate it: {{ scheme }}://{{ site }}{% url 'django_registration_activate' activation_key %}
+
+The link expires in {{ expiration_days }} days, so get to it!

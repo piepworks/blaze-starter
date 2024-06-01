@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+  Registration submitted
+  {% if request.path == index_url %}/{% endif %}
+{% endblock title %}
+{% block content %}
+  <div>
+    <h1>
+      Registration submitted!
+      <br>
+      Check your email for a confirmation link.
+    </h1>
+  </div>
+{% endblock content %}

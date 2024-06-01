@@ -53,6 +53,7 @@ INSTALLED_APPS += [
     "django_browser_reload",
     "django_extensions",
     "django_htmx",
+    "django_registration",
 ]
 
 # Our apps
@@ -185,3 +186,6 @@ filterwarnings(
     "ignore", "The FORMS_URLFIELD_ASSUME_HTTPS transitional setting is deprecated."
 )
 FORMS_URLFIELD_ASSUME_HTTPS = True
+
+# django-registration
+ACCOUNT_ACTIVATION_DAYS = 2

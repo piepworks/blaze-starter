@@ -1,14 +1,18 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate
+from django.shortcuts import get_object_or_404, render, redirect
+from django.contrib.auth import login
 from django.conf import settings
 from django.urls import reverse
 from django.http import FileResponse
 from django.contrib.auth.decorators import login_required
-from django.contrib.sites.shortcuts import get_current_site
+from django.contrib import messages
 from django.views.decorators.cache import cache_control
 from django.views.decorators.http import require_GET
-from .forms import RegisterForm
+from django_registration.backends.activation.views import (
+    ActivationView as BaseActivationView,
+    RegistrationView as BaseRegistrationView,
+)
 from .utils import send_email_to_admin
+from .models import User
 
 
 def placeholder(request):
@@ -29,31 +33,26 @@ def favicon(request):
     return FileResponse(file)
 
 
-def register(request):
-    if request.method == "POST":
-        form = RegisterForm(request.POST)
+def account_verified(request, user_id):
+    user = get_object_or_404(User, id=user_id)
 
-        if form.is_valid():
-            form.save()
+    send_email_to_admin(
+        subject=f"New user: {user.email}",
+        message="EOM",
+    )
 
-            # Automatically log in
-            email = form.cleaned_data.get("email")
-            raw_password = form.cleaned_data.get("password1")
-            user = authenticate(email=email, password=raw_password)
-            login(request, user)
+    login(request, user)
+    messages.success(request, "Your account has been activated! Enjoy!")
+    return redirect("index")
 
-            send_email_to_admin(
-                subject="New {{ project_name }} user!",
-                message=f"""{email} signed up!\n
-                    https://{get_current_site(request)}{reverse('admin:core_user_changelist')}
-                """,
-            )
 
+class ActivationView(BaseActivationView):
+    def get_success_url(self, user):
+        return reverse("account-verified", args=(user.id,))
+
+
+class RegistrationView(BaseRegistrationView):
+    def get(self, request, *args, **kwargs):
+        if self.request.user.is_authenticated:
             return redirect("index")
-    else:
-        if request.user.is_authenticated:
-            return redirect(reverse("index"))
-
-        form = RegisterForm()
-
-    return render(request, "registration/register.html", {"form": form})
+        return super().get(request, *args, **kwargs)
