@@ -5,8 +5,6 @@
 [![codecov](https://codecov.io/gh/piepworks/blaze-starter/branch/main/graph/badge.svg?token=5V3K1650SC)](https://codecov.io/gh/piepworks/blaze-starter)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pre-commit: enabled](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
-[![Django version 4.2.x](https://img.shields.io/badge/Django-4.2.x-blue?logo=django&logoColor=green)](https://djangoproject.com)
-[![Python version 3.11.x](https://img.shields.io/badge/Python-3.11.x-blue?logo=python&logoColor=ffd440)](https://www.python.org)
 [![SQLite: in production](https://img.shields.io/badge/SQLite-in_production-blue?logo=sqlite&logoColor=green)](https://litestream.io)
 [![Playwright: enabled](https://img.shields.io/badge/Playwright-enabled-brightgreen?logo=playwright)](https://playwright.dev)
 
@@ -18,7 +16,7 @@
 
 Big tech thinks everyone needs to [build aircraft carriers](https://youtu.be/KrPsyr8Ig6M?t=841), but all you need is a horse.
 
-From the makers of [Cassette Nest](https://cassettenest.com) and [Lists of Books](https://listsofbooks.com). We’ve distilled what we’ve learned, making all the little picky decisions so you don’t have to: just get to work on your project!
+From the makers of [Cassette Nest](https://cassettenest.com), [Book Stacks](https://bookstacks.app), and [Lists of Books](https://listsofbooks.com). We’ve distilled what we’ve learned, making all the little picky decisions so you don’t have to: just get to work on your project!
 
 <details>
   <summary><del>Batteries</del> <u>Reins and Saddle</u> included!</summary>
