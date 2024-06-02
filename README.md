@@ -52,6 +52,7 @@ From the makers of [Cassette Nest](https://cassettenest.com), [Book Stacks](http
     <li><a href="https://brew.sh">Homebrew</a></li>
     <li><a href="https://www.python.org/downloads/">Python version 3</a></li>
     <li><a href="https://github.com/nvm-sh/nvm">Node Version Manager</a></li>
+    <li><a href="https://just.systems">Just</a></li>
   </ul>
 </details>
 
