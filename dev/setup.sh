@@ -128,12 +128,12 @@ gum spin --title "Installing Python dependencies" -- pip-compile --resolver=back
 gum spin --title "Installing Python dependencies" -- python -m pip install -r requirements/requirements.txt
 
 # Setup .env file
-echo "SECRET_KEY=$(eval ./dev/generate-django-key)"                 >> .env
-echo "DEBUG=True"                                                   >> .env
-echo "ALLOWED_HOSTS=*"                                              >> .env
-echo "CSRF_TRUSTED_ORIGINS=http://localhost"                        >> .env
-echo "DATABASE_URL=sqlite:///db.sqlite3"                            >> .env
-echo "ADMIN_URL=$ADMIN_FOLDER_NAME/"                                >> .env
+echo "SECRET_KEY=$(just generate-django-key)"   >> .env
+echo "DEBUG=True"                               >> .env
+echo "ALLOWED_HOSTS=*"                          >> .env
+echo "CSRF_TRUSTED_ORIGINS=http://localhost"    >> .env
+echo "DATABASE_URL=sqlite:///db.sqlite3"        >> .env
+echo "ADMIN_URL=$ADMIN_FOLDER_NAME/"            >> .env
 
 # Setup e2e/playwright.env file
 touch e2e/playwright.env
