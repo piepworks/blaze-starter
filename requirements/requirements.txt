@@ -26,7 +26,7 @@ colorama==0.4.6
     # via djlint
 confusable-homoglyphs==3.3.1
     # via django-registration
-coverage==7.5.3
+coverage==7.5.4
     # via -r requirements/requirements.in
 cssbeautifier==1.15.1
     # via djlint
@@ -50,7 +50,7 @@ django==5.0.6
     #   django-honeypot
     #   django-htmx
     #   django-registration
-django-browser-reload==1.12.1
+django-browser-reload==1.13.0
     # via -r requirements/requirements.in
 django-cache-url==3.4.5
     # via environs
@@ -60,7 +60,7 @@ django-extensions==3.2.3
     # via -r requirements/requirements.in
 django-honeypot==1.2.0
     # via -r requirements/requirements.in
-django-htmx==1.17.3
+django-htmx==1.18.0
     # via -r requirements/requirements.in
 django-registration==3.4
     # via -r requirements/requirements.in
@@ -74,7 +74,7 @@ environs[django]==11.0.0
     # via -r requirements/requirements.in
 executing==2.0.1
     # via stack-data
-filelock==3.15.1
+filelock==3.15.4
     # via virtualenv
 flake8==7.1.0
     # via -r requirements/requirements.in
@@ -184,13 +184,13 @@ typing-extensions==4.12.2
     # via
     #   dj-database-url
     #   ipython
-virtualenv==20.26.2
+virtualenv==20.26.3
     # via pre-commit
 wcwidth==0.2.13
     # via prompt-toolkit
 wheel==0.43.0
     # via pip-tools
-whitenoise==6.6.0
+whitenoise==6.7.0
     # via -r requirements/requirements.in
 
 # The following packages are considered to be unsafe in a requirements file:
