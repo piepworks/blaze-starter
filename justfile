@@ -33,6 +33,7 @@ playwright:
 
 # Update all Python packages
 update-packages:
+  .venv/bin/python -m pip install --upgrade pip
   .venv/bin/pip-compile --upgrade requirements/requirements.in
   .venv/bin/python -m pip install -r requirements/requirements.txt
 

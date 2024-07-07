@@ -54,7 +54,7 @@ django-browser-reload==1.13.0
     # via -r requirements/requirements.in
 django-cache-url==3.4.5
     # via environs
-django-debug-toolbar==4.4.2
+django-debug-toolbar==4.4.5
     # via -r requirements/requirements.in
 django-extensions==3.2.3
     # via -r requirements/requirements.in
@@ -88,7 +88,7 @@ identify==2.5.36
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
-ipython==8.25.0
+ipython==8.26.0
     # via -r requirements/requirements.in
 jedi==0.19.1
     # via ipython
