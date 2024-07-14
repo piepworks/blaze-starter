@@ -42,6 +42,11 @@ update-a-package package:
   .venv/bin/pip-compile -P {{ package }} requirements/requirements.in
   .venv/bin/python -m pip install -r requirements/requirements.txt
 
+# Update Python and Node stuff
+update: update-packages
+  npm update
+  npm outdated
+
 build-static-files:
   .venv/bin/python manage.py collectstatic --noinput
 

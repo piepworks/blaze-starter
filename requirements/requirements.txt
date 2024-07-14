@@ -26,7 +26,7 @@ colorama==0.4.6
     # via djlint
 confusable-homoglyphs==3.3.1
     # via django-registration
-coverage==7.5.4
+coverage==7.6.0
     # via -r requirements/requirements.in
 cssbeautifier==1.15.1
     # via djlint
@@ -40,7 +40,7 @@ dj-database-url==2.2.0
     #   environs
 dj-email-url==1.0.6
     # via environs
-django==5.0.6
+django==5.0.7
     # via
     #   -r requirements/requirements.in
     #   dj-database-url
@@ -54,7 +54,7 @@ django-browser-reload==1.13.0
     # via -r requirements/requirements.in
 django-cache-url==3.4.5
     # via environs
-django-debug-toolbar==4.4.5
+django-debug-toolbar==4.4.6
     # via -r requirements/requirements.in
 django-extensions==3.2.3
     # via -r requirements/requirements.in
@@ -84,7 +84,7 @@ html-tag-names==0.1.2
     # via djlint
 html-void-elements==0.1.0
     # via djlint
-identify==2.5.36
+identify==2.6.0
     # via pre-commit
 iniconfig==2.0.0
     # via pytest
