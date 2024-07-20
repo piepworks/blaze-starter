@@ -17,4 +17,5 @@ pip-lock
 pip-tools
 pre-commit
 pytest-django
+pytz
 whitenoise

@@ -157,6 +157,8 @@ pytest-django==4.8.0
     # via -r requirements/requirements.in
 python-dotenv==1.0.1
     # via environs
+pytz==2024.1
+    # via -r requirements/requirements.in
 pyyaml==6.0.1
     # via
     #   djlint

@@ -168,6 +168,7 @@ gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
   "Warming up $(gum style --foreground 212 'database') and $(gum style --foreground 212 'static files')…"
 gum spin --title "Collecting static files" -- python manage.py collectstatic
 gum spin --title "Warming up the database" -- python manage.py makemigrations
+gum spin --title "Warming up the database" -- mv dev/0002_adjust_timezone_migration.py core/migrations/0002_adjust_timezone_migration.py
 gum spin --title "Warming up the database" -- python manage.py migrate
 gum spin --title "Creating initial superuser account" -- python manage.py createsuperuser --noinput --email=$EMAIL
 
