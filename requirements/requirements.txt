@@ -50,7 +50,7 @@ django==5.1
     #   django-honeypot
     #   django-htmx
     #   django-registration
-django-browser-reload==1.13.0
+django-browser-reload==1.15.0
     # via -r requirements/requirements.in
 django-cache-url==3.4.5
     # via environs
@@ -78,7 +78,7 @@ filelock==3.15.4
     # via virtualenv
 flake8==7.1.1
     # via -r requirements/requirements.in
-gunicorn==22.0.0
+gunicorn==23.0.0
     # via -r requirements/requirements.in
 html-tag-names==0.1.2
     # via djlint
