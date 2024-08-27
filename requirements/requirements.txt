@@ -98,7 +98,7 @@ jsbeautifier==1.15.1
     #   djlint
 json5==0.9.25
     # via djlint
-marshmallow==3.21.3
+marshmallow==3.22.0
     # via environs
 matplotlib-inline==0.1.7
     # via ipython
