@@ -11,6 +11,15 @@ from core.forms import RegisterForm
 urlpatterns = [
     path("", views.placeholder, name="index"),
     path("private-page", views.private_page, name="private-page"),
+    # PWA goodies
+    path(
+        "sw.js",
+        TemplateView.as_view(
+            template_name="js/sw.js", content_type="application/javascript"
+        ),
+        name="sw",
+    ),
+    path("offline", TemplateView.as_view(template_name="offline.html"), name="offline"),
     path("favicon.ico", views.favicon),
     # Redirect the old registration URL.
     path(

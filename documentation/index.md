@@ -21,3 +21,13 @@ However, if you still want to use Tailwind (no judgement), here's how you can do
 - [Fly](deployment/fly.md)
 
 Why no AWS? We don't believe you should use it. We do our best to not give Amazon any money if we can help it.
+
+## Update Workbox
+
+- `npx workbox-cli copyLibraries static/js/vendor/`
+- Update paths in `templates/js/sw.js` as needed.
+
+Further reading:
+
+- [Using Local Workbox Files Instead of CDN](https://developer.chrome.com/docs/workbox/modules/workbox-sw/#using-local-workbox-files-instead-of-cdn)
+- [workbox-cli’s copylibraries option](https://developer.chrome.com/docs/workbox/modules/workbox-cli/#copylibraries)
