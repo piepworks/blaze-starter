@@ -39,7 +39,7 @@ repos:
       - id: eslint
         name: Run ESLint
         language: system
-        entry: npx eslint --ext .js ./templates/js
+        entry: npx eslint ./templates/js
         types: [javascript]
         pass_filenames: false
       - id: stylelint
