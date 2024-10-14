@@ -11,7 +11,7 @@ asgiref==3.8.1
     #   django-htmx
 asttokens==2.4.1
     # via stack-data
-black==24.8.0
+black==24.10.0
     # via -r requirements/requirements.in
 build==1.2.2.post1
     # via pip-tools
@@ -26,13 +26,13 @@ colorama==0.4.6
     # via djlint
 confusable-homoglyphs==3.3.1
     # via django-registration
-coverage==7.6.1
+coverage==7.6.3
     # via -r requirements/requirements.in
 cssbeautifier==1.15.1
     # via djlint
 decorator==5.1.1
     # via ipython
-distlib==0.3.8
+distlib==0.3.9
     # via virtualenv
 dj-database-url==2.2.0
     # via
@@ -40,7 +40,7 @@ dj-database-url==2.2.0
     #   environs
 dj-email-url==1.0.6
     # via environs
-django==5.1.1
+django==5.1.2
     # via
     #   -r requirements/requirements.in
     #   dj-database-url
@@ -50,7 +50,7 @@ django==5.1.1
     #   django-honeypot
     #   django-htmx
     #   django-registration
-django-browser-reload==1.15.0
+django-browser-reload==1.16.0
     # via -r requirements/requirements.in
 django-cache-url==3.4.5
     # via environs
@@ -133,7 +133,7 @@ platformdirs==4.3.6
     #   virtualenv
 pluggy==1.5.0
     # via pytest
-pre-commit==4.0.0
+pre-commit==4.0.1
     # via -r requirements/requirements.in
 prompt-toolkit==3.0.48
     # via ipython
