@@ -66,7 +66,7 @@ django-registration==5.1.0
     # via -r requirements/requirements.in
 djlint==1.36.3
     # via -r requirements/requirements.in
-editorconfig==0.12.4
+editorconfig==0.17.0
     # via
     #   cssbeautifier
     #   jsbeautifier
@@ -165,7 +165,7 @@ six==1.17.0
     # via
     #   cssbeautifier
     #   jsbeautifier
-sqlparse==0.5.2
+sqlparse==0.5.3
     # via
     #   django
     #   django-debug-toolbar
