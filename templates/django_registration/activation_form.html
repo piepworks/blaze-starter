@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Complete your account activation
+{% endblock title %}
+
+{% block content %}
+  <h1>Complete your account activation</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="hidden"
+           name="activation_key"
+           value="{{ request.GET.activation_key }}">
+    <button type="submit">Activate your account and log in</button>
+  </form>
+{% endblock content %}

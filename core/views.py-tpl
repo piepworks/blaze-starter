@@ -3,7 +3,7 @@ from django.contrib.auth import login
 from django.conf import settings
 from django.urls import reverse
 from django.http import FileResponse
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_not_required
 from django.contrib import messages
 from django.views.decorators.cache import cache_control
 from django.views.decorators.http import require_GET
@@ -17,24 +17,26 @@ from .utils import send_email_to_admin
 from .models import User
 
 
+@login_not_required
 def placeholder(request):
     context = {}
     return render(request, "placeholder.html", context)
 
 
-@login_required
 def private_page(request):
     context = {}
     return render(request, "private.html", context)
 
 
 @require_GET
+@login_not_required
 @cache_control(max_age=60 * 60 * 24, immutable=True, public=True)  # One day
 def favicon(request):
     file = (settings.BASE_DIR / "static" / "img" / "seahorse-64x64.png").open("rb")
     return FileResponse(file)
 
 
+@login_not_required
 def account_verified(request, user_id):
     user = get_object_or_404(User, id=user_id)
 
@@ -48,14 +50,23 @@ def account_verified(request, user_id):
     return redirect("index")
 
 
+@method_decorator(login_not_required, name="dispatch")
 class ActivationView(BaseActivationView):
-    def get_success_url(self, user):
+    def get_success_url(self, user=None):
+        if not User:
+            return reverse("index")
         return reverse("account-verified", args=(user.id,))
 
 
+@method_decorator(login_not_required, name="dispatch")
 @method_decorator(check_honeypot, name="post")
 class RegistrationView(BaseRegistrationView):
     def get(self, request, *args, **kwargs):
         if self.request.user.is_authenticated:
             return redirect("index")
         return super().get(request, *args, **kwargs)
+
+
+@login_not_required
+def registration_complete(request):
+    return render(request, "django_registration/registration_complete.html")

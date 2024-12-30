@@ -33,6 +33,11 @@ urlpatterns = [
         name="login",
     ),
     path(
+        "accounts/register/complete/",
+        views.registration_complete,
+        name="django_registration_complete",
+    ),
+    path(
         "accounts/register/",
         views.RegistrationView.as_view(
             form_class=RegisterForm,
@@ -40,7 +45,7 @@ urlpatterns = [
         name="django_registration_register",
     ),
     path(
-        "accounts/activate/<str:activation_key>/",
+        "accounts/activate/",
         views.ActivationView.as_view(),
         name="django_registration_activate",
     ),
