@@ -28,10 +28,9 @@ jobs:
           cd test_project
           python3 -m venv --prompt . .venv
           .venv/bin/pip install -U pip setuptools wheel
-          .venv/bin/python -m pip install pip-tools Django
-          .venv/bin/django-admin startproject --exclude=.git,__pycache__,.env --template=https://github.com/piepworks/django-starter/archive/${BRANCH_NAME}.zip test_project .
-          .venv/bin/pip-compile --resolver=backtracking requirements/requirements.in
-          .venv/bin/python -m pip install -r requirements/requirements.txt
+          .venv/bin/python -m pip install Django uv
+          .venv/bin/django-admin startproject --template=https://github.com/piepworks/django-starter/archive/${BRANCH_NAME}.zip test_project .
+          .venv/bin/uv sync --no-dev --locked
           .venv/bin/python manage.py makemigrations
           .venv/bin/python manage.py migrate --noinput
           .venv/bin/python manage.py loaddata e2e/django-fixtures.json

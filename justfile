@@ -2,9 +2,7 @@ default:
   @just --list
 
 setup-venv:
-  python3 -m venv --prompt . .venv
-  .venv/bin/pip install -U pip setuptools wheel
-  .venv/bin/python -m pip install -r requirements/requirements.txt
+  uv sync
 
 reset-venv:
   rm -rf .venv
@@ -18,8 +16,7 @@ bootstrap: setup-venv
   pre-commit install
 
 update-venv:
-  .venv/bin/pip-compile requirements/requirements.in
-  .venv/bin/python -m pip install -r requirements/requirements.txt
+  just reset-venv
 
 shell:
   .venv/bin/python manage.py shell
@@ -33,14 +30,11 @@ playwright:
 
 # Update all Python packages
 update-packages:
-  .venv/bin/python -m pip install --upgrade pip
-  .venv/bin/pip-compile --upgrade requirements/requirements.in
-  .venv/bin/python -m pip install -r requirements/requirements.txt
+  uv sync --upgrade
 
 # Update a single package
 update-a-package package:
-  .venv/bin/pip-compile -P {{ package }} requirements/requirements.in
-  .venv/bin/python -m pip install -r requirements/requirements.txt
+  uv sync --upgrade-package {{ package }}
 
 # Update Python and Node stuff
 update: update-packages

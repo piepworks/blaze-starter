@@ -1,3 +1,29 @@
+[project]
+name = "Blaze.horse"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+  "black>=24.10.0",
+  "coverage>=7.6.10",
+  "dj-database-url>=2.3.0",
+  "django>=5.1.4",
+  "django-browser-reload>=1.17.0",
+  "django-debug-toolbar>=4.4.6",
+  "django-extensions>=3.2.3",
+  "django-honeypot>=1.2.1",
+  "django-htmx>=1.21.0",
+  "django-registration>=5.1.0",
+  "djlint>=1.36.4",
+  "environs[django]>=11.2.1",
+  "flake8>=7.1.1",
+  "gunicorn>=23.0.0",
+  "ipython>=8.31.0",
+  "pre-commit>=4.0.1",
+  "pytest-django>=4.9.0",
+  "pytz>=2024.2",
+  "whitenoise>=6.8.2",
+]
+
 [tool.black]
 target-version = ['py311']
 include = '\.py-tpl$'

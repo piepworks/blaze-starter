@@ -23,11 +23,13 @@ RUN apt-get update && \
 RUN wget https://github.com/benbjohnson/litestream/releases/download/v0.3.8/litestream-v0.3.8-linux-amd64.deb \
     && dpkg -i litestream-v0.3.8-linux-amd64.deb
 
-COPY requirements/requirements.txt /tmp/requirements.txt
+COPY pyproject.toml /pyproject.toml
+COPY uv.lock /uv.lock
 
 RUN set -ex && \
     pip install --upgrade pip && \
-    pip install -r /tmp/requirements.txt && \
+    pip install uv && \
+    UV_PROJECT_ENVIRONMENT=/usr/local/ uv sync --no-dev --locked && \
     rm -rf /root/.cache/
 
 COPY . /code/

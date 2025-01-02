@@ -119,13 +119,11 @@ gum style --border normal --margin "1" --padding "0 2" --border-foreground 212 \
 gum spin --title "Setting up Python virtual environment" -- python3 -m venv --prompt . .venv
 gum spin --title "Warming up virtual environment" -- .venv/bin/pip install -U pip setuptools wheel
 source .venv/bin/activate
-gum spin --title "Warming up virtual environment" -- python -m pip install pip-tools Django
+gum spin --title "Warming up virtual environment" -- python -m pip install uv Django
 gum spin --title "Installing Django Starter Kit" -- django-admin startproject \
-  --exclude=.git,__pycache__,.env \
   --template=https://github.com/piepworks/django-starter/archive/$VERSION.zip \
   $PROJECT_NAME .
-gum spin --title "Installing Python dependencies" -- pip-compile --resolver=backtracking requirements/requirements.in
-gum spin --title "Installing Python dependencies" -- python -m pip install -r requirements/requirements.txt
+gum spin --title "Installing Python dependencies" -- uv sync
 
 # Setup .env file
 echo "SECRET_KEY=$(just generate-django-key)"   >> .env
@@ -150,7 +148,7 @@ echo "        pass_filenames: false"      >> .pre-commit-config.yaml
 
 # Delete files related to the starter kit project itself
 # These have no meaning on a generated project
-rm .github/workflows/blaze-*
+# rm .github/workflows/blaze-* # This should automatically be excluded by `startproject`
 rm dev/setup.sh # Local version of this file
 rm dev/test-build* # Scripts for testing project generation
 

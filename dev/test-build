@@ -10,10 +10,9 @@ case $yn in
         cd .test_project
         python3 -m venv --prompt . .venv
         .venv/bin/pip install -U pip setuptools wheel
-        .venv/bin/python -m pip install pip-tools Django
+        .venv/bin/python -m pip install Django uv
         .venv/bin/django-admin startproject --template=../ test_project .
-        .venv/bin/pip-compile --resolver=backtracking requirements/requirements.in
-        .venv/bin/python -m pip install -r requirements/requirements.txt
+        .venv/bin/uv sync --no-dev --locked
         .venv/bin/python manage.py makemigrations
         mv dev/0002_adjust_timezone_migration.py core/migrations/0002_adjust_timezone_migration.py
         .venv/bin/python manage.py migrate --noinput

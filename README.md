@@ -29,7 +29,7 @@ From the makers of [Cassette Nest](https://cassettenest.com), [Book Stacks](http
         <li>Email addresses are the usernames: the most sensible default!</li>
       </ul>
     </li>
-    <li>🎁 <a href="https://pypi.org/project/pip-tools/">pip-tools</a> for easy dependency management.</li>
+    <li>🎁 <a href="https://docs.astral.sh/uv/">uv</a> for easy dependency management.</li>
     <li>📐 <a href="https://pre-commit.com">pre-commit</a> to keep your code clean and working properly.</li>
     <li>🧪 <a href="https://pytest-django.readthedocs.io/en/latest/">pytest</a> for fast, easy-to-write tests.</li>
     <li>🎭 <a href="https://playwright.dev">Playwright</a> for robust browser testing, including visual regression tests!
