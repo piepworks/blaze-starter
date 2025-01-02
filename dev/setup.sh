@@ -4,11 +4,17 @@
 
 # Check for arguments
 VERSION="main"
+LOCAL=false
+LOCAL_PATH="~/Code/django-starter"
 while [[ $# -gt 0 ]]; do
   case $1 in
     -v|--version)
       VERSION="$2"
       shift
+      shift
+      ;;
+    -l|--local)
+      LOCAL=true
       shift
       ;;
     -*|--*)
@@ -120,9 +126,14 @@ gum spin --title "Setting up Python virtual environment" -- python3 -m venv --pr
 gum spin --title "Warming up virtual environment" -- .venv/bin/pip install -U pip setuptools wheel
 source .venv/bin/activate
 gum spin --title "Warming up virtual environment" -- python -m pip install uv Django
-gum spin --title "Installing Django Starter Kit" -- django-admin startproject \
-  --template=https://github.com/piepworks/django-starter/archive/$VERSION.zip \
-  $PROJECT_NAME .
+if [ "$LOCAL" = true ]; then
+  gum spin --title "Installing Django Starter Kit (local)" -- django-admin startproject \
+    --template=$LOCAL_PATH $PROJECT_NAME .
+else
+  gum spin --title "Installing Django Starter Kit" -- django-admin startproject \
+    --template=https://github.com/piepworks/django-starter/archive/$VERSION.zip \
+    $PROJECT_NAME .
+fi
 gum spin --title "Installing Python dependencies" -- uv sync
 
 # Setup .env file
