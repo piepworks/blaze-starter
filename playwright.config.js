@@ -98,6 +98,6 @@ export default defineConfig({
   webServer: {
     command: `${new_user} ${envs} e2e/start-django.sh`,
     url: 'http://127.0.0.1:8000',
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: false,
   },
 });
