@@ -45,6 +45,6 @@ repos:
       - id: stylelint
         name: Run Stylelint
         language: system
-        entry: npx stylelint "static_src/css/*.css"
+        entry: npx stylelint "static_src/css/**/*.css"
         types: [css]
         pass_filenames: false
