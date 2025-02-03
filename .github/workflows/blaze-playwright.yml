@@ -43,7 +43,7 @@ jobs:
         run: cd test_project && npx playwright install --with-deps
       - name: Run Playwright tests
         run: cd test_project && CREATE_USER=True npx playwright test --ignore-snapshots
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: artifacts
