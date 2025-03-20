@@ -28,8 +28,7 @@
     {% if not debug %}
       <script>{% include "js/sw-setup.js" %}</script>
     {% endif %}
-    <script src="{% static 'js/vendor/htmx-1.9.2.min.js' %}" defer></script>
-    {% django_htmx_script %}
+    {% htmx_script %}
     <script>{% include 'js/placeholder.js' %}</script>
   </body>
 </html>
